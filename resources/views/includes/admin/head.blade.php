@@ -7,8 +7,16 @@
 <meta name="author" content="Łukasz Holeczek">
 <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+
+{{-- icons --}}
+<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('/icons/icon-192x192.png') }}">
+<link rel="icon" type="image/png" sizes="152x152" href="{{ asset('/icons/icon-152x152.png') }}">
+<link rel="icon" type="image/png" sizes="144x144" href="{{ asset('/icons/icon-144x144.png') }}">
+<link rel="icon" type="image/png" sizes="128x128" href="{{ asset('/icons/icon-128x128.png') }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/icons/icon-96x96.png') }}">
+<link rel="icon" type="image/png" sizes="72x72" href="{{ asset('/icons/icon-72x72.png') }}">
+
 {{-- styles --}}
 @vite([
     "resources/css/core-ui/vendors/simplebar.css",
