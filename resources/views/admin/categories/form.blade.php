@@ -25,10 +25,15 @@
                 <textarea class="@error('benefit') is-invalid @enderror d-none" name="benefit" id="benefit" placeholder="Masukkan misi"></textarea>
             </div>
             {{-- quil editor --}}
-            <section id="editor" class="mb-3"></section>
+            <section id="editor" class="mb-3">
+                {!! @$category->benefit ?? old('benefit') !!}
+            </section>
             {{-- End of Benefit --}}
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-save"></i> 
+                    Submit
+                </button>
             </div>
         </form>
     </div>

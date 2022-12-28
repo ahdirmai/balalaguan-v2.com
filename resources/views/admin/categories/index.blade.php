@@ -2,13 +2,13 @@
 
 @push('style')
     <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 @endpush
 
 @section('content')
     <div class="container">
-        <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">Tambah Kategori</a>
-
-        <table class="table">
+        <table id="table" class="table table-striped" style="width: 100%">
             <thead>
                 <tr>
                     <th>No</th>
@@ -24,39 +24,26 @@
                         <td>{{ $c->name }}</td>
                         <td>{!! $c->benefit !!}</td>
                         <td>
-                            <a href="{{ route('admin.categories.edit', $c->id) }}" class="btn btn-warning">Ubah</a>
-
-                            {{-- Delete --}}
-
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#deleteModal{{ $c->id }}">
-                                Hapus
-                            </button>
+                            <section>
+                                {{-- Edit --}}
+                                <a href="{{ route('admin.categories.edit', $c->id) }}" class="btn btn-primary">
+                                    <i class="fa-solid fa-edit"></i>
+                                </a>
+                                {{-- Delete --}}
+                                <button type="button" class="btn btn-danger"  data-coreui-toggle="modal"
+                                data-coreui-target="#deleteModal{{ $c->id }}">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </section>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="deleteModal{{ $c->id }}" tabindex="-1" aria-labelledby="deleteModal{{ $c->id }}Label"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="deleteModal{{ $c->id }}Label">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Apakah anda yakin ingin menghapus {{ $c->name }}?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <form action="{{ route('admin.categories.destroy', $c->id) }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Hapus</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <x-base.modal-confirm modal-id="deleteModal{{ $c->id }}" title="Konfirmasi" sub-title="Apakah anda yakin ingin menghapus {{ $c->name }} ?">
+                                <form action="{{ route('admin.categories.destroy', $c->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                </form>
+                            </x-base.modal-confirm>
                         </td>
                     </tr>
                 @endforeach
@@ -64,3 +51,16 @@
         </table>
     </div>
 @endsection
+
+@push('script')
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
+@endpush
+
+@push('script')
+    <script>
+        $(document).ready( function() {
+            $('#table').DataTable()
+        })
+    </script>
+@endpush

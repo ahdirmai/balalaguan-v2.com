@@ -14,10 +14,16 @@
     "resources/css/core-ui/vendors/simplebar.css",
     "resources/css/core-ui/vendors/chartjs.css",
     "resources/css/core-ui/style.css",
-    "resources/css/core-ui/example.css"
+    "resources/css/core-ui/example.css",
 ])
 <!-- We use those styles to show code examples, you should remove them in your application.-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+
+{{-- Font awesome 6 --}}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous"/>
+
+{{-- Core UI modal --}}
+<link rel="canonical" href="https://coreui.io/docs/components/modal/">
 
 {{-- scripts --}}
 <!-- Global site tag (gtag.js) - Google Analytics-->

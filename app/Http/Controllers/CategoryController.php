@@ -120,6 +120,6 @@ class CategoryController extends Controller
         } else {
             flash()->addError('Gagal menghapus kategori!');
         }
-        return redirect()->route('admin.periods.index');
+        return redirect()->route('admin.categories.index');
     }
 }
