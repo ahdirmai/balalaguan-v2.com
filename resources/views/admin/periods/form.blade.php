@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <h1>{{ $title }} Periode</h1>
+        <a href="{{ url()->previous() }}" class="btn btn-secondary my-4">Kembali</a>
 
         <form action="{{ $url }}" method="post">
             @csrf
