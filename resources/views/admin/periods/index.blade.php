@@ -1,9 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.admin.base')
 
 @section('content')
     <div class="container">
-        <a href="{{ route('admin.periods.create') }}" class="btn btn-primary">Tambah Paket</a>
-
         <table class="table">
             <thead>
                 <tr>

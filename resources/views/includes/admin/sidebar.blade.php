@@ -55,7 +55,7 @@
         {{-- Ticket Package routes --}}
         <li class="nav-title">Ticket Package</li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.categories.index') }}">
+            <a class="nav-link" href="{{ route('admin.periods.index') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bar-chart') }}"></use>
                 </svg> 
@@ -64,7 +64,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.categories.create') }}">
+            <a class="nav-link" href="{{ route('admin.periods.create') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-plus') }}"></use>
                 </svg> 
@@ -75,7 +75,7 @@
         {{-- Ticket category routes --}}
         <li class="nav-title">Categories Ticket</li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('admin.categories.index') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bar-chart') }}"></use>
                 </svg> 
@@ -84,7 +84,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('admin.categories.create') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-plus') }}"></use>
                 </svg> 
