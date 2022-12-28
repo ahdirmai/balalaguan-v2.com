@@ -19,7 +19,6 @@ class CreateTransactionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('period_id');
-            $table->integer('category_id');
             $table->integer('quantity');
             $table->boolean('is_paid')->default(false);
             $table->timestamps();

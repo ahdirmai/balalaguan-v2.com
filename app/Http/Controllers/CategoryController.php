@@ -14,7 +14,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.categories.index');
+        $categories = Category::all();
+        $data = [
+            'categories' => $categories,
+        ];
+        return view('admin.categories.index', $data);
     }
 
     /**
@@ -24,7 +28,11 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'title' => 'Tambah Kategori',
+            'url' => route('admin.categories.store'),
+        ];
+        return view('admin.categories.form', $data);
     }
 
     /**
@@ -35,7 +43,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'string|required',
+            'benefit' => 'required|string',
+        ]);
+        if (Category::create($data)) {
+            flash()->addSuccess('Berhasil menambahkan kategori!');
+        } else {
+            flash()->addError('Gagal menambahkan kategori!');
+        }
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -55,21 +72,37 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $data = [
+            'title' => 'Ubah Category',
+            'category' => $category,
+            'url' => route('admin.categories.update', $id)
+        ];
+        return view('admin.categories.form', $data);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\categorie  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $data = $request->validate([
+            'name' => 'string|required',
+            'benefit' => 'required|string',
+        ]);
+        if ($category->update($data)) {
+            flash()->addSuccess('Berhasil memperbarui kategori!');
+        } else {
+            flash()->addError('Gagal memperbarui kategori!');
+        }
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -78,8 +111,15 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $name = $category->name;
+        if ($category->delete()) {
+            flash()->addSuccess('Berhasil menghapus kategori ' . $name . '!');
+        } else {
+            flash()->addError('Gagal menghapus kategori!');
+        }
+        return redirect()->route('admin.periods.index');
     }
 }

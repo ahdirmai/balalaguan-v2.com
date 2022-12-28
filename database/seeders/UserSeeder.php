@@ -21,6 +21,9 @@ class UserSeeder extends Seeder
         $data = [
             'name' => 'admin',
             'email' => 'admin@balalaguan.com',
+            'address' => 'jalan trans kalimantan',
+            'nik' => '123456789',
+            'phone' => '081253780486',
             'password' => Hash::make('12345678'),
         ];
 

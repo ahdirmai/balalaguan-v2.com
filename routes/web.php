@@ -31,10 +31,10 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
     //Category
-    Route::get('categories', [CategoryController::class, 'index'])->name('categories');
+    Route::resource('categories', CategoryController::class);
     
     // Period
-    Route::get('periods', [PeriodController::class, 'index'])->name('periods');
+    Route::resource('periods', PeriodController::class);
     
 });
 
