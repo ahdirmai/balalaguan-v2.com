@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\PeriodController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,10 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     
     // Period
     Route::resource('periods', PeriodController::class);
+
+    // Event
+    Route::get('event', [EventController::class, 'index'])->name('event.index');
+    Route::put('event', [EventController::class, 'update'])->name('event.update');
     
 });
 
