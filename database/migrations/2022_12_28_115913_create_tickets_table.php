@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaymentsTable extends Migration
+class CreateTicketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,12 +15,12 @@ class CreatePaymentsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('transactions_id');
+            $table->string('token');
+            $table->string('status');
             $table->integer('event_id');
-            $table->string('name');
-            $table->string('account_number');
-            $table->string('description');
             $table->timestamps();
         });
 
@@ -34,6 +34,6 @@ class CreatePaymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('tickets');
     }
 }

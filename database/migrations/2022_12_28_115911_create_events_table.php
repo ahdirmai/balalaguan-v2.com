@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContactsTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('event_id');
             $table->string('name');
-            $table->string('phone');
+            $table->dateTime('start')->nullable();
+            $table->dateTime('end')->nullable();
+            $table->text('description');
+            $table->string('payment_name');
+            $table->string('payment_account');
+            $table->string('contact_name');
+            $table->string('contact_number');
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -33,6 +34,6 @@ class CreateContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('events');
     }
 }
