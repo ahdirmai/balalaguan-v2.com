@@ -31,6 +31,9 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     // Dashboard
     Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
+    // Barcode scanner
+    Route::get('scanner', [AdminDashboardController::class, 'scanner'])->name('scanner');
+
     //Category
     Route::resource('categories', CategoryController::class);
     

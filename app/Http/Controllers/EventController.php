@@ -13,7 +13,7 @@ class EventController extends Controller
         $data = [
             'event' => $event,
         ];
-        return view('admin.event.index', $data);
+        return view('pages.admin.event.index', $data);
     }
 
     public function update(Request $request)

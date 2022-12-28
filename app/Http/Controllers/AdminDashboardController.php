@@ -10,4 +10,9 @@ class AdminDashboardController extends Controller
     {
         return view('pages.admin.index');
     }
+
+    public function scanner()
+    {
+        return view('pages.admin.scanner.index');
+    }
 }

@@ -18,7 +18,7 @@ class CategoryController extends Controller
         $data = [
             'categories' => $categories,
         ];
-        return view('admin.categories.index', $data);
+        return view('pages.admin.categories.index', $data);
     }
 
     /**
@@ -29,10 +29,10 @@ class CategoryController extends Controller
     public function create()
     {
         $data = [
-            'title' => 'Tambah Kategori',
+            'title' => 'Tambah Kategori Baru',
             'url' => route('admin.categories.store'),
         ];
-        return view('admin.categories.form', $data);
+        return view('pages.admin.categories.form', $data);
     }
 
     /**
@@ -76,11 +76,11 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $data = [
-            'title' => 'Ubah Category',
+            'title' => 'Ubah Kategori Tiket',
             'category' => $category,
             'url' => route('admin.categories.update', $id)
         ];
-        return view('admin.categories.form', $data);
+        return view('pages.admin.categories.form', $data);
     }
 
     /**

@@ -24,7 +24,7 @@ class PeriodController extends Controller
         $data = [
             'periods' => $periods,
         ];
-        return view('admin.periods.index', $data);
+        return view('pages.admin.periods.index', $data);
     }
 
     /**
@@ -40,7 +40,7 @@ class PeriodController extends Controller
             'url' => route('admin.periods.store'),
             'categories' => $categories,
         ];
-        return view('admin.periods.form', $data);
+        return view('pages.admin.periods.form', $data);
     }
 
     /**
@@ -96,7 +96,7 @@ class PeriodController extends Controller
             'period' => $period,
             'url' => route('admin.periods.update', $id)
         ];
-        return view('admin.periods.form', $data);
+        return view('pages.admin.periods.form', $data);
     }
 
     /**

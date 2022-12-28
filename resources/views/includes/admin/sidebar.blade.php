@@ -15,7 +15,7 @@
                 </svg> 
                 Dashboard
             </a>
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">
+            <a class="nav-link" href="{{ route('admin.scanner') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-qr-code') }}"></use>
                 </svg> 
@@ -52,26 +52,6 @@
             </a>
         </li>
         {{-- End of Transaction routes --}}
-        {{-- Ticket Package routes --}}
-        <li class="nav-title">Ticket Package</li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.periods.index') }}">
-                <svg class="nav-icon">
-                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bar-chart') }}"></use>
-                </svg> 
-                All Records
-                <span class="badge badge-sm bg-info ms-auto">23+</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.periods.create') }}">
-                <svg class="nav-icon">
-                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-plus') }}"></use>
-                </svg> 
-                Add New Package
-            </a>
-        </li>
-        {{-- End of Ticket Package routes --}}
         {{-- Ticket category routes --}}
         <li class="nav-title">Categories Ticket</li>
         <li class="nav-item">
@@ -79,7 +59,7 @@
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bar-chart') }}"></use>
                 </svg> 
-                All Records
+                All Categories
                 <span class="badge badge-sm bg-info ms-auto">23+</span>
             </a>
         </li>
@@ -92,6 +72,26 @@
             </a>
         </li>
         {{-- End of Ticket category routes --}}
+        {{-- Ticket Package routes --}}
+        <li class="nav-title">Package</li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.periods.index') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bar-chart') }}"></use>
+                </svg> 
+                All Packages
+                <span class="badge badge-sm bg-info ms-auto">23+</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.periods.create') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-plus') }}"></use>
+                </svg> 
+                Add New Package
+            </a>
+        </li>
+        {{-- End of Ticket Package routes --}}
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>

@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        <h4 class="mb-4">Tambah Paket Baru</h4>
+        <h4 class="mb-3">{{ $title }}</h4>
 
         <form action="{{ $url }}" id="form" method="post">
             @csrf
@@ -20,7 +20,7 @@
             </div>
             {{-- End of Category name --}}
             {{-- Benefit --}}
-            <div class="col-12 mb-4">
+            <div class="col-12">
                 <label for="benefit" class="form-label">Benefit</label>
                 <textarea class="@error('benefit') is-invalid @enderror d-none" name="benefit" id="benefit" placeholder="Masukkan misi"></textarea>
             </div>
