@@ -2,17 +2,18 @@
 
 @section('content')
     <div class="container">
-        <a href="{{ route('admin.periods.create') }}" class="btn btn-primary">Tambah Periode</a>
+        <a href="{{ route('admin.periods.create') }}" class="btn btn-primary">Tambah Paket</a>
 
         <table class="table">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Nama Paket</th>
-                    <th>Diskon</th>
+                    <th>Harga</th>
                     <th>Stok</th>
                     <th>Waktu dimulai</th>
                     <th>Waktu berakhir</th>
+                    <th>Kategori</th>
                     <th>Status</th>
                     <th>Aksi</th>
                 </tr>
@@ -22,10 +23,11 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $p->name }}</td>
-                        <td>{{ $p->discount }}%</td>
+                        <td>{{ $p->price }}</td>
                         <td>{{ $p->stock }}</td>
                         <td>{{ $p->start }}</td>
                         <td>{{ $p->end }}</td>
+                        <td>{{ $p->category->name }}</td>
                         <td>{{ $p->is_active==1 ? 'Aktif' : 'Non-Aktif' }}</td>
                         <td>
                             <a href="{{ route('admin.periods.edit', $p->id) }}" class="btn btn-warning">Ubah</a>

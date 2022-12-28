@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransactionsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,13 +15,10 @@ class CreateTransactionsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('period_id');
-            $table->integer('category_id');
-            $table->integer('quantity');
-            $table->boolean('is_paid')->default(false);
+            $table->string('name');
+            $table->mediumText('benefit');
             $table->timestamps();
         });
 
@@ -35,6 +32,6 @@ class CreateTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('categories');
     }
 }

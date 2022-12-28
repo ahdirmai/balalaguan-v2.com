@@ -18,11 +18,12 @@ class CreatePeriodsTable extends Migration
         Schema::create('periods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('discount');
+            $table->integer('price');
             $table->dateTime('start')->nullable();
             $table->dateTime('end')->nullable();
             $table->integer('stock');
             $table->boolean('is_active')->default(false);
+            $table->bigInteger('category_id');
             $table->timestamps();
         });
 

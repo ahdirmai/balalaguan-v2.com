@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Period;
 use DateTime;
 use Exception;
@@ -19,7 +20,7 @@ class PeriodController extends Controller
      */
     public function index()
     {
-        $periods = Period::all();
+        $periods = Period::with('category')->get();
         $data = [
             'periods' => $periods,
         ];
@@ -33,9 +34,11 @@ class PeriodController extends Controller
      */
     public function create()
     {
+        $categories = Category::all();
         $data = [
-            'title' => 'Tambah',
+            'title' => 'Tambah Paket',
             'url' => route('admin.periods.store'),
+            'categories' => $categories,
         ];
         return view('admin.periods.form', $data);
     }
@@ -48,18 +51,20 @@ class PeriodController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $data = $request->validate([
             'name' => 'string|required',
-            'discount' => 'numeric|required',
+            'price' => 'numeric|required',
             'stock' => 'numeric|required',
             'start' => 'nullable|date',
             'end' => 'nullable|date',
             'is_active' => 'required|boolean',
+            'category_id' => 'required|int',
         ]);
         if (Period::create($data)) {
-            flash()->addSuccess('Berhasil menambahkan paket');
+            flash()->addSuccess('Berhasil menambahkan paket!');
         } else {
-            flash()->addError('Gagal menambahkan paket');
+            flash()->addError('Gagal menambahkan paket!');
         }
         return redirect()->route('admin.periods.index');
     }
@@ -83,9 +88,11 @@ class PeriodController extends Controller
      */
     public function edit($id)
     {
+        $categories = Category::all();
         $period = Period::findOrFail($id);
         $data = [
-            'title' => 'Ubah',
+            'title' => 'Ubah Paket',
+            'categories' => $categories,
             'period' => $period,
             'url' => route('admin.periods.update', $id)
         ];
@@ -104,16 +111,17 @@ class PeriodController extends Controller
         $period = Period::findOrFail($id);
         $data = $request->validate([
             'name' => 'string|required',
-            'discount' => 'numeric|required',
+            'price' => 'numeric|required',
             'stock' => 'numeric|required',
             'start' => 'nullable|date',
             'end' => 'nullable|date',
             'is_active' => 'required|boolean',
+            'category_id' => 'required|int',
         ]);
         if ($period->update($data)) {
-            flash()->addSuccess('Berhasil memperbarui paket');
+            flash()->addSuccess('Berhasil memperbarui paket!');
         } else {
-            flash()->addError('Gagal memperbarui paket');
+            flash()->addError('Gagal memperbarui paket!');
         }
         return redirect()->route('admin.periods.index');
     }
@@ -128,11 +136,10 @@ class PeriodController extends Controller
     {
         $period = Period::findOrFail($id);
         $name = $period->name;
-        // dd($period);
         if ($period->delete()) {
-            flash()->addSuccess('Berhasil menghapus paket '. $name);
+            flash()->addSuccess('Berhasil menghapus paket ' . $name . '!');
         } else {
-            flash()->addError('Gagal menghapus paket');
+            flash()->addError('Gagal menghapus paket!');
         }
         return redirect()->route('admin.periods.index');
     }
