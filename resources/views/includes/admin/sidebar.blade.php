@@ -21,6 +21,12 @@
                 </svg> 
                 Scanner Barcode
             </a>
+            <a class="nav-link" href="{{ route('admin.event.index') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-cog') }}"></use>
+                </svg> 
+                Manage Event
+            </a>
         </li>
         {{-- Transaction routes --}}
         <li class="nav-title">Transactions</li>
