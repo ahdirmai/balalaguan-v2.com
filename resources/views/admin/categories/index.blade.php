@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin.base')
+
+@push('style')
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
+@endpush
 
 @section('content')
     <div class="container">
@@ -18,7 +22,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $c->name }}</td>
-                        <td>{{ $c->benefit }}</td>
+                        <td>{!! $c->benefit !!}</td>
                         <td>
                             <a href="{{ route('admin.categories.edit', $c->id) }}" class="btn btn-warning">Ubah</a>
 

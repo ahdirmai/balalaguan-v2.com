@@ -52,7 +52,7 @@ class CategoryController extends Controller
         } else {
             flash()->addError('Gagal menambahkan kategori!');
         }
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('admin.categories.create');
     }
 
     /**
