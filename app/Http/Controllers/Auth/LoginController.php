@@ -42,7 +42,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('pages.login');
     }
 
     protected function authenticated(Request $request, $user)

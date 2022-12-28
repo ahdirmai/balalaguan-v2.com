@@ -34,10 +34,17 @@
             <div class="dropdown-menu dropdown-menu-end pt-0">
             <div class="dropdown-header py-2">
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
                 <svg class="icon me-2">
-                <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-account-logout') }}"></use>
-                </svg> Logout</a>
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-account-logout') }}"></use>
+                </svg>
+                Logout
+                {{-- Logout form --}}
+                <form id="logout-form" class="d-none" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
+            </a>
             </div>
         </li>
         </ul>
