@@ -1,4 +1,4 @@
-<footer class="footer bg-light" style="padding: 4rem">
+<footer class="" style="padding: 3rem">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
@@ -16,13 +16,13 @@
             <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item me-4">
-                        <a href="#!"><i class="fa-brands fa-facebook fs-3"></i></a>
+                        <a href="#!"><i class="text-brand-dark-blue fa-brands fa-facebook fs-3"></i></a>
                     </li>
                     <li class="list-inline-item me-4">
-                        <a href="#!"><i class="fa-brands fa-twitter fs-3"></i></a>
+                        <a href="#!"><i class="text-brand-dark-blue fa-brands fa-twitter fs-3"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#!"><i class="fa-brands fa-instagram fs-3"></i></a>
+                        <a href="#!"><i class="text-brand-dark-blue fa-brands fa-instagram fs-3"></i></a>
                     </li>
                 </ul>
             </div>
