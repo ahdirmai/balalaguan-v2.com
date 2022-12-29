@@ -27,6 +27,12 @@
                 </svg> 
                 Manage Event
             </a>
+            <a class="nav-link" href="{{ route('admin.ticket.index') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-cog') }}"></use>
+                </svg> 
+                Guest Status
+            </a>
         </li>
         {{-- Transaction routes --}}
         <li class="nav-title">Transactions</li>

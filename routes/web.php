@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\PhaseController;
+use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TransactionController;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
@@ -52,7 +53,9 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
 
     // Transaction
     Route::resource('transactions', TransactionController::class);
-    
+
+    // Ticket
+    Route::resource('ticket', TicketController::class);
 });
 
 Route::middleware('role:user')->group(function () {
