@@ -1,0 +1,18 @@
+:root {
+    --brand-red: #E44275;
+    --brand-blue: #B47FB6;
+    --brand-dark-blue: #2E2166;
+}
+
+/* background */
+.bg-brand-red {
+    background-color: var(--brand-red) !important;
+}
+
+.bg-brand-blue {
+    background-color: var(--brand-blue) !important;
+}
+
+.bg-brand-dark-blue {
+    background-color: var(--brand-dark-blue) !important;
+}
