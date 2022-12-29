@@ -12,7 +12,7 @@ class Transaction extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
 
-    protected $fillable = ['id', 'user_id', 'period_id', 'quantity', 'is_paid'];
+    protected $fillable = ['id', 'user_id', 'period_id', 'quantity', 'is_paid', 'is_verified'];
 
     public function period()
     {

@@ -61,6 +61,9 @@
                                 <form action="{{ route('admin.transactions.update', $t->id) }}" method="post">
                                     @csrf
                                     @method('PUT')
+                                    <input type="hidden" name="quantity" value="{{ $t->quantity }}">
+                                    <input type="hidden" name="period_id" value="{{ $t->period->id }}">
+                                    <input type="hidden" name="chance_id" value="{{ $t->user->chances[0]->id }}">
                                     <button type="submit" class="btn btn-primary">Verifikasi</button>
                                 </form>
                             </x-base.modal-confirm>
