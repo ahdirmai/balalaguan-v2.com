@@ -61,7 +61,10 @@
                 </select>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-save"></i>
+                    Submit
+                </button>
             </div>
         </form>
     </div>

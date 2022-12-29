@@ -38,7 +38,7 @@ class PeriodController extends Controller
         $categories = Category::all();
         $phases = Phase::all();
         $data = [
-            'title' => 'Tambah Paket',
+            'title' => 'Tambah Harga Baru',
             'url' => route('admin.periods.store'),
             'categories' => $categories,
             'phases' => $phases,
@@ -63,9 +63,9 @@ class PeriodController extends Controller
             'category_id' => 'required|int',
         ]);
         if (Period::create($data)) {
-            flash()->addSuccess('Berhasil menambahkan paket!');
+            flash()->addSuccess('Berhasil menambahkan harga baru!');
         } else {
-            flash()->addError('Gagal menambahkan paket!');
+            flash()->addError('Gagal menambahkan harga!');
         }
         return redirect()->route('admin.periods.index');
     }
@@ -93,7 +93,7 @@ class PeriodController extends Controller
         $period = Period::findOrFail($id);
         $phases = Phase::all();
         $data = [
-            'title' => 'Ubah Paket',
+            'title' => 'Ubah Harga',
             'categories' => $categories,
             'period' => $period,
             'phases' => $phases,
@@ -120,9 +120,9 @@ class PeriodController extends Controller
             'category_id' => 'required|int',
         ]);
         if ($period->update($data)) {
-            flash()->addSuccess('Berhasil memperbarui paket!');
+            flash()->addSuccess('Berhasil memperbarui harga!');
         } else {
-            flash()->addError('Gagal memperbarui paket!');
+            flash()->addError('Gagal memperbarui harga!');
         }
         return redirect()->route('admin.periods.index');
     }
@@ -138,9 +138,9 @@ class PeriodController extends Controller
         $period = Period::findOrFail($id);
         $name = $period->name;
         if ($period->delete()) {
-            flash()->addSuccess('Berhasil menghapus paket ' . $name . '!');
+            flash()->addSuccess('Berhasil menghapus list harga untuk ' . $name . '!');
         } else {
-            flash()->addError('Gagal menghapus paket!');
+            flash()->addError('Gagal menghapus list harga!');
         }
         return redirect()->route('admin.periods.index');
     }

@@ -29,7 +29,7 @@ class PhaseController extends Controller
     public function create()
     {
         $data = [
-            'title' => 'Tambah Tipe Paket',
+            'title' => 'Tambah Paket Tiket',
             'url' => route('admin.phases.store'),
         ];
         return view('pages.admin.phases.form', $data);
@@ -49,9 +49,9 @@ class PhaseController extends Controller
             'end' => 'required|date',
         ]);
         if (Phase::create($data)) {
-            flash()->addSuccess('Berhasil menambahkan tipe paket!');
+            flash()->addSuccess('Berhasil menambahkan paket tiket!');
         } else {
-            flash()->addError('Gagal menambahkan tipe paket!');
+            flash()->addError('Gagal menambahkan paket tiket!');
         }
         return redirect()->route('admin.phases.index');
     }
@@ -77,7 +77,7 @@ class PhaseController extends Controller
     {
         $phase = Phase::findOrFail($id);
         $data = [
-            'title' => 'Edit Tipe Paket',
+            'title' => 'Edit paket tiket',
             'url' => route('admin.phases.update', $id),
             'phase' => $phase,
         ];
@@ -100,9 +100,9 @@ class PhaseController extends Controller
             'end' => 'required|date',
         ]);
         if ($phase->update($data)) {
-            flash()->addSuccess('Berhasil memperbarui tipe paket!');
+            flash()->addSuccess('Berhasil memperbarui paket tiket!');
         } else {
-            flash()->addError('Gagal memperbarui tipe paket!');
+            flash()->addError('Gagal memperbarui paket tiket!');
         }
         return redirect()->route('admin.phases.index');
     }
@@ -118,9 +118,9 @@ class PhaseController extends Controller
         $phase = Phase::findOrFail($id);
         $name = $phase->name;
         if ($phase->delete()) {
-            flash()->addSuccess('Berhasil menghapus tipe paket ' . $name . '!');
+            flash()->addSuccess('Berhasil menghapus paket tiket ' . $name . '!');
         } else {
-            flash()->addError('Gagal menghapus tipe paket!');
+            flash()->addError('Gagal menghapus paket tiket!');
         }
         return redirect()->route('admin.phases.index');
     }
