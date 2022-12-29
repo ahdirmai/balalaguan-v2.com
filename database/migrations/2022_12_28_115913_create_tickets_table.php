@@ -17,9 +17,9 @@ class CreateTicketsTable extends Migration
 
         Schema::create('tickets', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('transactions_id');
+            $table->integer('transaction_id');
             $table->string('token');
-            $table->string('status');
+            $table->boolean('is_checked_in');
             $table->integer('event_id');
             $table->timestamps();
         });

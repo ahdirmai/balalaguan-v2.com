@@ -21,6 +21,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('period_id');
             $table->integer('quantity');
             $table->boolean('is_paid')->default(false);
+            $table->boolean('is_verified')->default(false);
             $table->timestamps();
         });
 
