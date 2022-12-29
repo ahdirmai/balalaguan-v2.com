@@ -3,6 +3,10 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+.col-half {
+    width: 100%;
+}
+
 #mainNav {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
@@ -48,6 +52,9 @@ hr.divider {
 @media (min-width: 768px) {
     .showcase .showcase-text {
         padding: 7rem;
+    }
+    .col-half {
+        width: 47% !important;
     }
 }
 

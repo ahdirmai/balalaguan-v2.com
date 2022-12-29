@@ -32,9 +32,8 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        //
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -44,6 +43,7 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         //
+        // return view('pages.user.transaction.detail');
     }
 
     /**
@@ -142,4 +142,5 @@ class TransactionController extends Controller
     {
         //
     }
+
 }

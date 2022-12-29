@@ -15,12 +15,6 @@
             </div>
             <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                 <ul class="list-inline mb-0">
-                    <li class="list-inline-item me-4">
-                        <a href="#!"><i class="text-brand-dark-blue fa-brands fa-facebook fs-3"></i></a>
-                    </li>
-                    <li class="list-inline-item me-4">
-                        <a href="#!"><i class="text-brand-dark-blue fa-brands fa-twitter fs-3"></i></a>
-                    </li>
                     <li class="list-inline-item">
                         <a href="#!"><i class="text-brand-dark-blue fa-brands fa-instagram fs-3"></i></a>
                     </li>
