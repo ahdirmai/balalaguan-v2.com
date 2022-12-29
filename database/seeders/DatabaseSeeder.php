@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             EventSeeder::class,
+            CategorySeeder::class,
+            PhaseSeeder::class,
         ]);
     }
 }

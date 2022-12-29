@@ -97,6 +97,23 @@
                 Add New Package
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.phases.index') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bar-chart') }}"></use>
+                </svg> 
+                Semua Tipe Paket
+                <span class="badge badge-sm bg-info ms-auto">23+</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.phases.create') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-plus') }}"></use>
+                </svg> 
+                Tambah Tipe Paket
+            </a>
+        </li>
         {{-- End of Ticket Package routes --}}
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>

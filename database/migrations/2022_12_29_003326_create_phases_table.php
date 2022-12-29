@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePeriodsTable extends Migration
+class CreatePhasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,15 +15,11 @@ class CreatePeriodsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('periods', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('phases', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
-            $table->integer('price');
-            $table->dateTime('start')->nullable();
-            $table->dateTime('end')->nullable();
-            $table->integer('stock');
-            $table->boolean('is_active')->default(false);
-            $table->bigInteger('category_id');
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
             $table->timestamps();
         });
 
@@ -37,6 +33,6 @@ class CreatePeriodsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('periods');
+        Schema::dropIfExists('phases');
     }
 }
