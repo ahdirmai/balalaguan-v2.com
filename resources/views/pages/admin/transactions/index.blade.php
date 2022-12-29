@@ -16,8 +16,8 @@
                     <th>Paket</th>
                     <th>Jumlah Tiket</th>
                     <th>Total Bayar</th>
+                    <th>Tanggal</th>
                     <th>Status</th>
-                    <th>Bukti Pembayaran</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -30,28 +30,27 @@
                         <td>{{ $t->period->phase->name }}</td>
                         <td>{{ $t->quantity }}</td>
                         <td>{{ $t->quantity * $t->period->price }}</td>
+                        <td>{{ date('l, j F Y H:i', strtotime($t->created_at)) }}</td>
                         <td>{{ $t->is_paid == 1 ? 'Sudah Bayar' : 'Belum Bayar' }}</td>
                         <td>
                             {{-- Lihat bukti pembayaran --}}
-                            <button type="button" class="btn btn-success" data-coreui-toggle="modal"
+                            <button title="Lihat bukti pembayaran" type="button" class="btn btn-success" data-coreui-toggle="modal"
                                 data-coreui-target="#buktiModal{{ $t->id }}">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
 
                             <!-- Modal Lihat bukti pembayaran -->
-                            <x-base.modal-confirm modal-id="buktiModal{{ $t->id }}" title="Konfirmasi"
-                                sub-title="Bukti pembayaran pembelian tiket dari {{ $t->user->name }}">
+                            <x-base.modal modal-id="buktiModal{{ $t->id }}" title="Bukti pembayaran dari {{ $t->user->name }}">
                                 <div class="col-12 mb-4">
                                     <div class="mb-2">
                                         <img src="{{ $t->hasMedia('image')? @$t->getMedia('image')->last()->getUrl(): 'https://img.freepik.com/free-vector/realistic-receipt-template_23-2147938550.jpg?w=360' }}"
-                                            class="img-thumbnail" alt="...">
+                                            class="" style="width: 100%" alt="...">
                                     </div>
                                 </div>
-                            </x-base.modal-confirm>
-                        </td>
-                        <td>
+                            </x-base.modal>
+
                             {{-- Verifikasi Pembayaran --}}
-                            <button type="button" class="btn btn-primary" data-coreui-toggle="modal"
+                            <button type="button" title="Verifikasi pembayaran" class="btn btn-primary" data-coreui-toggle="modal"
                                 data-coreui-target="#verifModal{{ $t->id }}">
                                 <i class="fa-solid fa-check"></i>
                             </button>
