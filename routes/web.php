@@ -5,6 +5,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\PhaseController;
+use App\Http\Controllers\TransactionController;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +49,9 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     // Event
     Route::get('event', [EventController::class, 'index'])->name('event.index');
     Route::put('event', [EventController::class, 'update'])->name('event.update');
+
+    // Transaction
+    Route::resource('transactions', TransactionController::class);
     
 });
 
