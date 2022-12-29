@@ -14,7 +14,12 @@ class TicketController extends Controller
      */
     public function index()
     {
-        //
+        $tickets = Ticket::with(['transaction.period.category', 'transaction.user'])->get();
+        $data = [
+            'tickets' => $tickets,
+        ];
+        // return response()->json($data);
+        return view('pages.admin.ticket.index', $data);
     }
 
     /**

@@ -19,10 +19,10 @@ class EventSeeder extends Seeder
         $data = [
             'name' => 'Balalaguan',
             'description' => 'lorem ipsum',
-            'payment_name' => 'Oka R Abdillah',
+            'payment_name' => 'Oka R Abdillah (Dana)',
             'payment_account' => '123456789012',
-            'contact_name' => 'Oka',
-            'contact_number' => '081917259445',
+            'contact_name' => 'Oka (Whatsapp)',
+            'contact_number' => '081923657893',
         ];
 
         Event::create($data);
