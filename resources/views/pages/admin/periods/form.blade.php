@@ -9,9 +9,15 @@
                 @method('PUT')
             @endif
             <div class="col-12 mb-4">
-                <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Masukkan nama paket"
-                    required value="{{ @$period->name ?? old('name') }}">
+                <label class="form-check-label" for="name">
+                    Nama
+                </label>
+                <select class="form-select form-select-lg" aria-label="name" id="name" name="phase_id">
+                    @foreach ($phases as $ph)
+                        <option value="{{ $ph->id }}" {{ @$period->phase_id == $ph->id ? 'selected' : '' }}>
+                            {{ $ph->name }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="row mb-4">
                 <div class="col-6">
@@ -26,20 +32,8 @@
                 </div>
             </div>
 
-            <div class="row mb-4">
-                <div class="col-6">
-                    <label for="start" class="form-label">Waktu Periode dimulai (opsional)</label>
-                    <input type="datetime-local" class="form-control form-control-lg" id="start" name="start"
-                        value="{{ @$period->start ?? old('start') }}">
-                </div>
-                <div class="col-6">
-                    <label for="end" class="form-label">Waktu Periode berakhir (opsional)</label>
-                    <input type="datetime-local" class="form-control form-control-lg" id="end" name="end"
-                        value="{{ @$period->end ?? old('end') }}">
-                </div>
-            </div>
             <div class="col-12 mb-4 d-flex gap-4">
-                <label>Status Periode</label>
+                <label>Status Paket</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="is_active" id="is_active1" value="1"
                         {{ @$period->is_active == 1 ? 'checked' : '' }}>

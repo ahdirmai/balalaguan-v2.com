@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Period;
+use App\Models\Phase;
 use DateTime;
 use Exception;
 use GuzzleHttp\Promise\Create;
@@ -20,7 +21,7 @@ class PeriodController extends Controller
      */
     public function index()
     {
-        $periods = Period::with('category')->get();
+        $periods = Period::with('category', 'phase')->get();
         $data = [
             'periods' => $periods,
         ];
@@ -35,10 +36,12 @@ class PeriodController extends Controller
     public function create()
     {
         $categories = Category::all();
+        $phases = Phase::all();
         $data = [
             'title' => 'Tambah Paket',
             'url' => route('admin.periods.store'),
             'categories' => $categories,
+            'phases' => $phases,
         ];
         return view('pages.admin.periods.form', $data);
     }
@@ -53,11 +56,9 @@ class PeriodController extends Controller
     {
         // dd($request);
         $data = $request->validate([
-            'name' => 'string|required',
+            'phase_id' => 'numeric|required',
             'price' => 'numeric|required',
             'stock' => 'numeric|required',
-            'start' => 'nullable|date',
-            'end' => 'nullable|date',
             'is_active' => 'required|boolean',
             'category_id' => 'required|int',
         ]);
@@ -90,10 +91,12 @@ class PeriodController extends Controller
     {
         $categories = Category::all();
         $period = Period::findOrFail($id);
+        $phases = Phase::all();
         $data = [
             'title' => 'Ubah Paket',
             'categories' => $categories,
             'period' => $period,
+            'phases' => $phases,
             'url' => route('admin.periods.update', $id)
         ];
         return view('pages.admin.periods.form', $data);
@@ -110,11 +113,9 @@ class PeriodController extends Controller
     {
         $period = Period::findOrFail($id);
         $data = $request->validate([
-            'name' => 'string|required',
+            'phase_id' => 'numeric|required',
             'price' => 'numeric|required',
             'stock' => 'numeric|required',
-            'start' => 'nullable|date',
-            'end' => 'nullable|date',
             'is_active' => 'required|boolean',
             'category_id' => 'required|int',
         ]);

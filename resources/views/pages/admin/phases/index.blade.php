@@ -12,25 +12,21 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Paket</th>
-                    <th>Harga</th>
-                    <th>Stok</th>
-                    <th>Kategori tiket</th>
-                    <th>Status</th>
+                    <th>Waktu dimulai</th>
+                    <th>Waktu berakhir</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($periods as $p)
+                @foreach ($phases as $p)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $p->phase->name }}</td>
-                        <td>{{ $p->price }}</td>
-                        <td>{{ $p->stock }}</td>
-                        <td>{{ $p->category->name }}</td>
-                        <td>{{ $p->is_active==1 ? 'Aktif' : 'Non-Aktif' }}</td>
+                        <td>{{ $p->name }}</td>
+                        <td>{{ $p->start }}</td>
+                        <td>{{ $p->end }}</td>
                         <td>
                             {{-- Update --}}
-                            <a href="{{ route('admin.periods.edit', $p->id) }}" class="btn btn-primary">
+                            <a href="{{ route('admin.phases.edit', $p->id) }}" class="btn btn-primary">
                                 <i class="fa-solid fa-edit"></i>
                             </a>
                             {{-- Delete --}}
@@ -41,7 +37,7 @@
 
                             <!-- Modal -->
                             <x-base.modal-confirm modal-id="deleteModal{{ $p->id }}" title="Konfirmasi" sub-title="Apakah anda yakin ingin menghapus paket {{ $p->name }}">
-                                <form action="{{ route('admin.periods.destroy', $p->id) }}" method="post">
+                                <form action="{{ route('admin.phases.destroy', $p->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Hapus</button>

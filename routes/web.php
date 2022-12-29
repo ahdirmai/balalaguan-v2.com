@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PeriodController;
+use App\Http\Controllers\PhaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,9 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     //Category
     Route::resource('categories', CategoryController::class);
     
+    // Phase
+    Route::resource('phases', PhaseController::class);
+
     // Period
     Route::resource('periods', PeriodController::class);
 
