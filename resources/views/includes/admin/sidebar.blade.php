@@ -37,7 +37,7 @@
         {{-- Transaction routes --}}
         <li class="nav-title">Transactions</li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('admin.transactions.indexAll') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bank') }}"></use>
                 </svg> 
@@ -51,15 +51,6 @@
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user-x') }}"></use>
                 </svg> 
                 Unverified
-                <span class="badge badge-sm bg-info ms-auto">23+</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <svg class="nav-icon">
-                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user') }}"></use>
-                </svg> 
-                Accounts
                 <span class="badge badge-sm bg-info ms-auto">23+</span>
             </a>
         </li>

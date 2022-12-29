@@ -25,6 +25,16 @@ class TransactionController extends Controller
         return view('pages.admin.transactions.index', $data);
     }
 
+    public function indexAll()
+    {
+        $transactions = Transaction::with(['period.category', 'period.phase', 'user.chances'])->get();
+        $data = [
+            'transactions' => $transactions,
+        ];
+        // return response()->json($data);
+        return view('pages.admin.transactions.indexAll', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,7 +62,7 @@ class TransactionController extends Controller
      * @param  \App\Models\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
-    public function show(Transaction $transaction)
+    public function show()
     {
         //
     }

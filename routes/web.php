@@ -52,6 +52,7 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     Route::put('event', [EventController::class, 'update'])->name('event.update');
 
     // Transaction
+    Route::get('transactions/all', [TransactionController::class, 'indexAll'])->name('transactions.indexAll');
     Route::resource('transactions', TransactionController::class);
 
     // Ticket
