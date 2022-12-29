@@ -9,7 +9,7 @@
     @include('includes.user.navbar')
     @yield('outer')
     <main class="bg-light">
-        <section class="container-lg">
+        <section class="container-lg p-4">
             @yield('content')
         </section>
     </main>

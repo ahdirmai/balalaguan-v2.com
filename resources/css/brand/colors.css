@@ -16,3 +16,29 @@
 .bg-brand-dark-blue {
     background-color: var(--brand-dark-blue) !important;
 }
+
+/* Text color */
+.text-brand-red {
+    color: var(--brand-red) !important;
+}
+
+.text-brand-blue {
+    color: var(--brand-blue) !important;
+}
+
+.text-brand-dark-blue {
+    color: var(--brand-dark-blue) !important;
+}
+
+/* Border colors */
+.border-brand-red {
+    border-color: var(--brand-red) !important;
+}
+
+.border-brand-blue {
+    border-color: var(--brand-blue) !important;
+}
+
+.border-brand-dark-blue {
+    border-color: var(--brand-dark-blue) !important;
+}
