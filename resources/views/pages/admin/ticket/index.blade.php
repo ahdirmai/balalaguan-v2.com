@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container">
-        <table id="table" class="table table-striped">
+        <table id="table" class="table table-striped display nowrap" style="width: 100%">
             <thead>
                 <tr>
                     <th>No</th>
@@ -38,7 +38,9 @@
 @push('script')
     <script>
         $(document).ready( function() {
-            $('#table').DataTable()
+            $('#table').DataTable({
+                scrollX: true
+            })
         })
     </script>
 @endpush

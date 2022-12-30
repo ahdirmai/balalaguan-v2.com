@@ -124,7 +124,7 @@ class UserTransactionController extends Controller
             flash()->addError('Upload gagal!');
             return redirect()->route('user.transaction.show', $id);
         }
-        return redirect()->route('landing-page');
+        return redirect()->route('user.transaction.index');
         // return redirect()->route('');
 
 

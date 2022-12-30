@@ -12,11 +12,11 @@
                     <img style="cursor: pointer" class="img-thumbnail rounded-circle dropdown-toggle" width="40" height="40" src="{{ asset('/core-ui/img/avatars/2.jpg') }}" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li>
-                            <span class="dropdown-item">
+                            <a href="{{ route('user.profile') }}" class="dropdown-item {{ Request::routeIs('user.profile') ? 'active' : '' }}">
                                 <small class="text-muted">Akun</small>
                                 <br>
                                 <small>{{ Str::limit(auth()->user()->name, 15) }}</small>
-                            </span>
+                            </a>
                         </li>
                         <li><a class="dropdown-item {{ Request::routeIs('user.transaction.index') ? 'active' : '' }}" href="{{ route('user.transaction.index') }}">Pesanan</a></li>
                         <li><a class="dropdown-item {{ Request::routeIs('user.ticket.index') ? 'active' : '' }}" href="{{ route('user.ticket.index') }}">Tiket</a></li>
