@@ -38,7 +38,7 @@
 {{-- modal --}}
 <div class="modal fade" id="qrcode-{{ $id }}" tabindex="-1" aria-labelledby="qrcode-{{ $id }}"
     aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="qrcode-{{ $id }}">QR Code Anda</h1>
@@ -46,8 +46,6 @@
             </div>
             <div class="modal-body">
                 <div class="mb-2">
-                    {{-- <img src="https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png"
-                        class="" style="width: 100%" alt="..."> --}}
                     <div class="mb-3 d-flex justify-content-center" style="width: 100%">{!! DNS2D::getBarcodeHTML( $qrcode, 'QRCODE') !!}</div>
                 </div>
             </div>

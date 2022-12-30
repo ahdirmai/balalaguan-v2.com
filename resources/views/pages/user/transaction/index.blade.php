@@ -9,7 +9,7 @@
                     <x-user.transaction-card :id="$tr->id" :package="$tr->period->phase->name" :category="$tr->period->category->name" :amount="$tr->quantity" :timestamp="$tr->created_at" :isVerified="$tr->is_verified" />
                 @endforeach
             @else
-                <span class="text=center text-light">
+                <span class="text-center text-light">
                     <p>
                         Ups, anda belum mempunyai pesanan saat ini, yuuk mulai buat pesanan anda <a class="text-brand-red" href="{{ route('landing-page') }}">disini</a>
                     </p>

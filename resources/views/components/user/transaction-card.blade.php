@@ -28,9 +28,13 @@
             <h6>{{ date_format(new DateTime($timestamp), 'l, d F Y g:i a') }}</h6>
         </span>
     </section>
+    @if (!$isVerified)    
     <section class="mt-3 mt-lg-0">
-        <a href="{{ route('user.transaction.show', $id) }}" @disabled($isVerified) class="btn bg-brand-red  text-light" title="Upload bukti pembayaran">
+        <a href="{{ route('user.transaction.show', $id) }}" class="btn bg-brand-red  text-light" title="Upload bukti pembayaran">
             <span>Konfirmasi pembayaran</span>
         </a>
     </section>
+    @else
+        <span>Lunas</span>
+    @endif
 </section>

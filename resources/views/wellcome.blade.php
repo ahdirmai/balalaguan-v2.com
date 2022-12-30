@@ -6,14 +6,14 @@
             position: relative;
             text-align: right;
             height: 300px;
-            width: 400px;
+            width: 100%;
         }
 
         .gmap_canvas {
             overflow: hidden;
             background: none !important;
             height: 300px;
-            width: 400px;
+            width: 100%;
         }
     </style>
 @endpush
@@ -26,7 +26,7 @@
     {{-- Overlapping Section --}}
     <section style="transform: translateY(-50%)"
         class="container-lg bg-white p-2 rounded-3 mx-auto shadow d-flex flex-column-reverse flex-md-row justify-content-between">
-        <div class="bg-brand-red d-flex justify-content-center align-items-center text-light px-3 rounded-3">Kunjungi</div>
+        <div class="bg-brand-red d-flex justify-content-center align-items-center text-light px-3 py-3 py-lg-0 rounded-3">Kunjungi</div>
         {{-- Lokasi acara --}}
         <section class="d-flex align-items-center gap-4 p-3">
             <span class="border p-3 rounded-circle d-flex justify-content-center align-items-center"
@@ -70,14 +70,14 @@
                     <hr class="divider divider-light" />
                     <section class="d-flex justify-content-between row gap-4 mt-2">
                         {{-- Map embeded --}}
-                        <div class="mapouter col-6">
+                        <div class="mapouter col-lg-6">
                             <div class="gmap_canvas">
-                                <iframe width="600" height="500" id="gmap_canvas"
+                                <iframe style="width: 100%" height="500" id="gmap_canvas"
                                     src="https://maps.google.com/maps?q=universitas%20muhammadiyah%20banjarmasin&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </div>
                         </div>
-                        <section class="col-6">
+                        <section class="col-lg-6">
                             <p class="text-white-75 mb-4">Anim incididunt consectetur exercitation ad aute officia in irure.
                                 Nisi elit ea excepteur proident ipsum ex aute irure commodo ullamco do. Officia ea ex
                                 aliquip velit eiusmod adipisicing eu velit irure cillum ea nulla. Incididunt laboris

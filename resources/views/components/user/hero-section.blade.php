@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     min-height: 120vh;
     ">
-    <div class="container px-5 pt-5">
+    <div class="container px-5" style="padding-top: 5rem">
         <div class="row gap-2 gx-5 justify-content-center">
             {{ $slot }}
         </div>
