@@ -23,4 +23,9 @@ class Transaction extends Model implements HasMedia
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class, 'transaction_id', 'id');
+    }
 }

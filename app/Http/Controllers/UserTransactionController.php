@@ -17,7 +17,12 @@ class UserTransactionController extends Controller
      */
     public function index()
     {
-        //
+        $transactions = Transaction::where('user_id', auth()->user()->id)->with('period.category', 'period.phase', 'tickets')->get();
+        $data = [
+            'transactions' => $transactions,
+        ];
+        // return response()->json($data);
+        return view('pages.user.transaction.index', $data);
     }
 
     /**
@@ -74,9 +79,10 @@ class UserTransactionController extends Controller
     public function show($id)
     {
         // dd($id);
-        $transaction = Transaction::findOrFail($id);
+        $transaction = Transaction::where('id', $id)
+        ->with('period.category', 'period.phase', 'tickets')->get();
         $data = [
-            'transaction' => $transaction,
+            'transaction' => $transaction[0],
         ];
         // return response()->json($data);
         return view('pages.user.transaction.payment', $data);

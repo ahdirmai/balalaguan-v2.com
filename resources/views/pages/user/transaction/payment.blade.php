@@ -10,7 +10,11 @@
             <section class="py-2 d-flex gap-5" style="border-top: 1px dashed #ebe4e4">
                 <span>
                     <small class="text-muted">Tiket</small>
-                    <h6>VIP</h6>
+                    <h6>{{ $transaction->period->category->name }}</h6>
+                </span>
+                <span>
+                    <small class="text-muted">Paket</small>
+                    <h6>{{ $transaction->period->phase->name }}</h6>
                 </span>
                 <span>
                     <small class="text-muted">Jumlah</small>
@@ -18,7 +22,11 @@
                 </span>
                 <span>
                     <small class="text-muted">Tanggal Pemesanan</small>
-                    <h6>{{ date_format(new DateTime('now'), 'l, d F Y g:i a') }}</h6>
+                    <h6>{{ date_format(new DateTime($transaction->created_at), 'l, d F Y g:i a') }}</h6>
+                </span>
+                <span>
+                    <small class="text-muted">Total Pembayaran</small>
+                    <h6>IDR {{ $transaction->quantity * $transaction->period->price }}</h6>
                 </span>
             </section>
             <form class="py-2" method="post" action="{{ route('user.transaction.update', $transaction->id) }}"

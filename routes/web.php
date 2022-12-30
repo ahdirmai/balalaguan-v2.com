@@ -49,7 +49,7 @@ Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
     Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
     Route::get('transaction/{period_id}/{amount}', [UserTransactionController::class, 'create'])->name('transaction.create');
     Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
-    Route::get('transaction', function() { return view('pages.user.transaction.index'); })->name('transaction.index');
+    Route::get('transaction', [UserTransactionController::class, 'index'])->name('transaction.index');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
