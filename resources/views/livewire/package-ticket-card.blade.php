@@ -9,11 +9,12 @@
             {{-- Category ticket --}}
             <section class="mt-3">
                 <section>
-                    @foreach ($categories as $c)
+                    @foreach ($categories as $key => $c)
                         <div class="form-check form-check-inline">
                             <input wire:model="category_id" wire:input="setCategoryPrice" class="form-check-input"
-                                type="radio" name="category_id" id="value-1" value="{{ $c->id }}">
-                            <label class="form-check-label" for="category_id">{{ $c->name }}</label>
+                                type="radio" name="category_id" id="value-1" value="{{ $c->id }}"
+                                @disabled($getPeriod[$key]->is_active == 0) @disabled($getPeriod[$key]->stock <= 0)>
+                            <label class="form-check-label" for="category_id">{{ $c->name }} {{ $getPeriod[$key]->stock <= 0 ? ' (Stok habis)' : '' }}</label>
                         </div>
                     @endforeach
                 </section>
@@ -26,8 +27,12 @@
                     <small class="text-muted">Harga</small>
                     <p>
                         @if (auth()->check())
-                            {{-- {{ $this->category_id }} --}}
-                            {{ @$period->price ? 'IDR ' . number_format($period->price, 0, ',', '.') : 'Pilih Kategori' }}
+                            @if ($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)
+                                IDR ******
+                            @else
+                                {{-- {{ $this->category_id }} --}}
+                                {{ @$period->price ? 'IDR ' . $period->price : 'Pilih Kategori' }}
+                            @endif
                         @else
                             IDR ******
                         @endif
@@ -35,7 +40,8 @@
                 </span>
                 <span>
                     <button wire:click="expanded({{ $phaseid }})" @disabled(!auth()->check())
-                        class="btn bg-brand-red px-4 text-light" type="button">Pilih</button>
+                        @disabled($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)@disabled($getPeriod[0]->stock <= 0 && $getPeriod[1]->stock <= 0) class="btn bg-brand-red px-4 text-light"
+                        type="button">Pilih</button>
                 </span>
             </section>
         @else
@@ -74,8 +80,9 @@
                 <section class="d-flex justify-content-end mt-3">
                     <button wire:click="expanded({{ $phaseid }})" type="button"
                         class="btn btn-outline-secondary me-3">Batal</button>
-                    <button @disabled(!@$period->price) wire:click="order({{ $amounts }}, {{ @$period->id ?? 0 }})" type="button"
-                        class="btn bg-brand-red px-3 text-light">Pesan Sekarang</button>
+                    <button wire:click="order({{ $amounts }}, {{ @$period->id ?? 0 }})"
+                        @if ($period) @disabled($period->is_active == 0) @disabled($period->stock <= 0) @endif
+                        type="button" class="btn bg-brand-red px-3 text-light">Pesan Sekarang</button>
                 </section>
             </section>
         @endif

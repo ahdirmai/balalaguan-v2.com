@@ -7,6 +7,7 @@ use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\PhaseController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserTicketController;
 use App\Http\Controllers\UserTransactionController;
 use App\Models\Category;
 use App\Models\Period;
@@ -49,8 +50,8 @@ Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
     Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
     Route::get('transaction/{period_id}/{amount}', [UserTransactionController::class, 'create'])->name('transaction.create');
     Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
-    Route::get('transaction', function() { return view('pages.user.transaction.index'); })->name('transaction.index');
-    Route::get('ticket', function() { return view('pages.user.ticket.index'); })->name('ticket.index');
+    // Route::get('transaction', function() { return view('pages.user.transaction.index'); })->name('transaction.index');
+    Route::get('ticket', [UserTicketController::class, 'index'])->name('ticket.index');
     Route::get('transaction', [UserTransactionController::class, 'index'])->name('transaction.index');
 });
 

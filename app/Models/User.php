@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Chance::class, 'id');
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'id');
+    }
 }

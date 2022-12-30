@@ -13,7 +13,7 @@
         <div class="col-5">
             <span>
                 <small class="text-muted">Tanggal</small>
-                <h6>{{ date_format(new DateTime('now'), 'l, d F Y g:i a') }}</h6>
+                <h6>{{ $isCheckIn ? date_format(new DateTime($date), 'l, d F Y g:i a') : 'Belum Check In' }}</h6>
             </span>
         </div>
         <div class="col-5">
@@ -32,7 +32,7 @@
         </div>
     </section>
     <button class="btn bg-brand-red px-3 col-12 text-light mt-3" data-bs-toggle="modal"
-    data-bs-target="#qrcode-{{ $id }}">Lihat QR Code</button>
+        data-bs-target="#qrcode-{{ $id }}">Lihat QR Code</button>
 </section>
 
 {{-- modal --}}
@@ -41,14 +41,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="qrcode-{{ $id }}">Qr Code Anda</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                <h1 class="modal-title fs-5" id="qrcode-{{ $id }}">{{ $qrcode }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="mb-2">
-                    <img src="https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png"
-                        class="" style="width: 100%" alt="...">
+                    {{-- <img src="https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png"
+                        class="" style="width: 100%" alt="..."> --}}
+                    <div class="mb-3 d-flex justify-content-center" style="width: 100%">{!! DNS2D::getBarcodeHTML( $qrcode, 'QRCODE') !!}</div>
                 </div>
             </div>
             <div class="modal-footer">

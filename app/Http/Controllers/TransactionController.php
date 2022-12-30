@@ -116,7 +116,7 @@ class TransactionController extends Controller
                         for ($i = 0; $i < $quantity; $i++) {
                             $token = $username . uniqid();
                             $ticket = [
-                                'transaction_id' => $transactionGet[0]->id,
+                                'transaction_id' => $transaction->id,
                                 'token' => $token,
                                 'is_checked_in' => 0,
                                 'event_id' => 1,
