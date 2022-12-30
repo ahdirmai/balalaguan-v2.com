@@ -24,10 +24,16 @@
         <section class="py-3 d-flex align-items-center justify-content-between" style="border-top: 1px dashed #ebe4e4">
             <span>
                 <small class="text-muted">Harga</small>
-                <p>IDR 235.000</p>
+                <p>
+                    @if (auth()->check())
+                    IDR 235.000
+                    @else
+                    IDR ******
+                    @endif
+                </p>
             </span>
             <span>
-                <button wire:click="expanded" class="btn bg-brand-red px-4 text-light" type="button">Pilih</button>
+                <button wire:click="expanded" @disabled(!auth()->check()) class="btn bg-brand-red px-4 text-light" type="button">Pilih</button>
             </span>
         </section>
         @else

@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('wellcome');
-});
+})->name('landing-page');
 
 
 Auth::routes();
@@ -39,13 +39,6 @@ Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
     Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
     Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
 });
-// Route::get('/user/transaction', function () {
-//     return view('pages.user.transaction.detail');
-// })->name('user.transaction.detail');
-
-// Route::get('/user/transaction/payment', function () {
-//     return view('pages.user.transaction.payment');
-// })->name('user.transaction.payment');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
