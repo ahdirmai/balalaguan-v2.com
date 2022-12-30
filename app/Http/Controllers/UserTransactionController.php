@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chance;
 use App\Models\Period;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
@@ -61,11 +62,42 @@ class UserTransactionController extends Controller
         ]);
 
 
-        $transaction = Transaction::create($data);
-        if ($transaction) {
-            flash()->addSuccess('Transaksi berhasil dibuat, silakan lakukan pembayaran');
+        
+        $user_id = auth()->user()->id;
+        $chance = Chance::where('user_id', $user_id)->first();
+        $userChance = $chance->chance;
+        $quantity = $request->quantity;
+        $period = Period::findOrFail($request->period_id);
+        
+        // return response()->json($chance);
+        // Cek apakah user masih memiliki chance
+        if ($userChance > 0) {
+            $finalChance = $userChance - $quantity;
+            // Cek jumlah tiket yang dibeli sesuai dengan chance yang tersisa
+            if ($finalChance >= 0) {
+                // Cek apakah stok tiket masih ada
+                if ($period->stock > 0 && $period->stock - $quantity >= 0) {
+                    $transaction = Transaction::create($data);
+                    if ($transaction) {
+                        // Kurangi chance user membeli tiket
+                        $chance->update(['chance' => $finalChance]);
+
+                        flash()->addSuccess('Transaksi berhasil dibuat, silakan lakukan pembayaran');
+                    } else {
+                        flash()->addError('Transaksi gagal dibuat!');
+                        return redirect()->route('landing-page');
+                    }
+                } else {
+                    flash()->addError('Maaf, stok tiket habis');
+                    return redirect()->route('landing-page');
+                }
+            } else {
+                flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
+                return redirect()->route('landing-page');
+            }
         } else {
-            flash()->addError('Transaksi gagal dibuat!');
+            flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
+            return redirect()->route('landing-page');
         }
         return redirect()->route('user.transaction.show', $transaction->id);
     }
@@ -80,7 +112,7 @@ class UserTransactionController extends Controller
     {
         // dd($id);
         $transaction = Transaction::where('id', $id)
-        ->with('period.category', 'period.phase', 'tickets')->get();
+            ->with('period.category', 'period.phase', 'tickets')->get();
         $data = [
             'transaction' => $transaction[0],
         ];

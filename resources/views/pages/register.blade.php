@@ -15,7 +15,7 @@
 
                                 </svg></span>
                             <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                placeholder="Username" name="name">
+                                placeholder="Username" name="name" value="{{ old('name') }}">
                         </div>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-envelope-open') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('email') is-invalid @enderror" type="text"
-                                placeholder="Email" name="email">
+                                placeholder="Email" name="email" value="{{ old('email') }}">
                         </div>
                         @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -68,7 +68,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('nik') is-invalid @enderror" type="number" placeholder="NIK"
-                                name="nik">
+                                name="nik"  value="{{ old('nik') }}">
                         </div>
                         @error('nik')
                             <span class="invalid-feedback" role="alert">
@@ -81,7 +81,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('phone') is-invalid @enderror" type="number"
-                                placeholder="Phone" name="phone">
+                                placeholder="Phone" name="phone"  value="{{ old('phone') }}">
                         </div>
                         @error('phone')
                             <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('address') is-invalid @enderror" type="text"
-                                placeholder="Alamat" name="address">
+                                placeholder="Alamat" name="address"  value="{{ old('address') }}">
                         </div>
                         @error('address')
                             <span class="invalid-feedback" role="alert">
