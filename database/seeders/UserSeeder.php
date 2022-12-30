@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Chance;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -29,5 +30,24 @@ class UserSeeder extends Seeder
 
         $user = User::create($data);
         $user->assignRole('admin');
+
+        // Make user account
+        $rizkiData = [
+            'name' => 'Muhammad Rizki Al-Ghifari',
+            'email' => 'mrizkiag1027@gmail.com',
+            'address' => 'Jalan Martapura Lama',
+            'nik' => '6303012341234',
+            'phone' => '081917259445',
+            'password' => Hash::make('12345678'),
+        ];
+
+        $rizki = User::create($rizkiData);
+        $rizki->assignRole('user');
+
+        $rizkiChanceData = [
+            'user_id' => $rizki->id,
+            'chance' => 2,
+        ];
+        Chance::create($rizkiChanceData);
     }
 }

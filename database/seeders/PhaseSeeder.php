@@ -16,7 +16,7 @@ class PhaseSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['name' => 'Early Bid'],
+            ['name' => 'Early Bird'],
             ['name' => 'Presale 1'],
             ['name' => 'Presale 2'],
             ['name' => 'Presale 3'],
