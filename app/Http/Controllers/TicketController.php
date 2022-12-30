@@ -90,6 +90,24 @@ class TicketController extends Controller
 
     public function checkIn(Request $request)
     {
-        dd($request);
+        // dd($request);
+        $token = base64_decode($request->decoded);
+        $ticket = Ticket::where('token', $token)->with('transaction.user')->first();
+        $username = $ticket->transaction->user->name;
+        // return response()->json($ticket);
+        if ($ticket != null) {
+            if ($ticket->is_checked_in == 0) {
+                if ($ticket->update(['is_checked_in' => 1])) {
+                    flash()->addSuccess("Scan berhasil, silakan masuk ${username}!");
+                } else {
+                    flash()->addError('Terjadi kesalahan, silakan coba lagi!');
+                }
+            } else {
+                flash()->addWarning("${username} sudah melakukan check-in!");
+            }
+        } else {
+            flash()->addError('Tiket tidak sesuai, silakan coba lagi!');
+        }
+        return redirect()->route('admin.scanner');
     }
 }

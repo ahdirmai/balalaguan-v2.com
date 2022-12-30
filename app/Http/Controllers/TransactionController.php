@@ -99,10 +99,10 @@ class TransactionController extends Controller
         // Cek apakah sudah bayar
         if ($transaction->is_paid == 1) {
             // Cek apakah user masih memiliki chance
-            if ($chance->chance > 0) {
-                $finalChance = $userChance - $quantity;
+            // if ($chance->chance > 0) {
+                // $finalChance = $userChance - $quantity;
                 // Cek jumlah tiket yang dibeli sesuai dengan chance yang tersisa
-                if ($finalChance >= 0) {
+                // if ($finalChance >= 0) {
                     // Cek apakah stok tiket masih ada
                     if ($period->stock > 0 && $period->stock - $quantity >= 0) {
                         // Kurangi stok tiket
@@ -130,12 +130,12 @@ class TransactionController extends Controller
                     } else {
                         flash()->addError('Maaf, stok tiket habis.');
                     }
-                } else {
-                    flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
-                }
-            } else {
-                flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
-            }
+                // } else {
+                //     flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
+                // }
+            // } else {
+            //     flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
+            // }
         } else {
             flash()->addError("${username} belum bayar!");
         }
