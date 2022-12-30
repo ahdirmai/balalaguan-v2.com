@@ -1,5 +1,6 @@
 <div class="modal fade" id="{{ $modalId }}" tabindex="-1" aria-labelledby="{{ $modalId }}"
     aria-hidden="true">
+    {{ $modalId }}
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

@@ -51,6 +51,7 @@ Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
     Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
     Route::get('transaction', function() { return view('pages.user.transaction.index'); })->name('transaction.index');
     Route::get('ticket', function() { return view('pages.user.ticket.index'); })->name('ticket.index');
+    Route::get('transaction', [UserTransactionController::class, 'index'])->name('transaction.index');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

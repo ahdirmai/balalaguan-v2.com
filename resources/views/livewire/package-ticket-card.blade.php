@@ -74,7 +74,7 @@
                 <section class="d-flex justify-content-end mt-3">
                     <button wire:click="expanded({{ $phaseid }})" type="button"
                         class="btn btn-outline-secondary me-3">Batal</button>
-                    <button wire:click="order({{ $amounts }}, {{ @$period->id ?? 0 }})" type="button"
+                    <button @disabled(!@$period->price) wire:click="order({{ $amounts }}, {{ @$period->id ?? 0 }})" type="button"
                         class="btn bg-brand-red px-3 text-light">Pesan Sekarang</button>
                 </section>
             </section>

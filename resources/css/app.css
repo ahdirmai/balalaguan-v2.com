@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.text-gray {
+    color: #c7c3c3 !important;
+}
+
 #mainNav {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
@@ -54,7 +58,7 @@ hr.divider {
         padding: 7rem;
     }
     .col-half {
-        width: 47% !important;
+        width: 48% !important;
     }
 }
 
