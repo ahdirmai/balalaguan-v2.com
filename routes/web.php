@@ -8,6 +8,9 @@ use App\Http\Controllers\PhaseController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserTransactionController;
+use App\Models\Category;
+use App\Models\Period;
+use App\Models\Phase;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +27,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('wellcome');
+    $periods = Period::with('category', 'phase')->get();
+    $phases = Phase::all();
+    $categories = Category::all();
+    $data = [
+        'periods' => $periods,
+        'phases' => $phases,
+        'categories' => $categories,
+    ];
+    // return response()->json($data);
+    return view('wellcome', $data);
 })->name('landing-page');
 
 
@@ -33,11 +45,10 @@ Auth::routes();
 // User
 
 Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
-    // Route::resource('transaction/', UserTransactionController::class);
-    Route::get('transaction/{period_id}', [UserTransactionController::class, 'create'])->name('transaction.create');
-    Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
-    Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
     Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
+    Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
+    Route::get('transaction/{period_id}/{amount}', [UserTransactionController::class, 'create'])->name('transaction.create');
+    Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

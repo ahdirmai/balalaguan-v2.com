@@ -6,6 +6,7 @@ use App\Models\Period;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class UserTransactionController extends Controller
 {
@@ -24,13 +25,15 @@ class UserTransactionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($period_id)
+    public function create($period_id, $amount)
     {
-        $period = Period::findOrFail($period_id)->with('category', 'phase')->get();
-        $quantity = 2;
+        $period = Period::where('id', $period_id)
+            ->with('category', 'phase')->get();
+        $quantity = $amount;
         $totalPayment = $quantity * $period[0]->price;
+        // dd($totalPayment);
         $data = [
-            'period' => $period,
+            'period' => $period[0],
             'quantity' => $quantity,
             'totalPayment' => $totalPayment,
         ];
@@ -52,6 +55,7 @@ class UserTransactionController extends Controller
             'quantity' => 'numeric|required',
         ]);
 
+
         $transaction = Transaction::create($data);
         if ($transaction) {
             flash()->addSuccess('Transaksi berhasil dibuat, silakan lakukan pembayaran');
@@ -69,6 +73,7 @@ class UserTransactionController extends Controller
      */
     public function show($id)
     {
+        // dd($id);
         $transaction = Transaction::findOrFail($id);
         $data = [
             'transaction' => $transaction,
@@ -113,7 +118,7 @@ class UserTransactionController extends Controller
             flash()->addError('Upload gagal!');
             return redirect()->route('user.transaction.show', $id);
         }
-        return 'kemana nih redirect nya?';
+        return redirect()->route('landing-page');
         // return redirect()->route('');
 
 

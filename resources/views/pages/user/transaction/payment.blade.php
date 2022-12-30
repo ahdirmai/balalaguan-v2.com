@@ -13,7 +13,7 @@
                 </span>
                 <span>
                     <small class="text-muted">Jumlah</small>
-                    <h6>2 Tiket</h6>
+                    <h6>{{ $transaction->quantity }} Tiket</h6>
                 </span>
                 <span>
                     <small class="text-muted">Tanggal Pemesanan</small>
@@ -29,6 +29,8 @@
                     <input class="form-control form-control-lg" id="formFileLg"
                         accept="image/jpeg, image/jpg, image/png" type="file" name="image">
                 </div>
+                <input type="hidden" name="period_id" value="{{ $transaction->period_id }}">
+                <input type="hidden" name="quantity" value="{{ $transaction->quantity }}">
                 <section class="row px-2">
                     <button class="col-12 btn bg-brand-red px-3 text-light" type="submit">Kirim</button>
                 </section>
