@@ -7,6 +7,7 @@ use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\PhaseController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserTransactionController;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,13 +31,21 @@ Route::get('/', function () {
 Auth::routes();
 
 // User
-Route::get('/user/transaction', function() {
-    return view('pages.user.transaction.detail');
-})->name('user.transaction.detail');
 
-Route::get('/user/transaction/payment', function() {
-    return view('pages.user.transaction.payment');
-})->name('user.transaction.payment');
+Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
+    // Route::resource('transaction/', UserTransactionController::class);
+    Route::get('transaction/{period_id}', [UserTransactionController::class, 'create'])->name('transaction.create');
+    Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
+    Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
+    Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
+});
+// Route::get('/user/transaction', function () {
+//     return view('pages.user.transaction.detail');
+// })->name('user.transaction.detail');
+
+// Route::get('/user/transaction/payment', function () {
+//     return view('pages.user.transaction.payment');
+// })->name('user.transaction.payment');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -49,7 +58,7 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
 
     //Category
     Route::resource('categories', CategoryController::class);
-    
+
     // Phase
     Route::resource('phases', PhaseController::class);
 

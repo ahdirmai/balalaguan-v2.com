@@ -43,7 +43,7 @@
                             <x-base.modal modal-id="buktiModal{{ $t->id }}" title="Bukti pembayaran dari {{ $t->user->name }}">
                                 <div class="col-12 mb-4">
                                     <div class="mb-2">
-                                        <img src="{{ $t->hasMedia('image')? @$t->getMedia('image')->last()->getUrl(): 'https://img.freepik.com/free-vector/realistic-receipt-template_23-2147938550.jpg?w=360' }}"
+                                        <img src="{{ $t->hasMedia('image')? @$t->getMedia('image')->last()->getUrl(): 'https://t3.ftcdn.net/jpg/04/87/13/44/360_F_487134492_svhGzEgDXKyQuuPXQrs7prKoBYWCEJdw.jpg' }}"
                                             class="" style="width: 100%" alt="...">
                                     </div>
                                 </div>
