@@ -36,9 +36,11 @@ Route::get('/', function () {
         'phases' => $phases,
         'categories' => $categories,
     ];
-    // if (auth()->user()->hasRole('admin')) {
-    //     return redirect()->route('admin.dashboard');
-    // }
+    if (auth()->user() != null){
+        if (auth()->user()->hasRole('admin')) {
+            return redirect()->route('admin.dashboard');
+        }
+    }
     // return response()->json($data);
     return view('wellcome', $data);
 })->name('landing-page');
