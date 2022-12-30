@@ -36,7 +36,7 @@ Route::get('/', function () {
         'phases' => $phases,
         'categories' => $categories,
     ];
-    if (auth()->user()->hasRole('admin')){
+    if (auth()->user()->hasRole('admin')) {
         return redirect()->route('admin.dashboard');
     }
     // return response()->json($data);
@@ -49,7 +49,9 @@ Auth::routes();
 // User
 
 Route::middleware('role:user')->prefix('user')->name('user.')->group(function () {
-    Route::get('profile', function() { return view('pages.user.profile.index'); })->name('profile');
+    Route::get('profile', function () {
+        return view('pages.user.profile.index');
+    })->name('profile');
     Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
     Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
     Route::get('transaction/{period_id}/{amount}', [UserTransactionController::class, 'create'])->name('transaction.create');

@@ -31,7 +31,7 @@
                                 IDR ******
                             @else
                                 {{-- {{ $this->category_id }} --}}
-                                {{ @$period->price ? 'IDR ' . $period->price : 'Pilih Kategori' }}
+                                {{ @$period->price ? 'IDR ' . number_format($period->price, 0, '.', '.') : 'Pilih Kategori' }}
                             @endif
                         @else
                             IDR ******

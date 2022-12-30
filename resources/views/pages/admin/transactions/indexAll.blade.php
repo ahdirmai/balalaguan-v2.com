@@ -28,11 +28,22 @@
                         <td>{{ $t->user->name }}</td>
                         <td>{{ $t->period->category->name }}</td>
                         <td>{{ $t->period->phase->name }}</td>
-                        <td>{{ $t->quantity }}</td>
-                        <td>{{ $t->quantity * $t->period->price }}</td>
+                        <td class="text-center">{{ $t->quantity }} tiket</td>
+                        <td>Rp {{ number_format($t->quantity * $t->period->price, 0, '.', '.') }}</td>
                         <td>{{ date('l, j F Y H:i', strtotime($t->created_at)) }}</td>
-                        <td>{{ $t->is_paid == 1 ? 'Sudah Bayar' : 'Belum Bayar' }}</td>
-                        <td>{{ $t->is_verified == 1 ? 'Sudah terverifikasi' : 'Belum terverifikasi' }}</td>
+                        <td class="text-center">
+                            @if ($t->is_paid == 1)
+                                <span class="badge text-bg-success">Sudah bayar</span>
+                            @else                                
+                                <span class="badge text-bg-danger">Belum bayar</span>
+                            @endif
+                        <td class="text-center">
+                            @if ($t->is_verified == 1)
+                                <span class="badge text-bg-success">Sudah terverifikasi</span>
+                            @else                                
+                                <span class="badge text-bg-danger">Belum terverifikasi</span>
+                            @endif
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

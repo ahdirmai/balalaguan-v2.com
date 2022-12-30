@@ -23,7 +23,13 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $t->transaction->user->name }}</td>
                         <td>{{ $t->transaction->period->category->name }}</td>
-                        <td>{{ @$t->is_checked_in==1 ? 'Sudah Check In' : 'Belum Check In' }}</td>
+                        <td class="text-center">
+                            @if ($t->is_paid == 1)
+                                <span class="badge text-bg-success">Sudah Check In</span>
+                            @else                                
+                                <span class="badge text-bg-danger">Belum Check In</span>
+                            @endif
+                        </td>
                         <td>{{ @$t->is_checked_in==1 ? $t->updated_at : '-' }}</td>
                 @endforeach
             </tbody>

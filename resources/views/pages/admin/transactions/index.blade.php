@@ -28,16 +28,29 @@
                         <td>{{ $t->user->name }}</td>
                         <td>{{ $t->period->category->name }}</td>
                         <td>{{ $t->period->phase->name }}</td>
-                        <td>{{ $t->quantity }}</td>
-                        <td>{{ $t->quantity * $t->period->price }}</td>
+                        <td class="text-center">{{ $t->quantity }} tiket</td>
+                        <td>Rp {{ number_format($t->quantity * $t->period->price, 0, '.', '.') }}</td>
                         <td>{{ date('l, j F Y H:i', strtotime($t->created_at)) }}</td>
-                        <td>{{ $t->is_paid == 1 ? 'Sudah Bayar' : 'Belum Bayar' }}</td>
+                        <td class="text-center">
+                            @if ($t->is_paid == 1)
+                                <span class="badge text-bg-success">Sudah bayar</span>
+                            @else                                
+                                <span class="badge text-bg-danger">Belum bayar</span>
+                            @endif
+                        </td>
                         <td>
-                            {{-- Lihat bukti pembayaran --}}
-                            <button title="Lihat bukti pembayaran" type="button" class="btn btn-success" data-coreui-toggle="modal"
-                                data-coreui-target="#buktiModal{{ $t->id }}">
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
+                            <section class="d-flex gap-2 align-items-center">
+                                {{-- Lihat bukti pembayaran --}}
+                                <button title="Lihat bukti pembayaran" type="button" class="btn btn-success" data-coreui-toggle="modal"
+                                    data-coreui-target="#buktiModal{{ $t->id }}">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                                {{-- Verifikasi Pembayaran --}}
+                                <button @disabled($t->is_paid == 1) type="button" title="Verifikasi pembayaran" class="btn btn-primary" data-coreui-toggle="modal"
+                                    data-coreui-target="#verifModal{{ $t->id }}">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </section>
 
                             <!-- Modal Lihat bukti pembayaran -->
                             <x-base.modal modal-id="buktiModal{{ $t->id }}" title="Bukti pembayaran dari {{ $t->user->name }}">
@@ -48,12 +61,6 @@
                                     </div>
                                 </div>
                             </x-base.modal>
-
-                            {{-- Verifikasi Pembayaran --}}
-                            <button type="button" title="Verifikasi pembayaran" class="btn btn-primary" data-coreui-toggle="modal"
-                                data-coreui-target="#verifModal{{ $t->id }}">
-                                <i class="fa-solid fa-check"></i>
-                            </button>
 
                             <!-- Modal Verifikasi Pembayaran -->
                             <x-base.modal-confirm modal-id="verifModal{{ $t->id }}" title="Konfirmasi"

@@ -35,7 +35,7 @@
             </span>
             <section>
                 <strong>Lokasi Acara</strong>
-                <p class="mb-0">Wetland Square Banjarmasin</p>
+                <p class="mb-0">Universitas Muhammadiyah Banjarmasin</p>
             </section>
         </section>
         {{-- Durasi acara --}}
@@ -45,8 +45,8 @@
                 <i class="fa-solid fa-clock text-brand-red fs-5"></i>
             </span>
             <section>
-                <strong>Durasi Acara</strong>
-                <p class="mb-0">2 Februari - 4 Februari 2023</p>
+                <strong>Tanggal Acara</strong>
+                <p class="mb-0">Senin, 13 Februari 2022</p>
             </section>
         </section>
         {{-- Narahubung --}}
@@ -68,21 +68,21 @@
                 <div class="col-lg-12">
                     <h2 class="text-brand-red mt-0 text-center">Temukan Lokasi Kami</h2>
                     <hr class="divider divider-light" />
-                    <section class="d-flex justify-content-between row gap-4 mt-2">
+                    <section class="d-flex justify-content-between gap-4 row mt-2">
                         {{-- Map embeded --}}
-                        <div class="mapouter col-lg-6">
+                        <div class="mapouter col-lg-5">
                             <div class="gmap_canvas">
                                 <iframe style="width: 100%" height="500" id="gmap_canvas"
                                     src="https://maps.google.com/maps?q=universitas%20muhammadiyah%20banjarmasin&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </div>
                         </div>
-                        <section class="col-lg-6">
+                        <section class="col">
                             <p class="text-white-75 mb-4">Anim incididunt consectetur exercitation ad aute officia in irure.
                                 Nisi elit ea excepteur proident ipsum ex aute irure commodo ullamco do. Officia ea ex
                                 aliquip velit eiusmod adipisicing eu velit irure cillum ea nulla. Incididunt laboris
                                 pariatur ea deserunt enim culpa culpa veniam nostrud sint in excepteur in.!</p>
-                            <a class="btn px-3 bg-brand-red text-light" target="_blank" href="https://google.com">Buka
+                            <a class="btn px-3 bg-brand-red text-light mx-auto" target="_blank" href="https://google.com">Buka
                                 Google Map!</a>
                         </section>
                     </section>

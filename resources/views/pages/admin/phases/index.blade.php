@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container">
-        <table id="table" class="table table-striped">
+        <table id="table" class="table table-striped display no-wrap" style="width: 100%">
             <thead>
                 <tr>
                     <th>No</th>

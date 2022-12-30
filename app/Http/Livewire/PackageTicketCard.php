@@ -20,7 +20,7 @@ class PackageTicketCard extends Component
 
     public function mount()
     {
-        $this->amounts = 0;
+        $this->amounts = 1;
         // $this->phaseid = 0;
         $this->category_id = 0;
     }
