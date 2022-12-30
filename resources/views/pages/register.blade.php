@@ -78,7 +78,7 @@
 
                         <div class="input-group mb-4"><span class="input-group-text">
                                 <svg class="icon">
-                                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
+                                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-phone') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('phone') is-invalid @enderror" type="number"
                                 placeholder="Phone" name="phone"  value="{{ old('phone') }}">
@@ -91,7 +91,7 @@
 
                         <div class="input-group mb-4"><span class="input-group-text">
                                 <svg class="icon">
-                                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
+                                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-home') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('address') is-invalid @enderror" type="text"
                                 placeholder="Alamat" name="address"  value="{{ old('address') }}">
@@ -102,7 +102,10 @@
                             </span>
                         @enderror
 
-                        <button class="btn btn-block btn-success" type="submit">Create Account</button>
+                        <button class="btn btn-block btn-success text-light mb-2" type="submit">Buat akun</button>
+                        <p>
+                            Sudah punya akun ? Login <a href="{{ route('login') }}">disini</a>
+                        </p>
                     </form>
                 </div>
             </div>

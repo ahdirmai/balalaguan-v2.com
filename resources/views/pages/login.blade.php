@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row justify-content-center">
+    <div class="p-3 row justify-content-center">
         <div class="col-lg-8">
             <div class="card-group d-block d-md-flex row">
                 <div class="card col-md-7 p-4 mb-0">
@@ -54,10 +54,10 @@
                 <div class="card col-md-5 text-white bg-primary py-5">
                     <div class="card-body text-center">
                         <div>
-                            <h2>Sign up</h2>
+                            <h2>Belum punya akun ?</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua.</p>
-                            <a class="btn btn-lg btn-outline-light mt-3" href="{{ route('register') }}">Register Now!</a>
+                            <a class="btn btn-lg btn-outline-light mt-3" href="{{ route('register') }}">Daftar Sekarang!</a>
                         </div>
                     </div>
                 </div>
