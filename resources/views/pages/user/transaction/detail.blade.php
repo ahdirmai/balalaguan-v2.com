@@ -3,9 +3,9 @@
 @section('outer')
     {{-- Header --}}
     <x-user.hero-section>
-        <x-base.header-navigation />
+        <x-base.header-navigation title="Detail Pesanan Anda" />
         {{-- Detail Pemesanan --}}
-        <div class="colbg-light p-4 rounded-3 border">
+        <div class="col-lg-6 bg-light p-4 rounded-3 border">
             <h5 class="mb-4">Detail Pemesanan</h5>
             <section class="d-flex align-items-center gap-3 mb-4">
                 <span style="width: 50px; height: 50px"
@@ -44,7 +44,7 @@
             </section>
         </div>
         {{-- Detail Profil --}}
-        <section class="col-lg-4 bg-light p-4 rounded-3 border text-end">
+        <section class="col-lg-5 bg-light p-4 rounded-3 border text-end">
             <h5 class="mb-4">Profil Pemesan</h5>
             <section class="py-2" style="border-top: 1px dashed #ebe4e4">
                 <span>

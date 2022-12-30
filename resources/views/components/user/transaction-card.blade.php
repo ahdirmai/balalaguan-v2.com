@@ -12,6 +12,10 @@
             @endif
         </span>
         <span>
+            <small class="text-muted">Paket</small>
+            <h6>{{ $package }}</h6>
+        </span>
+        <span>
             <small class="text-muted">Tiket</small>
             <h6>{{ $category }}</h6>
         </span>

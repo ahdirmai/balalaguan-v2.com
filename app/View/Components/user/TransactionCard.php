@@ -13,6 +13,7 @@ class TransactionCard extends Component
      */
 
     public $id;
+    public $package;
     public $category;
     public $amount;
     public $timestamp;
@@ -20,11 +21,12 @@ class TransactionCard extends Component
     public $isCheckIn;
     
     public function __construct(
-        $id = 1, $category = 'VIP', $amount = 2, $timestamp = 'now', $isVerified = false, $isCheckIn = false
+        $id = 1, $package = 'Early Bid', $category = 'VIP', $amount = 2, $timestamp = 'now', $isVerified = false, $isCheckIn = false
     )
     {
         //
         $this->id = $id;
+        $this->package = $package;
         $this->category = $category;
         $this->amount = $amount;
         $this->timestamp = $timestamp;
