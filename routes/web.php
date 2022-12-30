@@ -45,7 +45,7 @@ Auth::routes();
 
 // User
 
-Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
+Route::middleware('role:user')->prefix('user')->name('user.')->group(function () {
     Route::get('profile', function() { return view('pages.user.profile.index'); })->name('profile');
     Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
     Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
