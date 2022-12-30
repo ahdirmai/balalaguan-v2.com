@@ -50,7 +50,7 @@ class User extends Authenticatable
 
     public function chances()
     {
-        return $this->hasMany(Chance::class, 'id');
+        return $this->hasMany(Chance::class, 'user_id', 'id');
     }
 
     public function transactions()
