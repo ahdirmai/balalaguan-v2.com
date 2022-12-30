@@ -46,7 +46,7 @@
                                     <i class="fa-solid fa-eye"></i>
                                 </button>
                                 {{-- Verifikasi Pembayaran --}}
-                                <button @disabled($t->is_paid == 1) type="button" title="Verifikasi pembayaran" class="btn btn-primary" data-coreui-toggle="modal"
+                                <button type="button" title="Verifikasi pembayaran" class="btn btn-primary" data-coreui-toggle="modal"
                                     data-coreui-target="#verifModal{{ $t->id }}">
                                     <i class="fa-solid fa-check"></i>
                                 </button>

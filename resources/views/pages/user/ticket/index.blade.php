@@ -20,3 +20,7 @@
         </section>
     </x-user.hero-section>
 @endsection
+
+@push('script')
+    @vite('resources/js/pusher.js')
+@endpush

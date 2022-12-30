@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\Scanned;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
@@ -94,20 +95,41 @@ class TicketController extends Controller
         $token = base64_decode($request->decoded);
         $ticket = Ticket::where('token', $token)->with('transaction.user')->first();
         $username = $ticket->transaction->user->name;
+        $userId = $ticket->transaction->user->id;
+        $status = false;
+        $message = '';
+
         // return response()->json($ticket);
         if ($ticket != null) {
             if ($ticket->is_checked_in == 0) {
                 if ($ticket->update(['is_checked_in' => 1])) {
-                    flash()->addSuccess("Scan berhasil, silakan masuk ${username}!");
+                    $status = true;
+                    $message = "Scan berhasil, silakan masuk ${username}!";
+                    flash()->addSuccess($message);
                 } else {
-                    flash()->addError('Terjadi kesalahan, silakan coba lagi!');
+                    $status = false;
+                    $message = 'Terjadi kesalahan, silakan coba lagi!';
+                    flash()->addError($message);
                 }
             } else {
-                flash()->addWarning("${username} sudah melakukan check-in!");
+                $status = false;
+                $message = "${username} sudah melakukan check-in!";
+                flash()->addWarning($message);
             }
         } else {
-            flash()->addError('Tiket tidak sesuai, silakan coba lagi!');
+            $status = false;
+            $message = 'Tiket tidak sesuai, silakan coba lagi!';
+            flash()->addError($message);
         }
+        // Trigger event
+        event(
+            new Scanned(json_encode([
+                "status" => $status,
+                "username" => $username,
+                "userId" => $userId,
+                "message" => $message, 
+            ]))
+        );
         return redirect()->route('admin.scanner');
     }
 }

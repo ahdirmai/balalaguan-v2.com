@@ -4,6 +4,7 @@ import { Html5QrcodeScanner } from 'html5-qrcode'
 
 const form = document.querySelector('#form')
 const decodedField = document.querySelector('[name=decoded]')
+const loading = document.querySelector('#loading')
 
 const onScanSuccess = (decodedText, decodedResult) => {
     // handle the scanned code as you like, for example:
@@ -12,10 +13,12 @@ const onScanSuccess = (decodedText, decodedResult) => {
     // stopping scanning
     html5QrcodeScanner.clear()
 
+    // Show loading
+    loading.classList.remove('d-none')
+
     // submit form
     decodedField.setAttribute('value', decodedText)
     form.submit()
-    // console.log(decodedText)
 }
 
 const onScanFailure = error => {
