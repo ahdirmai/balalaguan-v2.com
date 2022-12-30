@@ -6,7 +6,7 @@
         <section class="row justify-content-between mt-2 border rounded-3 px-4 pt-3">
             @foreach ($tickets as $ticket)
                 @foreach ($ticket->tickets as $t)
-                    <x-base.ticket-card :id="$t->id" :fullname="$ticket->user->name" :email="$ticket->user->email" :telephone="$ticket->user->phone" :qrcode="base64_encode($t->token)" :date="$t->updated_at" :isCheckIn="$t->is_checked_in" />
+                    <x-base.ticket-card :id="$t->id" :fullname="$ticket->user->name" :email="$ticket->user->email" :telephone="$ticket->user->phone" :qrcode="base64_encode($t->token)" :date="$t->updated_at" :isCheckIn="$t->is_checked_in" :category="$ticket->period->category->name" />
                 @endforeach
             @endforeach
             {{-- <x-base.ticket-card id="2" /> --}}
