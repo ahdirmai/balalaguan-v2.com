@@ -24,20 +24,28 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $p->phase->name }}</td>
-                        <td>{{ $p->price }}</td>
-                        <td>{{ $p->stock }}</td>
+                        <td>Rp {{ number_format($p->price, 0, '.', '.') }}</td>
+                        <td>{{ $p->stock }} tiket</td>
                         <td>{{ $p->category->name }}</td>
-                        <td>{{ $p->is_active==1 ? 'Aktif' : 'Non-Aktif' }}</td>
+                        <td class="text-center">
+                            @if ($p->is_active == 1)
+                                <span class="badge text-bg-success">Aktif</span>
+                            @else                                
+                                <span class="badge text-bg-danger">Non-Aktif</span>
+                            @endif
+                        </td>
                         <td>
-                            {{-- Update --}}
-                            <a href="{{ route('admin.periods.edit', $p->id) }}" class="btn btn-primary">
-                                <i class="fa-solid fa-edit"></i>
-                            </a>
-                            {{-- Delete --}}
-                            <button type="button" class="btn btn-danger" data-coreui-toggle="modal"
-                                data-coreui-target="#deleteModal{{ $p->id }}">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
+                            <section class="d-flex gap-2">
+                                {{-- Update --}}
+                                <a href="{{ route('admin.periods.edit', $p->id) }}" class="btn btn-primary">
+                                    <i class="fa-solid fa-edit"></i>
+                                </a>
+                                {{-- Delete --}}
+                                <button type="button" class="btn btn-danger" data-coreui-toggle="modal"
+                                    data-coreui-target="#deleteModal{{ $p->id }}">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </section>
 
                             <!-- Modal -->
                             <x-base.modal-confirm modal-id="deleteModal{{ $p->id }}" title="Konfirmasi" sub-title="Apakah anda yakin ingin menghapus paket {{ $p->name }}">
