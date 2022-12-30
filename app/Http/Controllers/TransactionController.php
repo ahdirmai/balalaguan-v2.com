@@ -93,7 +93,7 @@ class TransactionController extends Controller
         $period = Period::findOrFail($request->period_id);
         $userChance = $chance->chance;
         $transaction = Transaction::findOrFail($id);
-        $transactionGet = $transaction->with('user', 'period')->get();
+        $transactionGet = $transaction->where('id', $id)->with('user', 'period')->get();
         $username = $transactionGet[0]->user->name;
 
         // Cek apakah sudah bayar
@@ -110,7 +110,7 @@ class TransactionController extends Controller
                         $period->update(['stock' => $finalStock]);
 
                         // Kurangi chance user membeli tiket
-                        $chance->update(['chance' => $finalChance]);
+                        // $chance->update(['chance' => $finalChance]);
 
                         // Generate Ticket sesuai dengan quantity
                         for ($i = 0; $i < $quantity; $i++) {
