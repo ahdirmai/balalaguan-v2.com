@@ -24,7 +24,7 @@
                         <td>{{ $t->transaction->user->name }}</td>
                         <td>{{ $t->transaction->period->category->name }}</td>
                         <td class="text-center">
-                            @if ($t->is_paid == 1)
+                            @if ($t->is_checked_in == 1)
                                 <span class="badge text-bg-success">Sudah Check In</span>
                             @else                                
                                 <span class="badge text-bg-danger">Belum Check In</span>

@@ -26,16 +26,12 @@
                 <span>
                     <small class="text-muted">Harga</small>
                     <p>
-                        @if (auth()->check())
                             @if ($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)
                                 IDR ******
                             @else
                                 {{-- {{ $this->category_id }} --}}
                                 {{ @$period->price ? 'IDR ' . number_format($period->price, 0, '.', '.') : 'Pilih Kategori' }}
                             @endif
-                        @else
-                            IDR ******
-                        @endif
                     </p>
                 </span>
                 <span>
