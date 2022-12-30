@@ -9,6 +9,9 @@ const onScanSuccess = (decodedText, decodedResult) => {
     // handle the scanned code as you like, for example:
     console.log(`Code matched = ${decodedText}`, decodedResult)
 
+    // stopping scanning
+    html5QrcodeScanner.clear()
+
     // submit form
     decodedField.setAttribute('value', decodedText)
     form.submit()
