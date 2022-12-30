@@ -17,7 +17,7 @@
             <section class="py-2 d-flex gap-5" style="border-top: 1px dashed #ebe4e4">
                 <span>
                     <small class="text-muted">Tiket</small>
-                    <h6>{{ $period[0]->category->name }}</h6>
+                    <h6>{{ $period->category->name }}</h6>
                 </span>
                 <span>
                     <small class="text-muted">Jumlah</small>
@@ -36,7 +36,7 @@
                 {{-- <button type="button" class="btn">Batalkan</button> --}}
                 <form action="{{ route('user.transaction.store') }}" method="post">
                     @csrf
-                    <input type="hidden" name="period_id" value="{{ $period[0]->id }}">
+                    <input type="hidden" name="period_id" value="{{ $period->id }}">
                     <input type="hidden" name="quantity" value="{{ $quantity }}">
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                     <button class="btn bg-brand-red px-3 text-light" type="submit">Lanjutkan pembayaran</button>
