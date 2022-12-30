@@ -8,10 +8,9 @@
                 {{-- reader --}}
                 <section id="reader"></section>
                 {{-- form --}}
-                <form class="d-none" action="" method="POST">
+                <form class="d-none" action="{{ route('admin.ticket.check-in') }}" id="form" method="POST">
                     @csrf
-                    @method('PUT')
-                    <input type="text" name="ticket_id" id="ticket_id">
+                    <input type="text" name="decoded" id="decoded">
                 </form>
             </section>
         </section>

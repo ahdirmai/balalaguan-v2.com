@@ -87,4 +87,9 @@ class TicketController extends Controller
     {
         //
     }
+
+    public function checkIn(Request $request)
+    {
+        dd($request);
+    }
 }
