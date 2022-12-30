@@ -26,7 +26,8 @@
     {{-- Overlapping Section --}}
     <section style="transform: translateY(-50%)"
         class="container-lg bg-white p-2 rounded-3 mx-auto shadow d-flex flex-column-reverse flex-md-row justify-content-between">
-        <div class="bg-brand-red d-flex justify-content-center align-items-center text-light px-3 py-3 py-lg-0 rounded-3">Kunjungi</div>
+        <div class="bg-brand-red d-flex justify-content-center align-items-center text-light px-3 py-3 py-lg-0 rounded-3">
+            Kunjungi</div>
         {{-- Lokasi acara --}}
         <section class="d-flex align-items-center gap-4 p-3">
             <span class="border p-3 rounded-circle d-flex justify-content-center align-items-center"
@@ -88,9 +89,13 @@
                                     <li>Tiket yang sudah dibeli tidak dapat dikembalikan.</li>
                                     <li>Tiket yang sudah dibeli tidak dapat diganti jadwalnya</li>
                                     <li>Pembeli wajib mengisi data diri pribadi saat memesan.</li>
-                                    <li>Penjualan tiket sewaktu-waktu dapat dihentikan atau dimulai oleh <a href="http://balalaguan.com">balalaguan.com</a> sesuai dengan kebijakan dari bumantara event organizer .</li>
-                                    <li>Untuk memasuki venue acara, pengunjung minimal sudah divaksin tahap kedua dan terintegrrasi dengan aplikasi Peduli Lindungi.</li>
-                                    <li>Pengunjung wajib menjaga dan mengikuti Protokol Kesehatan yang berlaku, sesuai dengan Peraturan Pemerintah</li>
+                                    <li>Penjualan tiket sewaktu-waktu dapat dihentikan atau dimulai oleh <a
+                                            href="http://balalaguan.com">balalaguan.com</a> sesuai dengan kebijakan dari
+                                        bumantara event organizer .</li>
+                                    <li>Untuk memasuki venue acara, pengunjung minimal sudah divaksin tahap kedua dan
+                                        terintegrrasi dengan aplikasi Peduli Lindungi.</li>
+                                    <li>Pengunjung wajib menjaga dan mengikuti Protokol Kesehatan yang berlaku, sesuai
+                                        dengan Peraturan Pemerintah</li>
                                     <li>1 tiket berlaku untuk 1 orang</li>
                                 </ol>
                             </section>
@@ -103,9 +108,13 @@
                             <section class="p-3 rounded bg-light border">
                                 <p class="text-muted">Penukaran Tiket</p>
                                 <ol>
-                                    <li>Tunjukkan identitas KTP serta e-tiket yang telah diterima melalui email atau di halaman “Tiketku” kepada petugas di lapangan untuk scan QR Code. Sesuaikan tingkat kecerahan layar ponsel sebelum menunjukkan QR Code.</li>
-                                    <li>Setelah QR Code sukses terverifikasi, customer akan mendapatkan wristband yang dapat digunakan untuk memasuki venue.</li>
-                                    <li>Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh protokol kesehatan selama event berlangsung</li>
+                                    <li>Tunjukkan identitas KTP serta e-tiket yang telah diterima melalui email atau di
+                                        halaman “Tiketku” kepada petugas di lapangan untuk scan QR Code. Sesuaikan tingkat
+                                        kecerahan layar ponsel sebelum menunjukkan QR Code.</li>
+                                    <li>Setelah QR Code sukses terverifikasi, customer akan mendapatkan wristband yang dapat
+                                        digunakan untuk memasuki venue.</li>
+                                    <li>Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh
+                                        protokol kesehatan selama event berlangsung</li>
                                 </ol>
                             </section>
                         </section>
@@ -117,10 +126,14 @@
     {{-- All Ticket Package --}}
     <section class="container-lg">
         <h4 class="mb-3 text-brand-red text-center">Paket tiket</h4>
+        @if (!auth()->check())
+            <p class="fst-italic text-center">(Silakan login terlebih dahulu untuk melakukan pembelian tiket)</p>
+        @endif
         <hr class="divider divider-light" />
         <section class="row">
             @foreach ($phases as $p)
-                <livewire:package-ticket-card :name="$p->name" :phaseid="$p->id" :phases="$p" :categories="$categories" :periods="$periods" />
+                <livewire:package-ticket-card :name="$p->name" :phaseid="$p->id" :phases="$p" :categories="$categories"
+                    :periods="$periods" />
             @endforeach
         </section>
     </section>
