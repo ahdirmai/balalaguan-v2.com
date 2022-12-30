@@ -18,7 +18,7 @@
                                 <small>{{ Str::limit(auth()->user()->name, 15) }}</small>
                             </span>
                         </li>
-                        <li><a class="dropdown-item" href="#">Pesanan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('user.transaction.index') }}">Pesanan</a></li>
                         <li><a class="dropdown-item" href="#">Tiket</a></li>
                         <li>
                             <a class="dropdown-item text-danger" href="" onclick="event.preventDefault();

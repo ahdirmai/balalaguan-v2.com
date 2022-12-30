@@ -2,8 +2,9 @@
 
 @section('outer')
     <x-user.hero-section>
+        <x-base.header-navigation title="Konfirmasi Pembayaran" />
         {{-- Upload --}}
-        <div class="col-lg-6 bg-light p-4 rounded-3 border">
+        <div class="col bg-light p-4 rounded-3 border">
             <h5>Upload Bukti Pembayaran</h5>
             <p class="text-muted">Lakukan pembayaran terhadap pemesanan tiket yang anda lakukan pada <strong>{{date_format($transaction->created_at, 'l, d F Y g:i a')}} WITA</strong></p>
             <section class="py-2 d-flex gap-5" style="border-top: 1px dashed #ebe4e4">

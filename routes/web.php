@@ -33,11 +33,17 @@ Auth::routes();
 // User
 
 Route::middleware('auth')->prefix('user')->name('user.')->group(function () {
+
     // Route::resource('transaction/', UserTransactionController::class);
     Route::get('transaction/{period_id}', [UserTransactionController::class, 'create'])->name('transaction.create');
+
     Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
+
     Route::put('transaction/payment/{transaction_id}', [UserTransactionController::class, 'update'])->name('transaction.update');
+
     Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
+
+    Route::get('transaction', function() { return view('pages.user.transaction.index'); })->name('transaction.index');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
