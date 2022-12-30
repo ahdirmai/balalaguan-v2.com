@@ -30,7 +30,7 @@
             </section>
             <section class="pt-4 pb-2 d-flex justify-content-between" style="border-top: 1px dashed #ebe4e4">
                 <h6>Total</h6>
-                <h5>IDR {{ $totalPayment }}</h5>
+                <h5>IDR {{ number_format($totalPayment, 0, ',', '.') }}</h5>
             </section>
             <section class="pt-4 d-flex justify-content-end" style="border-top: 1px dashed #ebe4e4">
                 {{-- <button type="button" class="btn">Batalkan</button> --}}

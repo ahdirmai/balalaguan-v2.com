@@ -18,8 +18,8 @@
                                 <small>{{ Str::limit(auth()->user()->name, 15) }}</small>
                             </span>
                         </li>
-                        <li><a class="dropdown-item" href="{{ route('user.transaction.index') }}">Pesanan</a></li>
-                        <li><a class="dropdown-item" href="#">Tiket</a></li>
+                        <li><a class="dropdown-item {{ Request::routeIs('user.transaction.index') ? 'active' : '' }}" href="{{ route('user.transaction.index') }}">Pesanan</a></li>
+                        <li><a class="dropdown-item {{ Request::routeIs('user.ticket.index') ? 'active' : '' }}" href="{{ route('user.ticket.index') }}">Tiket</a></li>
                         <li>
                             <a class="dropdown-item text-danger" href="" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">Logout</a>

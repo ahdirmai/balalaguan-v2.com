@@ -27,7 +27,7 @@
                     <p>
                         @if (auth()->check())
                             {{-- {{ $this->category_id }} --}}
-                            {{ @$period->price ? 'IDR ' . $period->price : 'Pilih Kategori' }}
+                            {{ @$period->price ? 'IDR ' . number_format($period->price, 0, ',', '.') : 'Pilih Kategori' }}
                         @else
                             IDR ******
                         @endif
@@ -47,7 +47,7 @@
                         {{-- Price --}}
                         <span>
                             <small class="text-muted">PAX</small>
-                            <p>{{ @$period->price ? 'IDR ' . $period->price : 'Pilih Kategori' }}</p>
+                            <p>{{ @$period->price ? 'IDR ' . number_format($period->price, 0, ',', '.') : 'Pilih Kategori' }}</p>
                             {{-- <p>{{ $this->phaseid }}</p> --}}
                         </span>
                         <section class="d-flex align-items-center gap-3">
@@ -67,7 +67,7 @@
                     </span>
                     <span>
                         <small class="text-muted">Total</small>
-                        <h4>IDR {{ @$period->price ? $amounts * $period->price : 0 }}</h4>
+                        <h4>IDR {{ @$period->price ? number_format($amounts * $period->price, 0, ',', '.') : 0 }}</h4>
                     </span>
                 </section>
                 {{-- CTA --}}
