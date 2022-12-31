@@ -11,9 +11,14 @@ class CardPackageTicket extends Component
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
+    public $name;
+    public $periods;
+    public function __construct(
+        $name,
+        $periods,
+    ) {
+        $this->name = $name;
+        $this->periods = $periods;
     }
 
     /**
