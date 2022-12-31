@@ -12,7 +12,6 @@
                         <div class="input-group mb-3"><span class="input-group-text">
                                 <svg class="icon">
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user') }}"></use>
-
                                 </svg></span>
                             <input class="form-control @error('name') is-invalid @enderror" type="text"
                                 placeholder="Fullname" name="name" value="{{ old('name') }}">
@@ -68,7 +67,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('nik') is-invalid @enderror" type="number" placeholder="NIK"
-                                name="nik"  value="{{ old('nik') }}">
+                                name="nik" minlength="16" maxlength="16" value="{{ old('nik') }}">
                         </div>
                         @error('nik')
                             <span class="invalid-feedback" role="alert">
