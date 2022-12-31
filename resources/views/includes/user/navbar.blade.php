@@ -5,7 +5,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0 d-flex align-items-center">
-                <li class="nav-item"><a class="nav-link" href="#services">Hubungi Kami</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://wa.me/6285939395319" target="_blank">Hubungi Kami</a></li>
                 @if ( auth()->check() )
                 <li class="nav-item dropdown">
                     <img style="cursor: pointer" class="img-thumbnail rounded-circle dropdown-toggle" width="40" height="40" src="{{ asset('/core-ui/img/avatars/2.jpg') }}" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
