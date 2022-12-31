@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card mb-4 mx-4">
+            <div class="card mb-4 m-4">
                 <div class="card-body p-4">
                     <h1>Register</h1>
                     <p class="text-medium-emphasis">Create your account</p>
@@ -110,4 +110,11 @@
             </div>
         </div>
     </div>
+    <script>
+        let bg = document.querySelector('.bg-light');
+        bg.style.backgroundImage = "url('{{ asset('img/concert-layer.png') }}')";
+        bg.style.backgroundSize = "cover";
+        bg.style.backgroundRepeat = "no-repeat";
+        bg.style.minHeight = "120vh";
+    </script>
 @endsection

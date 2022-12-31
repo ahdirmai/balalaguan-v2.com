@@ -6,10 +6,11 @@
                 <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-menu') }}"></use>
             </svg>
         </button>
-        <a class="header-brand d-md-none" href="#">
-            <svg width="118" height="46" alt="CoreUI Logo">
-                <use xlink:href="{{ asset('/core-ui/brand/coreui.svg#full') }}"></use>
-            </svg>
+        <a class="header-brand d-md-none mx-auto align-middle" href="#">
+            {{-- <svg width="118" height="46" alt="CoreUI Logo">
+                <use xlink:href="{{ asset('bumantara-logo.png') }}"></use>
+            </svg> --}}
+            <h3  class="m-0">Balalaguan</h3>
         </a>
         {{-- <ul class="header-nav d-none d-md-flex">
             <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
