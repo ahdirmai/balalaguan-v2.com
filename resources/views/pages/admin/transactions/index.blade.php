@@ -12,6 +12,8 @@
                 <tr>
                     <th>No</th>
                     <th>Pembeli</th>
+                    <th>NIK</th>
+                    <th>Telepon</th>
                     <th>Kategori</th>
                     <th>Paket</th>
                     <th>Jumlah Tiket</th>
@@ -26,6 +28,8 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $t->user->name }}</td>
+                        <td>{{ $t->user->nik }}</td>
+                        <td>{{ $t->user->phone }}</td>
                         <td>{{ $t->period->category->name }}</td>
                         <td>{{ $t->period->phase->name }}</td>
                         <td class="text-center">{{ $t->quantity }} tiket</td>
