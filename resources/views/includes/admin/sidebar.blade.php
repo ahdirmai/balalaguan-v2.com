@@ -50,7 +50,7 @@
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user-x') }}"></use>
                 </svg> 
                 Verifikasi
-                <span class="badge badge-sm bg-info ms-auto">23+</span>
+                {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
             </a>
         </li>
         {{-- End of Transaction routes --}}
@@ -62,7 +62,7 @@
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-tag') }}"></use>
                 </svg> 
                 Semua Kategori
-                <span class="badge badge-sm bg-info ms-auto">23+</span>
+                {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
             </a>
         </li>
         <li class="nav-item">
@@ -82,7 +82,7 @@
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-cart') }}"></use>
                 </svg> 
                 Semua Paket
-                <span class="badge badge-sm bg-info ms-auto">23+</span>
+                {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
             </a>
         </li>
         <li class="nav-item">
@@ -103,7 +103,7 @@
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-calculator') }}"></use>
                 </svg> 
                 Semua Harga
-                <span class="badge badge-sm bg-info ms-auto">23+</span>
+                {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
             </a>
         </li>
         <li class="nav-item">

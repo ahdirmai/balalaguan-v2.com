@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Transaction::class, 'id');
     }
+
+    public function getGetImageAttribute()
+    {
+        return "https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=$this->name";
+    }
 }
