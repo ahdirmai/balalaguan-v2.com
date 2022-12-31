@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                 <ul class="list-inline mb-2">
-                    <li class="list-inline-item"><a href="">Hubungi Kami</a></li>
+                    <li class="list-inline-item"><a href="https://wa.me/6285939395319" target="_blank">Hubungi Kami</a></li>
                 </ul>
                 <p class="text-muted small mb-4 mb-lg-0">&copy; Bumantara Event Organizer 2022. All Rights Reserved.</p>
             </div>

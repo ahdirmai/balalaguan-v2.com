@@ -3,17 +3,18 @@
 @push('style')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
-@endpush
+@endpush    
 
 @section('content')
     <div class="container">
-        <table id="table" class="table table-striped">
+        <table id="table" class="table table-striped  display nowrap" style="width: 100%">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Pembeli</th>
                     <th>NIK</th>
                     <th>Telepon</th>
+                    <th>Email</th>
                     <th>Kategori</th>
                     <th>Paket</th>
                     <th>Jumlah Tiket</th>
@@ -30,6 +31,7 @@
                         <td>{{ $t->user->name }}</td>
                         <td>{{ $t->user->nik }}</td>
                         <td>{{ $t->user->phone }}</td>
+                        <td>{{ $t->user->email }}</td>
                         <td>{{ $t->period->category->name }}</td>
                         <td>{{ $t->period->phase->name }}</td>
                         <td class="text-center">{{ $t->quantity }} tiket</td>
