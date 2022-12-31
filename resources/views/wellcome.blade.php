@@ -87,7 +87,7 @@
                                     <li class="mb-1">Tiket yang sudah dibeli tidak dapat dikembalikan.</li>
                                     <li class="mb-1">Tiket yang sudah dibeli tidak dapat diganti jadwalnya</li>
                                     <li class="mb-1">Pembeli wajib mengisi data diri pribadi saat memesan.</li>
-                                    <li class="mb-1">Penjualan tiket sewaktu-waktu dapat dihentikan atau dimulai oleh <a href="http://balalaguan.com">balalaguan.com</a> sesuai dengan kebijakan dari bumantara event organizer .</li>
+                                    <li class="mb-1">Penjualan tiket sewaktu-waktu dapat dihentikan atau dimulai oleh <a href="http://balalaguanmusicfest.com/">balalaguanmusicfest.com</a> sesuai dengan kebijakan dari bumantara event organizer .</li>
                                     <li class="mb-1">Untuk memasuki venue acara, pengunjung minimal sudah divaksin tahap kedua dan terintegrrasi dengan aplikasi Peduli Lindungi.</li>
                                     <li class="mb-1">Pengunjung wajib menjaga dan mengikuti Protokol Kesehatan yang berlaku, sesuai dengan Peraturan Pemerintah</li>
                                     <li class="mb-1">1 tiket berlaku untuk 1 orang</li>
@@ -97,6 +97,9 @@
                                 <p class="text-muted">E Ticket</p>
                                 <ol>
                                     <li class="mb-1">E-tiket tidak dapat diuangkan.</li>
+                                    <li class="mb-1">Tunjukkan identitas KTP atau Kartu Keluarga serta e-tiket yang telah diterima melalui email atau di halaman “Tiketku” kepada petugas di lapangan untuk scan QR Code. Sesuaikan tingkat kecerahan layar ponsel sebelum menunjukkan QR Code.</li>
+                                    <li class="mb-1">Setelah QR Code sukses terverifikasi, customer akan mendapatkan wristband yang dapat digunakan untuk memasuki venue.</li>
+                                    <li class="mb-1">Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh protokol kesehatan selama event berlangsung</li>
                                 </ol>
                             </section>
                             <section class="p-3 rounded bg-light border">
