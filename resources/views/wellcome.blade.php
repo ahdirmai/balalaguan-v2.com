@@ -116,10 +116,14 @@
     {{-- All Ticket Package --}}
     <section class="container-lg">
         <h4 class="mb-3 text-brand-red text-center">Paket tiket</h4>
+        @if (!auth()->check())
+            <p class="fst-italic text-center">(Silakan login terlebih dahulu untuk melakukan pembelian tiket)</p>
+        @endif
         <hr class="divider divider-light" />
         <section class="row">
             @foreach ($phases as $p)
-                <livewire:package-ticket-card :name="$p->name" :phaseid="$p->id" :phases="$p" :categories="$categories" :periods="$periods" />
+                <livewire:package-ticket-card :name="$p->name" :phaseid="$p->id" :phases="$p" :categories="$categories"
+                    :periods="$periods" />
             @endforeach
         </section>
     </section>

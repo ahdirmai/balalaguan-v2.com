@@ -7,6 +7,7 @@ use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\PhaseController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserTicketController;
 use App\Http\Controllers\UserTransactionController;
 use App\Models\Category;
@@ -36,9 +37,11 @@ Route::get('/', function () {
         'phases' => $phases,
         'categories' => $categories,
     ];
-    // if (auth()->user()->hasRole('admin')) {
-    //     return redirect()->route('admin.dashboard');
-    // }
+    if (auth()->user() != null){
+        if (auth()->user()->hasRole('admin')) {
+            return redirect()->route('admin.dashboard');
+        }
+    }
     // return response()->json($data);
     return view('wellcome', $data);
 })->name('landing-page');
@@ -49,9 +52,10 @@ Auth::routes();
 // User
 
 Route::middleware('role:user')->prefix('user')->name('user.')->group(function () {
-    Route::get('profile', function () {
-        return view('pages.user.profile.index');
-    })->name('profile');
+    Route::resource('profile', UserController::class);
+    // Route::get('profile', function () {
+    //     return view('pages.user.profile.index');
+    // })->name('profile');
     Route::get('transaction/detail/{transaction_id}', [UserTransactionController::class, 'show'])->name('transaction.show');
     Route::post('transaction}', [UserTransactionController::class, 'store'])->name('transaction.store');
     Route::get('transaction/{period_id}/{amount}', [UserTransactionController::class, 'create'])->name('transaction.create');
