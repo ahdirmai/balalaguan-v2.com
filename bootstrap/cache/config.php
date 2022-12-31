@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Laravel',
+    'name' => 'BalalaguanFestival',
     'env' => 'local',
     'debug' => true,
     'url' => 'https://e-ticketing.mrizkiag.tech',
@@ -134,22 +134,23 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'log',
+    'default' => 'pusher',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => '',
-        'secret' => '',
-        'app_id' => '',
+        'key' => 'ec09024514d6fe499025',
+        'secret' => '82e2f01bc9249ba1447f',
+        'app_id' => '1531950',
         'options' => 
         array (
-          'host' => 'api-mt1.pusher.com',
+          'host' => 'api-ap1.pusher.com',
           'port' => '443',
           'scheme' => 'https',
           'encrypted' => true,
           'useTLS' => true,
+          'cluster' => 'ap1',
         ),
         'client_options' => 
         array (
@@ -243,7 +244,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'laravel_cache_',
+    'prefix' => 'balalaguanfestival_cache_',
   ),
   'cors' => 
   array (
@@ -342,7 +343,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'laravel_database_',
+        'prefix' => 'balalaguanfestival_database_',
       ),
       'default' => 
       array (
@@ -546,9 +547,9 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'mailhog',
-        'port' => '1025',
-        'encryption' => NULL,
+        'host' => 'smtp.gmail.com',
+        'port' => '465',
+        'encryption' => 'ssl',
         'username' => NULL,
         'password' => NULL,
         'timeout' => NULL,
@@ -592,8 +593,8 @@
     ),
     'from' => 
     array (
-      'address' => 'hello@example.com',
-      'name' => 'Laravel',
+      'address' => 'admin@balalaguan.com',
+      'name' => 'BalalaguanFestival',
     ),
     'markdown' => 
     array (
@@ -857,7 +858,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'laravel_session',
+    'cookie' => 'balalaguanfestival_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,

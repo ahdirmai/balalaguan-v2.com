@@ -16,13 +16,14 @@ class TicketCard extends Component
     public $category;
     public $isCheckIn;
     public $fullname;
+    public $nik;
     public $date;
     public $telephone;
     public $email;
     public $qrcode;
     
     public function __construct(
-        $id = 1 ,$category = 'VIP', $isCheckIn = false, $fullname = 'Fulan bin Fulan', $date = 'now', $telephone = '098756843829', $email = 'fulan909909@yahoo.com', $qrcode = ''
+        $nik, $id = 1 ,$category = 'VIP', $isCheckIn = false, $fullname = 'Fulan bin Fulan', $date = 'now', $telephone = '098756843829', $email = 'fulan909909@yahoo.com', $qrcode = ''
     )
     {
         //
@@ -30,6 +31,7 @@ class TicketCard extends Component
         $this->category = $category;
         $this->isCheckIn = $isCheckIn;
         $this->fullname = $fullname;
+        $this->nik = $nik;
         $this->date = $date;
         $this->telephone = $telephone;
         $this->email = $email;

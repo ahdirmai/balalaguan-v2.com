@@ -7,7 +7,7 @@
             @if (count($tickets) > 0)
                 @foreach ($tickets as $ticket)
                     @foreach ($ticket->tickets as $t)
-                        <x-base.ticket-card :id="$t->id" :fullname="$ticket->user->name" :email="$ticket->user->email" :telephone="$ticket->user->phone" :qrcode="base64_encode($t->token)" :date="$t->updated_at" :isCheckIn="$t->is_checked_in" :category="$ticket->period->category->name" />
+                        <x-base.ticket-card :id="$t->id" :fullname="$ticket->user->name" :nik="$ticket->user->nik" :email="$ticket->user->email" :telephone="$ticket->user->phone" :qrcode="base64_encode($t->token)" :date="$t->updated_at" :isCheckIn="$t->is_checked_in" :category="$ticket->period->category->name" />
                     @endforeach
                 @endforeach
             @else
