@@ -25,6 +25,7 @@
     "resources/css/core-ui/vendors/chartjs.css",
     "resources/css/core-ui/style.css",
     "resources/css/core-ui/example.css",
+    "resources/css/brand/colors.css"
 ])
 <!-- We use those styles to show code examples, you should remove them in your application.-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
