@@ -62,12 +62,12 @@
                     </section>
                 </section>
                 {{-- Total --}}
-                <section class="d-flex justify-content-between align-items-end text-end"
+                <section class="d-flex justify-content-between align-items-end"
                     style="border-bottom: 1px dashed #ebe4e4">
-                    <span>
+                    <span class="text-lg-end">
                         <small>Syarat dan ketentuan berlaku</small>
                     </span>
-                    <span>
+                    <span class="text-end">
                         <small class="text-muted">Total</small>
                         <h4>IDR {{ @$period->price ? number_format($amounts * $period->price, 0, ',', '.') : 0 }}</h4>
                     </span>

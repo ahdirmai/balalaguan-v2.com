@@ -42,16 +42,17 @@
                             {{-- end of password --}}
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary px-4" type="submit">Login</button>
+                                    <button class="btn px-3 text-light bg-brand-red px-4" type="submit">Login</button>
                                 </div>
                                 <div class="col-6 text-end">
-                                    <button class="btn btn-link px-0" type="button">Forgot password?</button>
+                                    {{-- <button class="btn btn-link px-0" type="button">Forgot password?</button> --}}
+                                    <a class="btn btn-link px-0" href="{{ route('password.request') }}">Forgot password?</a>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="card col-md-5 text-white bg-primary py-5">
+                <div class="card col-md-5 text-white bg-brand-red py-5">
                     <div class="card-body text-center">
                         <div>
                             <h2>Belum punya akun ?</h2>

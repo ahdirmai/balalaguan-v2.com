@@ -26,7 +26,7 @@
                     <h6 class="text-break">{{ auth()->user()->address }}</h6>
                 </span>
             </section>
-            <a href="" class="col btn btn-danger">Ubah data profile</a>
+            <a href="{{ route('user.profile.edit', auth()->user()->id) }}" class="col btn btn-danger">Ubah data profile</a>
         </section>
     </x-user.hero-section>
 @endsection

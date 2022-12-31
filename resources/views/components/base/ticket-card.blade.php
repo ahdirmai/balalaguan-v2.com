@@ -12,12 +12,6 @@
         </div>
         <div class="col-5">
             <span>
-                <small class="text-muted">Tanggal</small>
-                <h6>{{ $isCheckIn ? date_format(new DateTime($date), 'l, d F Y g:i a') : 'Belum Check In' }}</h6>
-            </span>
-        </div>
-        <div class="col-5">
-            <span>
                 <small class="text-muted">
                     Email
                 </small>
@@ -28,6 +22,12 @@
             <span>
                 <small class="text-muted">Telepon</small>
                 <h6 class="text-break">{{ $telephone }}</h6>
+            </span>
+        </div>
+        <div class="col-5">
+            <span>
+                <small class="text-muted">Tanggal</small>
+                <h6>{{ $isCheckIn ? date_format(new DateTime($date), 'l, d F Y g:i a') : 'Belum Check In' }}</h6>
             </span>
         </div>
     </section>
