@@ -6,13 +6,17 @@
         <p>Statistik penjualan tiket</p>
         <section class="row mb-4">
             {{-- Amount of Stock Ticket --}}
-            <x-dashboard.card-widget card-title="{{ $stock }}" card-subtitle="Stock Ticket" />
+            <x-dashboard.card-widget card-title="{{ $stock }}" card-colour="bg-primary" useDropdown="false"
+                card-subtitle="Stock Ticket" />
             {{-- Amount of Tickets Sold --}}
-            <x-dashboard.card-widget card-title="{{ $tickets_sold }}" card-subtitle="Tiket terjual" card-colour="bg-warning" />
+            <x-dashboard.card-widget card-title="{{ $tickets_sold }}" card-subtitle="Tiket terjual" card-colour="bg-warning"
+                useDropdown="false" />
             {{-- Amount of User Register --}}
-            <x-dashboard.card-widget card-title="{{ $user_registered }}" card-subtitle="Pengguna yang mendaftar" card-colour="bg-success" />
+            <x-dashboard.card-widget card-title="{{ $user_registered }}" card-subtitle="Pengguna yang mendaftar"
+                card-colour="bg-success" useDropdown="false" />
             {{-- Amount of Successful Transaction --}}
-            <x-dashboard.card-widget card-title="{{ $tickets_sold_today }}" card-subtitle="Tiket terjual hari ini" card-colour="bg-info" />
+            <x-dashboard.card-widget card-title="{{ $tickets_sold_today }}" card-subtitle="Tiket terjual hari ini"
+                card-colour="bg-info" useDropdown="false" />
         </section>
         {{-- All availabel Package --}}
         <section class="row">

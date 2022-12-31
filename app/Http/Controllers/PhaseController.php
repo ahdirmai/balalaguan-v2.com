@@ -45,8 +45,8 @@ class PhaseController extends Controller
     {
         $data = $request->validate([
             'name' => 'string|required',
-            'start' => 'required|date',
-            'end' => 'required|date',
+            'start' => 'nullable|date',
+            'end' => 'nullable|date',
         ]);
         if (Phase::create($data)) {
             flash()->addSuccess('Berhasil menambahkan paket tiket!');
@@ -96,8 +96,8 @@ class PhaseController extends Controller
         $phase = Phase::findOrFail($id);
         $data = $request->validate([
             'name' => 'string|required',
-            'start' => 'required|date',
-            'end' => 'required|date',
+            'start' => 'nullable|date',
+            'end' => 'nullable|date',
         ]);
         if ($phase->update($data)) {
             flash()->addSuccess('Berhasil memperbarui paket tiket!');

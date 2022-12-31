@@ -12,6 +12,12 @@
         </div>
         <div class="col-5">
             <span>
+                <small class="text-muted">NIK</small>
+                <h6>{{ $nik }}</h6>
+            </span>
+        </div>
+        <div class="col-5">
+            <span>
                 <small class="text-muted">
                     Email
                 </small>
@@ -24,12 +30,12 @@
                 <h6 class="text-break">{{ $telephone }}</h6>
             </span>
         </div>
-        <div class="col-5">
+        <!-- <div class="col-5">
             <span>
                 <small class="text-muted">Tanggal</small>
                 <h6>{{ $isCheckIn ? date_format(new DateTime($date), 'l, d F Y g:i a') : 'Belum Check In' }}</h6>
             </span>
-        </div>
+        </div> -->
     </section>
     <button class="btn bg-brand-red px-3 col-12 text-light mt-3" data-bs-toggle="modal"
         data-bs-target="#qrcode-{{ $id }}">Lihat QR Code</button>

@@ -7,7 +7,7 @@
         <div class="col bg-light p-4 rounded-3 border">
             <h5>Upload Bukti Pembayaran</h5>
             <p class="text-muted">Lakukan pembayaran terhadap pemesanan tiket yang anda lakukan pada <strong>{{date_format($transaction->created_at, 'l, d F Y g:i a')}} WITA</strong></p>
-            <section class="py-2 d-flex flex-column flex-lg-row gap-lg-5" style="border-top: 1px dashed #ebe4e4">
+            <section class="py-2  mb-2 d-flex flex-column flex-lg-row gap-lg-5" style="border-top: 1px dashed #ebe4e4">
                 <span>
                     <small class="text-muted">Tiket</small>
                     <h6>{{ $transaction->period->category->name }}</h6>
@@ -29,6 +29,7 @@
                     <h6>IDR {{ number_format($transaction->quantity * $transaction->period->price, 0, '.', '.') }}</h6>
                 </span>
             </section>
+            <p class="text-muted">Lakukan pembayaran via rekening <strong>DANA 0859-3939-5319 AN Joko Roeswanto</strong></p>
             <form class="py-2" method="post" action="{{ route('user.transaction.update', $transaction->id) }}"
                 enctype="multipart/form-data">
                 @csrf

@@ -19,7 +19,7 @@ class PhaseSeeder extends Seeder
             ['name' => 'Early Bird'],
             ['name' => 'Presale 1'],
             ['name' => 'Presale 2'],
-            ['name' => 'Presale 3'],
+            ['name' => 'Normal'],
         ];
 
         foreach ($data as $d) {
