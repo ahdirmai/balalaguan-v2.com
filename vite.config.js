@@ -14,6 +14,7 @@ export default defineConfig({
                 "resources/css/core-ui/example.css",
                 "resources/js/core-ui/main.js",
                 "resources/js/core-ui/vendors/coreui.bundle.min.js",
+                "resources/js/core-ui/vendors/coreui.bundle.min.js.map",
                 "resources/js/core-ui/vendors/simplebar.min.js",
                 'resources/css/brand/colors.css',
                 'resources/css/app.css',

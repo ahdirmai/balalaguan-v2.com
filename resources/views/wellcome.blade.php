@@ -102,13 +102,17 @@
                                     <li class="mb-1">Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh protokol kesehatan selama event berlangsung</li>
                                 </ol>
                             </section>
-                            <section class="p-3 rounded bg-light border">
+                            <section class="p-3 rounded bg-light border mb-3">
                                 <p class="text-muted">Penukaran Tiket</p>
                                 <ol>
                                     <li class="mb-1">Tunjukkan identitas KTP serta e-tiket yang telah diterima melalui email atau di halaman “Tiketku” kepada petugas di lapangan untuk scan QR Code. Sesuaikan tingkat kecerahan layar ponsel sebelum menunjukkan QR Code.</li>
                                     <li class="mb-1">Setelah QR Code sukses terverifikasi, customer akan mendapatkan wristband yang dapat digunakan untuk memasuki venue.</li>
                                     <li class="mb-1">Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh protokol kesehatan selama event berlangsung</li>
                                 </ol>
+                            </section>
+                            <section class="px-3 py-4 rounded-3 bg-danger text-light border mb-3 text-center">
+                                <h3>Sebelum membeli tiket, baca syarat dan ketentuan diatas</h3>
+                                <p>Apabila tiket sudah terbeli, bukan tanggung jawab dari tim Balalaguan</p>
                             </section>
                         </section>
                     </section>
