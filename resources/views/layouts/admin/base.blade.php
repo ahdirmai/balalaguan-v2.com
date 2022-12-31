@@ -3,7 +3,7 @@
 <head>
     @include('includes.admin.head')    
     @stack('style')
-    <title>Balalaguan - Bumantara Event Orginizer</title>
+    <title>Balalaguan - Bumantara Event Organizer</title>
 </head>
 <body>
     @include('includes.admin.sidebar')
