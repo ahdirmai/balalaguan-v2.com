@@ -11,7 +11,7 @@
                     <img style="cursor: pointer" class="img-thumbnail rounded-circle dropdown-toggle" width="40" height="40" src="{{ asset('/core-ui/img/avatars/2.jpg') }}" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li>
-                            <a href="{{ route('user.profile') }}" class="dropdown-item {{ Request::routeIs('user.profile') ? 'active' : '' }}">
+                            <a href="{{ route('user.profile.index') }}" class="dropdown-item {{ Request::routeIs('user.profile.index') ? 'active' : '' }}">
                                 <small class="text-muted">Akun</small>
                                 <br>
                                 <small>{{ Str::limit(auth()->user()->name, 15) }}</small>
