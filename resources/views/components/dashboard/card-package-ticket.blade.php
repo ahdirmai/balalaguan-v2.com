@@ -11,7 +11,7 @@
         @foreach ($periods as $period)
             <div class="card-body row text-center">
                 <div class="col">
-                    <p class="fs-5 fw-semibold">{{ $period->price }}</p>
+                    <p class="fs-5 fw-semibold">IDR {{ number_format($period->price, 0, '.', '.') }}</p>
                     <div class="text-uppercase text-medium-emphasis small">{{ $period->category->name }}</div>
                 </div>
                 <div class="vr"></div>
