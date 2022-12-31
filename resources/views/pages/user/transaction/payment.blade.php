@@ -36,7 +36,7 @@
                 @method('PUT')
                 <div class="rounded-3 p-3 mb-4" style="border: 1px dashed #ebe4e4">
                     <label for="formFileLg" class="form-label">Pastikan file dalam format JPEG PNG JPG</label>
-                    <input class="form-control form-control-lg" id="formFileLg"
+                    <input max-file-size="1024" class="form-control form-control-lg" id="formFileLg"
                         accept="image/jpeg, image/jpg, image/png" type="file" name="image">
                 </div>
                 <input type="hidden" name="period_id" value="{{ $transaction->period_id }}">
@@ -48,3 +48,16 @@
         </div>
     </x-user.hero-section>
 @endsection
+
+@push('script')
+<script>
+    var uploadField = document.querySelector("[name=image]")
+
+    uploadField.onchange = function() {
+        if(this.files[0].size > 1048576){
+        alert("File yang di upload harus dibawah 1MB !")
+        this.value = ""
+        }
+    }
+</script>
+@endpush

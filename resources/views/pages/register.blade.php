@@ -17,7 +17,7 @@
                                 placeholder="Fullname" name="name" value="{{ old('name') }}">
                         </div>
                         @error('name')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -30,7 +30,7 @@
                                 placeholder="Email" name="email" value="{{ old('email') }}">
                         </div>
                         @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -39,11 +39,11 @@
                                 <svg class="icon">
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
-                            <input class="form-control @error('password') is-invalid @enderror" type="password"
+                            <input minlength="8" maxlength="8" class="form-control @error('password') is-invalid @enderror" type="password"
                                 placeholder="Password" name="password">
                         </div>
                         @error('password')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -57,7 +57,7 @@
                                 placeholder="Repeat password" name="password_confirmation" autocomplete="new-password">
                         </div>
                         @error('password_confirmation')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -70,7 +70,7 @@
                                 name="nik" minlength="16" maxlength="16" value="{{ old('nik') }}">
                         </div>
                         @error('nik')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -83,7 +83,7 @@
                                 placeholder="Phone" name="phone"  value="{{ old('phone') }}">
                         </div>
                         @error('phone')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -96,7 +96,7 @@
                                 placeholder="Alamat" name="address"  value="{{ old('address') }}">
                         </div>
                         @error('address')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="text-danger" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror

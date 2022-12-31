@@ -1,16 +1,16 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'BalalaguanFestival',
+    'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'https://e-ticketing.mrizkiag.tech',
+    'url' => 'http://localhost:8000',
     'asset_url' => NULL,
     'timezone' => 'Asia/Makassar',
     'locale' => 'id',
     'fallback_locale' => 'id',
     'faker_locale' => 'en_US',
-    'key' => 'base64:aWxuFgkupsItB5qTiNTaHLJViajyp7R6RTZezFwQ74Y=',
+    'key' => 'base64:Tt/fZgh785FbU8+lhkQDmjQL7VmgJ/w0yEYa9QHC1dw=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -200,7 +200,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/mrizkiag/Balalaguan.com/storage/framework/cache/data',
+        'path' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -244,7 +244,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'balalaguanfestival_cache_',
+    'prefix' => 'laravel_cache_',
   ),
   'cors' => 
   array (
@@ -283,7 +283,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'db-e-ticketing',
+        'database' => 'balalaguan_db',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -293,9 +293,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db-e-ticketing',
+        'database' => 'balalaguan_db',
         'username' => 'root',
-        'password' => 'tBFARpXHDRFaMACZ',
+        'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -313,9 +313,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db-e-ticketing',
+        'database' => 'balalaguan_db',
         'username' => 'root',
-        'password' => 'tBFARpXHDRFaMACZ',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -328,9 +328,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db-e-ticketing',
+        'database' => 'balalaguan_db',
         'username' => 'root',
-        'password' => 'tBFARpXHDRFaMACZ',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -343,7 +343,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'balalaguanfestival_database_',
+        'prefix' => 'laravel_database_',
       ),
       'default' => 
       array (
@@ -373,14 +373,14 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/mrizkiag/Balalaguan.com/storage/app',
+        'root' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/mrizkiag/Balalaguan.com/storage/app/public',
-        'url' => 'https://e-ticketing.mrizkiag.tech/storage',
+        'root' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\app/public',
+        'url' => 'http://localhost:8000/storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -399,7 +399,7 @@
     ),
     'links' => 
     array (
-      '/home/mrizkiag/Balalaguan.com/public/storage' => '/home/mrizkiag/Balalaguan.com/storage/app/public',
+      'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\public\\storage' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -419,7 +419,7 @@
   'livewire' => 
   array (
     'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => '/home/mrizkiag/Balalaguan.com/resources/views/livewire',
+    'view_path' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\resources\\views/livewire',
     'layout' => 'layouts.app',
     'asset_url' => NULL,
     'app_url' => NULL,
@@ -477,13 +477,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/mrizkiag/Balalaguan.com/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/mrizkiag/Balalaguan.com/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -535,7 +535,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/mrizkiag/Balalaguan.com/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -594,14 +594,14 @@
     'from' => 
     array (
       'address' => 'admin@balalaguan.com',
-      'name' => 'BalalaguanFestival',
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/mrizkiag/Balalaguan.com/resources/views/vendor/mail',
+        0 => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -810,7 +810,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'e-ticketing.mrizkiag.tech',
+      5 => 'localhost:8000',
     ),
     'guard' => 
     array (
@@ -849,7 +849,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/mrizkiag/Balalaguan.com/storage/framework/sessions',
+    'files' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -858,7 +858,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'balalaguanfestival_session',
+    'cookie' => 'laravel_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -869,9 +869,9 @@
   array (
     'paths' => 
     array (
-      0 => '/home/mrizkiag/Balalaguan.com/resources/views',
+      0 => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\resources\\views',
     ),
-    'compiled' => '/home/mrizkiag/Balalaguan.com/storage/framework/views',
+    'compiled' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan\\storage\\framework\\views',
   ),
   'image' => 
   array (
@@ -1015,7 +1015,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => '/home/mrizkiag/Balalaguan.com',
+    'remote_sites_path' => 'C:\\Users\\ASUS\\Documents\\projects\\balalaguan',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

@@ -18,7 +18,7 @@
                             </a>
                         </li>
                         <li><a class="dropdown-item {{ Request::routeIs('user.transaction.index') ? 'active' : '' }}" href="{{ route('user.transaction.index') }}">Pesanan</a></li>
-                        <li><a class="dropdown-item {{ Request::routeIs('user.ticket.index') ? 'active' : '' }}" href="{{ route('user.ticket.index') }}">Tiket</a></li>
+                        <li><a class="dropdown-item {{ Request::routeIs('user.ticket.index') ? 'active' : '' }}" href="{{ route('user.ticket.index') }}">Tiketku</a></li>
                         <li>
                             <a class="dropdown-item text-danger" href="" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">Logout</a>
