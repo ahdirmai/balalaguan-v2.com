@@ -15,7 +15,7 @@
 
                                 </svg></span>
                             <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                placeholder="Username" name="name" value="{{ old('name') }}">
+                                placeholder="Fullname" name="name" value="{{ old('name') }}">
                         </div>
                         @error('name')
                             <span class="invalid-feedback" role="alert">

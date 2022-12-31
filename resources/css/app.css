@@ -94,7 +94,8 @@ hr.divider {
     }
     #mainNav.navbar-shrink {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(8px);
     }
     #mainNav.navbar-shrink .navbar-brand {
         color: #212529;
