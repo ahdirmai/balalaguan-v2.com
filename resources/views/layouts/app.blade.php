@@ -2,7 +2,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @include('includes.admin.head')    
-    <title>Balalaguan - Bumantara Event Orginizer</title>
 </head>
 <body>
     <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
