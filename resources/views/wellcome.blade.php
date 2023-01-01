@@ -45,7 +45,7 @@
             </span>
             <section>
                 <strong>Tanggal Acara</strong>
-                <p class="mb-0">Senin, 13 Februari 2022</p>
+                <p class="mb-0">Sabtu, 11 Februari 2022</p>
             </section>
         </section>
         {{-- Narahubung --}}
