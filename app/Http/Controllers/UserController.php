@@ -40,6 +40,9 @@ class UserController extends Controller
             'nik' => ['required', ' ', 'max:255', $nik_unique],
             'phone' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:255'],
+        ], [
+            'nik.unique' => 'NIK yang digunakan telah terdaftar',
+            'email.unique' => 'Email yang digunakan telah terdaftar',
         ]);
 
         if ($user->update($data)) {
