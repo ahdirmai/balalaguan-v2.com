@@ -14,14 +14,14 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail(auth()->user()->id);
 
         return view('pages.user.profile.edit', compact('user'));
     }
 
     public function update($id, Request $request)
     {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail(auth()->user()->id);
         $old_email = $user->email;
         $old_nik = $user->nik;
         $email_unique = 'unique:users';
