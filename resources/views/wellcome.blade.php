@@ -94,18 +94,10 @@
                                 </ol>
                             </section>
                             <section class="p-3 rounded bg-light border mb-3">
-                                <p class="text-muted">E Ticket</p>
+                                <p class="text-muted">E-Ticket</p>
                                 <ol>
                                     <li class="mb-1">E-tiket tidak dapat diuangkan.</li>
                                     <li class="mb-1">Tunjukkan identitas KTP atau Kartu Keluarga serta e-tiket yang telah diterima melalui email atau di halaman “Tiketku” kepada petugas di lapangan untuk scan QR Code. Sesuaikan tingkat kecerahan layar ponsel sebelum menunjukkan QR Code.</li>
-                                    <li class="mb-1">Setelah QR Code sukses terverifikasi, customer akan mendapatkan wristband yang dapat digunakan untuk memasuki venue.</li>
-                                    <li class="mb-1">Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh protokol kesehatan selama event berlangsung</li>
-                                </ol>
-                            </section>
-                            <section class="p-3 rounded bg-light border mb-3">
-                                <p class="text-muted">Penukaran Tiket</p>
-                                <ol>
-                                    <li class="mb-1">Tunjukkan identitas KTP serta e-tiket yang telah diterima melalui email atau di halaman “Tiketku” kepada petugas di lapangan untuk scan QR Code. Sesuaikan tingkat kecerahan layar ponsel sebelum menunjukkan QR Code.</li>
                                     <li class="mb-1">Setelah QR Code sukses terverifikasi, customer akan mendapatkan wristband yang dapat digunakan untuk memasuki venue.</li>
                                     <li class="mb-1">Customer wajib memakai masker, membawa hand sanitizer pribadi, dan mematuhi seluruh protokol kesehatan selama event berlangsung</li>
                                 </ol>
