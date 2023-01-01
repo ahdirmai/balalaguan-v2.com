@@ -18,3 +18,5 @@ yarn-error.log
 /.vscode
 package-lock.json
 bootstrap/cache
+bootstrap/cache/routes-v7.php
+bootstrap/cache/config.php
