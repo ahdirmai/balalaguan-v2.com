@@ -7,7 +7,7 @@
                 <div class="card-body p-4">
                     <h1>Ubah data profil</h1>
                     {{-- <p class="text-medium-emphasis">Create your account</p> --}}
-                    <form action="{{ route('user.profile.update', $user->id) }}" method="post">
+                    <form action="{{ route('user.profile.update', auth()->user()->id) }}" method="post">
                         @csrf
                         @method('PUT')
 

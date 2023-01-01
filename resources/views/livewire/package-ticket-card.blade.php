@@ -77,7 +77,7 @@
                     <button wire:click="expanded({{ $phaseid }})" type="button"
                         class="btn btn-outline-secondary me-3">Batal</button>
                     <button wire:click="order({{ $amounts }}, {{ @$period->id ?? 0 }})"
-                        @if ($period) @disabled($period->is_active == 0) @disabled($period->stock <= 0) @endif
+                        @if ($period) @disabled($period->is_active == 0) @disabled($period->stock <= 0) @endif @disabled($category_id == 0)
                         type="button" class="btn bg-brand-red px-3 text-light">Pesan Sekarang</button>
                 </section>
             </section>
