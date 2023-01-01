@@ -70,7 +70,9 @@
 @push('script')
     <script>
         $(document).ready( function() {
-            $('#table').DataTable()
+            $('#table').DataTable({
+                scrollX: true
+            })
         })
     </script>
 @endpush
