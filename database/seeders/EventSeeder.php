@@ -17,12 +17,12 @@ class EventSeeder extends Seeder
     public function run()
     {
         $data = [
-            'name' => 'Balalaguan',
+            'name' => 'Balalaguan Music Festival',
             'description' => 'lorem ipsum',
-            'payment_name' => 'Oka R Abdillah (Dana)',
-            'payment_account' => '123456789012',
-            'contact_name' => 'Oka (Whatsapp)',
-            'contact_number' => '081923657893',
+            'payment_name' => 'Joko Roeswanto',
+            'payment_account' => 'Dana 0859-3939-5319',
+            'contact_name' => '085939395319 (Whatsapp)',
+            'contact_number' => '085939395319',
         ];
 
         Event::create($data);

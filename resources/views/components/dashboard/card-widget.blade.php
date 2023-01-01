@@ -13,9 +13,9 @@
             @if ($useDropdown)
                 <div class="dropdown">
                     <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg class="icon">
+                    {{-- <svg class="icon">
                         <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-options') }}"></use>
-                    </svg>
+                    </svg> --}}
                     </button>
                     <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                 </div>

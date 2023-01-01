@@ -4,7 +4,7 @@
     <div class="p-3 row justify-content-center">
         <div class="col-lg-8">
             <div class="card-group d-block d-md-flex row">
-                <div class="card col-md-7 p-4 mb-0">
+                <div class="card col-md-7 p-4 mb-md-0 mb-sm-2">
                     <div class="card-body">
                         <h1>Login</h1>
                         <p class="text-medium-emphasis">Sign In to your account</p>
@@ -65,4 +65,11 @@
             </div>
         </div>
     </div>
+    <script>
+        let bg = document.querySelector('.bg-light');
+        bg.style.backgroundImage = "url('{{ asset('img/concert-layer.png') }}')";
+        bg.style.backgroundSize = "cover";
+        bg.style.backgroundRepeat = "no-repeat";
+        bg.style.minHeight = "120vh";
+    </script>
 @endsection

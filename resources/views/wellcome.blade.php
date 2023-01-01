@@ -121,7 +121,7 @@
         </div>
     </section>
     {{-- All Ticket Package --}}
-    <section class="container-lg">
+    <section class="container-lg" id="ticket">
         <h4 class="mb-3 text-brand-red text-center">Paket tiket</h4>
         @if (!auth()->check())
             <p class="fst-italic text-center">(Silakan login terlebih dahulu untuk melakukan pembelian tiket)</p>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chance;
+use App\Models\Event;
 use App\Models\Period;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
@@ -62,13 +63,13 @@ class UserTransactionController extends Controller
         ]);
 
 
-        
+
         $user_id = auth()->user()->id;
         $chance = Chance::where('user_id', $user_id)->first();
         $userChance = $chance->chance;
         $quantity = $request->quantity;
         $period = Period::findOrFail($request->period_id);
-        
+
         // return response()->json($chance);
         // Cek apakah user masih memiliki chance
         if ($userChance > 0) {
@@ -113,8 +114,10 @@ class UserTransactionController extends Controller
         // dd($id);
         $transaction = Transaction::where('id', $id)
             ->with('period.category', 'period.phase', 'tickets')->get();
+        $event = Event::findOrFail(1);
         $data = [
             'transaction' => $transaction[0],
+            'event' => $event,
         ];
         // return response()->json($data);
         return view('pages.user.transaction.payment', $data);

@@ -65,7 +65,7 @@
                 {{-- Payment number --}}
                 <div class="col-6">
                     <label for="stock" class="form-label">Nomor akun pembayaran</label>
-                    <input type="number" class="form-control" id="stock" name="payment_account"
+                    <input type="text" class="form-control" id="stock" name="payment_account"
                     placeholder="Masukkan nomor akun pembayaran" required
                     value="{{ $event->payment_account ?? old('payment_account') }}">
                 </div>
@@ -84,7 +84,7 @@
                 {{-- Contact Person --}}
                 <div class="col-6">
                     <label for="stock" class="form-label">Nomor narahubung</label>
-                    <input type="number" class="form-control" id="stock" name="contact_number"
+                    <input type="text" class="form-control" id="stock" name="contact_number"
                     placeholder="Masukkan nomor akun pembayaran" required
                         value="{{ $event->contact_number ?? old('contact_number') }}">
                     </div>

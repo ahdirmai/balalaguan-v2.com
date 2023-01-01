@@ -13,7 +13,7 @@
         <div class="col-5">
             <span>
                 <small class="text-muted">NIK</small>
-                <h6>{{ $nik }}</h6>
+                <h6 class="text-break">{{ $nik }}</h6>
             </span>
         </div>
         <div class="col-5">

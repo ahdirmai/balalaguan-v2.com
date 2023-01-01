@@ -50,7 +50,7 @@ class LoginController extends Controller
         if ($user->hasRole('admin')) {
             return redirect()->route('admin.dashboard');
         } elseif ($user->hasRole('user')) {
-            return  redirect()->intended(route('landing-page'));
+            return  redirect()->intended(route('landing-page').'/#ticket');
         }
     }
 }

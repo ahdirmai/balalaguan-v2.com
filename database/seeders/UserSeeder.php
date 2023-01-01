@@ -22,10 +22,10 @@ class UserSeeder extends Seeder
         $data = [
             'name' => 'admin',
             'email' => 'admin@balalaguan.com',
-            'address' => 'jalan trans kalimantan',
-            'nik' => '123456789',
-            'phone' => '081253780486',
-            'password' => Hash::make('12345678'),
+            'address' => 'Barito Kuala',
+            'nik' => '1234567891234567',
+            'phone' => '085939395319',
+            'password' => Hash::make('adminbalalaguan2023'),
         ];
 
         $user = User::create($data);
