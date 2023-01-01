@@ -14,7 +14,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                placeholder="Fullname" name="name" value="{{ old('name') }}">
+                                placeholder="Fullname" name="name" value="{{ old('name') }}" required>
                         </div>
                         @error('name')
                             <span class="text-danger" role="alert">
@@ -27,7 +27,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-envelope-open') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('email') is-invalid @enderror" type="text"
-                                placeholder="Email" name="email" value="{{ old('email') }}">
+                                placeholder="Email" name="email" value="{{ old('email') }}" required>
                         </div>
                         @error('email')
                             <span class="text-danger" role="alert">
@@ -40,7 +40,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
                             <input minlength="8" maxlength="8" class="form-control @error('password') is-invalid @enderror" type="password"
-                                placeholder="Password" name="password">
+                                placeholder="Password" name="password" required>
                         </div>
                         @error('password')
                             <span class="text-danger" role="alert">
@@ -54,7 +54,7 @@
                                 </svg></span>
                             <input id="password-confirm"
                                 class="form-control @error('password_confirmation') is-invalid @enderror" type="password"
-                                placeholder="Repeat password" name="password_confirmation" autocomplete="new-password">
+                                placeholder="Repeat password" name="password_confirmation" autocomplete="new-password" required>
                         </div>
                         @error('password_confirmation')
                             <span class="text-danger" role="alert">
@@ -67,7 +67,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('nik') is-invalid @enderror" type="number" placeholder="NIK"
-                                name="nik" minlength="16" maxlength="16" value="{{ old('nik') }}">
+                                name="nik" minlength="16" maxlength="16" value="{{ old('nik') }}" required>
                         </div>
                         @error('nik')
                             <span class="text-danger" role="alert">
@@ -80,7 +80,7 @@
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-phone') }}"></use>
                                 </svg></span>
                             <input class="form-control @error('phone') is-invalid @enderror" type="number"
-                                placeholder="Phone" name="phone"  value="{{ old('phone') }}">
+                                placeholder="Phone" name="phone"  value="{{ old('phone') }}" required>
                         </div>
                         @error('phone')
                             <span class="text-danger" role="alert">

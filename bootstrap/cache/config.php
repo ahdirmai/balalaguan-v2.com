@@ -4,13 +4,13 @@
     'name' => 'BalalaguanFestival',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost:8000',
+    'url' => 'https://balalaguanmusicfest.com',
     'asset_url' => NULL,
     'timezone' => 'Asia/Makassar',
     'locale' => 'id',
     'fallback_locale' => 'id',
     'faker_locale' => 'en_US',
-    'key' => 'base64:36EuMyRr7kMHQ29oeSVsbczsM3ZhM8GMSGTGMVhyqgk=',
+    'key' => 'base64:8JwvyEKpevAKCSoMpN3obMi2xkATyGQzALtSctoyI5E=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -200,7 +200,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\framework/cache/data',
+        'path' => '/home/bala4956/repositories/Balalaguan.com/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -283,7 +283,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'e_ticketing',
+        'database' => 'bala4956_e-ticketing',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -293,9 +293,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'e_ticketing',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'bala4956_e-ticketing',
+        'username' => 'bala4956_e-ticketing',
+        'password' => ')3X[v#*SuXR#',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -313,9 +313,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'e_ticketing',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'bala4956_e-ticketing',
+        'username' => 'bala4956_e-ticketing',
+        'password' => ')3X[v#*SuXR#',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -328,9 +328,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'e_ticketing',
-        'username' => 'root',
-        'password' => '',
+        'database' => 'bala4956_e-ticketing',
+        'username' => 'bala4956_e-ticketing',
+        'password' => ')3X[v#*SuXR#',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -373,14 +373,14 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\app',
+        'root' => '/home/bala4956/repositories/Balalaguan.com/storage/app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\app/public',
-        'url' => 'http://localhost:8000/storage',
+        'root' => '/home/bala4956/repositories/Balalaguan.com/storage/app/public',
+        'url' => 'https://balalaguanmusicfest.com/storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -399,7 +399,7 @@
     ),
     'links' => 
     array (
-      'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\public\\storage' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\app/public',
+      '/home/bala4956/repositories/Balalaguan.com/public/storage' => '/home/bala4956/repositories/Balalaguan.com/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -419,7 +419,7 @@
   'livewire' => 
   array (
     'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\resources\\views/livewire',
+    'view_path' => '/home/bala4956/repositories/Balalaguan.com/resources/views/livewire',
     'layout' => 'layouts.app',
     'asset_url' => NULL,
     'app_url' => NULL,
@@ -477,13 +477,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\logs/laravel.log',
+        'path' => '/home/bala4956/repositories/Balalaguan.com/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\logs/laravel.log',
+        'path' => '/home/bala4956/repositories/Balalaguan.com/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -535,7 +535,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\logs/laravel.log',
+        'path' => '/home/bala4956/repositories/Balalaguan.com/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -551,7 +551,7 @@
         'port' => '465',
         'encryption' => 'ssl',
         'username' => 'balalaguanfestival@gmail.com',
-        'password' => 'duvfvnnyshskvvpg',
+        'password' => 'wnnoqiqlezxgvntg',
         'timeout' => NULL,
         'local_domain' => NULL,
       ),
@@ -601,7 +601,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\resources\\views/vendor/mail',
+        0 => '/home/bala4956/repositories/Balalaguan.com/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -810,7 +810,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost:8000',
+      5 => 'balalaguanmusicfest.com',
     ),
     'guard' => 
     array (
@@ -849,7 +849,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\framework/sessions',
+    'files' => '/home/bala4956/repositories/Balalaguan.com/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -869,9 +869,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\resources\\views',
+      0 => '/home/bala4956/repositories/Balalaguan.com/resources/views',
     ),
-    'compiled' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com\\storage\\framework\\views',
+    'compiled' => '/home/bala4956/repositories/Balalaguan.com/storage/framework/views',
   ),
   'image' => 
   array (
@@ -1015,7 +1015,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\Coding\\Github MRizkiAG\\Balalaguan.com',
+    'remote_sites_path' => '/home/bala4956/repositories/Balalaguan.com',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
