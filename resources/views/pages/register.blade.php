@@ -44,7 +44,7 @@
                                 <svg class="icon">
                                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock-locked') }}"></use>
                                 </svg></span>
-                            <input minlength="8" maxlength="8" class="form-control @error('password') is-invalid @enderror" type="password"
+                            <input minlength="8" class="form-control @error('password') is-invalid @enderror" type="password"
                                 placeholder="Password" name="password" required>
                         </div>
 
@@ -59,7 +59,7 @@
                                 </svg></span>
                             <input id="password-confirm"
                                 class="form-control @error('password_confirmation') is-invalid @enderror" type="password"
-                                placeholder="Repeat password" name="password_confirmation" autocomplete="new-password" required>
+                                minlength="8" placeholder="Repeat password" name="password_confirmation" autocomplete="new-password" required>
                         </div>
 
                         @error('nik')
