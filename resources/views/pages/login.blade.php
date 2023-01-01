@@ -11,6 +11,12 @@
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             {{-- email --}}
+                            {{-- email error --}}
+                            @error('email')
+                                <span class="text-danger mb-1" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             <div class="input-group mb-4"><span class="input-group-text">
                                     <svg class="icon">
                                         <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-lock') }}-locked"></use>
@@ -18,14 +24,15 @@
                                 <input class="form-control @error('email') is-invalid @enderror" type="email"
                                     value="{{ @old('email') }}" name="email" placeholder="Email">
                             </div>
-                            {{-- error --}}
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
+                            {{-- end of email --}}
+
+                            {{-- password --}}
+                            {{-- passwrod error --}}
+                            @error('password')
+                                <span class="text-danger mb-1" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                            {{-- end of email --}}
-                            {{-- password --}}
                             <div class="input-group mb-3"><span class="input-group-text">
                                     <svg class="icon">
                                         <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user') }}"></use>
@@ -33,12 +40,6 @@
                                 <input name="password" class="form-control  @error('password') is-invalid @enderror"
                                     type="password" placeholder="Password" value="{{ old('password') }}">
                             </div>
-                            {{-- error --}}
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                             {{-- end of password --}}
                             <div class="row">
                                 <div class="col-6">

@@ -62,12 +62,14 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'nik' => ['required','min:16', 'max:16', 'unique:users'],
+            'nik' => ['required', 'min:16', 'max:16', 'unique:users'],
             'phone' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:255'],
+        ], [
+            'nik.unique' => 'NIK yang digunakan telah terdaftar',
+            'email.unique' => 'Email yang digunakan telah terdaftar',
         ]);
     }
-    
     /**
      * Create a new user instance after a valid registration.
      *
@@ -109,7 +111,7 @@ class RegisterController extends Controller
         }
 
         return $request->wantsJson()
-                    ? new JsonResponse([], 201)
-                    : redirect($this->redirectPath());
+            ? new JsonResponse([], 201)
+            : redirect($this->redirectPath());
     }
 }
