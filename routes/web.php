@@ -93,6 +93,7 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
     // Transaction
     Route::get('transactions/all', [TransactionController::class, 'indexAll'])->name('transactions.indexAll');
     Route::get('transactions/verified', [TransactionController::class, 'indexVerified'])->name('transactions.indexVerified');
+    Route::post('transactions/reject/{transaction_id}', [TransactionController::class, 'reject'])->name('transactions.reject');
     Route::resource('transactions', TransactionController::class);
 
     // Ticket

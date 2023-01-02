@@ -58,6 +58,14 @@
                                         <i class="fa-solid fa-check"></i>
                                     </button>
                                 @endif
+
+                                @if ($t->is_verified == 0 && $t->is_accepted == 0)
+                                {{-- Reject Pembayaran --}}
+                                <button type="button" title="Reject pembayaran" class="btn btn-danger"
+                                    data-coreui-toggle="modal" data-coreui-target="#rejectModal{{ $t->id }}">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                                @endif
                             </section>
 
                             <!-- Modal Lihat bukti pembayaran -->
@@ -81,6 +89,17 @@
                                         <input type="hidden" name="period_id" value="{{ $t->period->id }}">
                                         <input type="hidden" name="chance_id" value="{{ $t->user->chances[0]->id }}">
                                         <button type="submit" class="btn btn-primary">Verifikasi</button>
+                                    </form>
+                                </x-base.modal-confirm>
+                            @endif
+
+                            @if ($t->is_verified == 0 && $t->is_accepted == 0)
+                                <!-- Modal Verifikasi Pembayaran -->
+                                <x-base.modal-confirm modal-id="rejectModal{{ $t->id }}" title="Konfirmasi"
+                                    sub-title="Apakah anda yakin ingin menolak pembelian tiket dari {{ $t->user->name }}">
+                                    <form action="{{ route('admin.transactions.reject', $t->id) }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary">Reject</button>
                                     </form>
                                 </x-base.modal-confirm>
                             @endif

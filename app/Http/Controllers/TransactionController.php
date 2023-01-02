@@ -162,4 +162,23 @@ class TransactionController extends Controller
     {
         //
     }
+
+    public function reject($transaction_id)
+    {
+        $transaction = Transaction::findOrFail($transaction_id);
+        $period = Period::findOrFail($transaction->period_id);
+        $quantity = $transaction->quantity;
+        $chance = Chance::where('user_id', $transaction->user_id)->first();
+        $userChance = $chance->chance;
+        $finalChance = $userChance + $quantity;
+        $finalStock = $period->stock + $quantity;
+
+        // Tambah stok tiket dan Tambah chance user
+        if ($period->update(['stock' => $finalStock]) && $chance->update(['chance' => $finalChance]) && $transaction->update(['is_verified' => 2])) {
+            flash()->addSuccess('Berhasil menolak pembayaran');
+        } else {
+            flash()->addError('Gagal menolak pembayaran');
+        }
+        return redirect()->route('admin.transactions.index');
+    }
 }
