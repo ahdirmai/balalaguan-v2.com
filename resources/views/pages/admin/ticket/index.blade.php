@@ -12,6 +12,8 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
+                    <th>Email</th>
+                    <th>NIK</th>
                     <th>Kategori</th>
                     <th>Status</th>
                     <th>Waktu Check In</th>
@@ -22,6 +24,8 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $t->transaction->user->name }}</td>
+                        <td>{{ $t->transaction->user->email }}</td>
+                        <td>{{ $t->transaction->user->nik }}</td>
                         <td>{{ $t->transaction->period->category->name }}</td>
                         <td class="text-center">
                             @if ($t->is_checked_in == 1)

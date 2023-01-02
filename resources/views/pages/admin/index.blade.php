@@ -8,15 +8,20 @@
             {{-- Amount of Stock Ticket --}}
             <x-dashboard.card-widget card-title="{{ $stock }}" card-colour="bg-primary" useDropdown="false"
                 card-subtitle="Stock Ticket" />
-            {{-- Amount of Tickets Sold --}}
-            <x-dashboard.card-widget card-title="{{ $tickets_sold }}" card-subtitle="Tiket terjual" card-colour="bg-warning"
+                {{-- Amount of Tickets Sold --}}
+                <x-dashboard.card-widget card-title="{{ $tickets_sold }}" card-subtitle="Tiket terjual" card-colour="bg-warning"
                 useDropdown="false" />
-            {{-- Amount of User Register --}}
-            <x-dashboard.card-widget card-title="{{ $user_registered }}" card-subtitle="Pengguna yang mendaftar"
+                {{-- Amount of User Register --}}
+                <x-dashboard.card-widget card-title="{{ $user_registered }}" card-subtitle="Pengguna yang mendaftar"
                 card-colour="bg-success" useDropdown="false" />
-            {{-- Amount of Successful Transaction --}}
-            <x-dashboard.card-widget card-title="{{ $tickets_sold_today }}" card-subtitle="Tiket terjual hari ini"
+                {{-- Amount of Successful Transaction --}}
+                <x-dashboard.card-widget card-title="{{ $tickets_sold_today }}" card-subtitle="Tiket terjual hari ini"
                 card-colour="bg-info" useDropdown="false" />
+                <h3>Tiket Festival terjual : {{ $tickets_sold_festival }}</h3>
+                <h3>Tiket VIP terjual : {{ $tickets_sold_vip }}</h3>
+
+                <h3>Stok Tiket Festival : {{ $stock_ticket_festival }}</h3>
+                <h3>Stok Tiket VIP : {{ $stock_ticket_vip }}</h3>
         </section>
         {{-- All availabel Package --}}
         <section class="row">

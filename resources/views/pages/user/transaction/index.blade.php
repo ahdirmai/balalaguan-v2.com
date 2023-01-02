@@ -11,7 +11,7 @@
             @else
                 <span class="text-center text-light">
                     <p>
-                        Ups, anda belum mempunyai pesanan saat ini, yuuk mulai buat pesanan anda <a class="text-brand-red" href="{{ route('landing-page') }}">disini</a>
+                        Ups, anda belum mempunyai pesanan saat ini, yuuk mulai buat pesanan anda <a class="text-brand-red" href="{{ route('landing-page').'/#ticket' }}">disini</a>
                     </p>
                 </span>
             @endif
