@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Chance;
 use App\Models\Phase;
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
@@ -17,6 +18,8 @@ class PackageTicketCard extends Component
     public $amounts = 0;
     public $price;
     public $name;
+    public $chance;
+    public $finalChance;
 
     public function mount()
     {
@@ -52,6 +55,11 @@ class PackageTicketCard extends Component
 
     public function render()
     {
+        if (auth()->user() != null) {
+            $chance = Chance::where('user_id', auth()->user()->id)->first();
+            $this->chance = $chance->chance;
+            $this->finalChance = $this->chance - $this->amounts;
+        }
         $period = $this->periods
             ->where('category_id', $this->category_id)
             ->where('phase_id', $this->phaseid)->first();

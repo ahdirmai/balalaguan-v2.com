@@ -36,7 +36,7 @@
                 </span>
                 <span>
                     <button wire:click="expanded({{ $phaseid }})" @disabled(!auth()->check())
-                        @disabled($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)@disabled($getPeriod[0]->stock <= 0 && $getPeriod[1]->stock <= 0) class="btn bg-brand-red px-4 text-light"
+                        @disabled($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)@disabled($getPeriod[0]->stock <= 0 && $getPeriod[1]->stock <= 0) @disabled($chance<=0) class="btn bg-brand-red px-4 text-light"
                         type="button">Pilih</button>
                 </span>
             </section>
@@ -77,7 +77,7 @@
                     <button wire:click="expanded({{ $phaseid }})" type="button"
                         class="btn btn-outline-secondary me-3">Batal</button>
                     <button wire:click="order({{ $amounts }}, {{ @$period->id ?? 0 }})"
-                        @if ($period) @disabled($period->is_active == 0) @disabled($period->stock <= 0) @endif @disabled($category_id == 0)
+                        @if ($period) @disabled($period->is_active == 0) @disabled($period->stock <= 0) @endif @disabled($category_id == 0) @disabled($finalChance<0)
                         type="button" class="btn bg-brand-red px-3 text-light">Pesan Sekarang</button>
                 </section>
             </section>

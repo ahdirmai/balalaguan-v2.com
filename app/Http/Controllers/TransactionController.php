@@ -35,6 +35,16 @@ class TransactionController extends Controller
         return view('pages.admin.transactions.indexAll', $data);
     }
 
+    public function indexVerified()
+    {
+        $transactions = Transaction::where('is_verified', 1)->with(['period.category', 'period.phase', 'user.chances'])->get();
+        $data = [
+            'transactions' => $transactions,
+        ];
+        // return response()->json($data);
+        return view('pages.admin.transactions.index', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -43,7 +53,7 @@ class TransactionController extends Controller
     public function create()
     {
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -100,39 +110,39 @@ class TransactionController extends Controller
         if ($transaction->is_paid == 1) {
             // Cek apakah user masih memiliki chance
             // if ($chance->chance > 0) {
-                // $finalChance = $userChance - $quantity;
-                // Cek jumlah tiket yang dibeli sesuai dengan chance yang tersisa
-                // if ($finalChance >= 0) {
-                    // Cek apakah stok tiket masih ada
-                    if ($period->stock > 0 && $period->stock - $quantity >= 0) {
-                        // Kurangi stok tiket
-                        $finalStock = $period->stock - $quantity;
-                        $period->update(['stock' => $finalStock]);
+            // $finalChance = $userChance - $quantity;
+            // Cek jumlah tiket yang dibeli sesuai dengan chance yang tersisa
+            // if ($finalChance >= 0) {
+            // Cek apakah stok tiket masih ada
+            if ($period->stock > 0 && $period->stock - $quantity >= 0) {
+                // Kurangi stok tiket
+                // $finalStock = $period->stock - $quantity;
+                // $period->update(['stock' => $finalStock]);
 
-                        // Kurangi chance user membeli tiket
-                        // $chance->update(['chance' => $finalChance]);
+                // Kurangi chance user membeli tiket
+                // $chance->update(['chance' => $finalChance]);
 
-                        // Generate Ticket sesuai dengan quantity
-                        for ($i = 0; $i < $quantity; $i++) {
-                            $token = $username . uniqid();
-                            $ticket = [
-                                'transaction_id' => $transaction->id,
-                                'token' => $token,
-                                'is_checked_in' => 0,
-                                'event_id' => 1,
-                            ];
-                            Ticket::create($ticket);
-                        }
+                // Generate Ticket sesuai dengan quantity
+                for ($i = 0; $i < $quantity; $i++) {
+                    $token = $username . uniqid();
+                    $ticket = [
+                        'transaction_id' => $transaction->id,
+                        'token' => $token,
+                        'is_checked_in' => 0,
+                        'event_id' => 1,
+                    ];
+                    Ticket::create($ticket);
+                }
 
-                        // Update status transaksi 
-                        $transaction->update(['is_verified' => 1]);
-                        flash()->addSuccess("Sukses membuat ${quantity} tiket untuk ${username}");
-                    } else {
-                        flash()->addError('Maaf, stok tiket habis.');
-                    }
-                // } else {
-                //     flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
-                // }
+                // Update status transaksi 
+                $transaction->update(['is_verified' => 1]);
+                flash()->addSuccess("Sukses membuat ${quantity} tiket untuk ${username}");
+            } else {
+                flash()->addError('Maaf, stok tiket habis.');
+            }
+            // } else {
+            //     flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
+            // }
             // } else {
             //     flash()->addError('Maaf, setiap user hanya dapat diberikan maksimal 2 tiket.');
             // }
@@ -152,5 +162,4 @@ class TransactionController extends Controller
     {
         //
     }
-
 }

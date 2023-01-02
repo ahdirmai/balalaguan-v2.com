@@ -49,7 +49,16 @@
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user-x') }}"></use>
                 </svg> 
-                Verifikasi
+                Belum Verifikasi
+                {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.transactions.indexVerified') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user') }}"></use>
+                </svg> 
+                Terverifikasi
                 {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
             </a>
         </li>

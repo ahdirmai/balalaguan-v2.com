@@ -80,6 +80,10 @@ class UserTransactionController extends Controller
                 if ($period->stock > 0 && $period->stock - $quantity >= 0) {
                     $transaction = Transaction::create($data);
                     if ($transaction) {
+                        // Kurangi stok tiket
+                        $finalStock = $period->stock - $quantity;
+                        $period->update(['stock' => $finalStock]);
+
                         // Kurangi chance user membeli tiket
                         $chance->update(['chance' => $finalChance]);
 

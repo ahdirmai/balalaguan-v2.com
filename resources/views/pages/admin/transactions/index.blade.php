@@ -3,7 +3,7 @@
 @push('style')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
-@endpush    
+@endpush
 
 @section('content')
     <div class="container">
@@ -40,26 +40,29 @@
                         <td class="text-center">
                             @if ($t->is_paid == 1)
                                 <span class="badge text-bg-success">Sudah bayar</span>
-                            @else                                
+                            @else
                                 <span class="badge text-bg-danger">Belum bayar</span>
                             @endif
                         </td>
                         <td>
                             <section class="d-flex gap-2 align-items-center">
                                 {{-- Lihat bukti pembayaran --}}
-                                <button title="Lihat bukti pembayaran" type="button" class="btn btn-success" data-coreui-toggle="modal"
-                                    data-coreui-target="#buktiModal{{ $t->id }}">
+                                <button title="Lihat bukti pembayaran" type="button" class="btn btn-success"
+                                    data-coreui-toggle="modal" data-coreui-target="#buktiModal{{ $t->id }}">
                                     <i class="fa-solid fa-eye"></i>
                                 </button>
-                                {{-- Verifikasi Pembayaran --}}
-                                <button type="button" title="Verifikasi pembayaran" class="btn btn-primary" data-coreui-toggle="modal"
-                                    data-coreui-target="#verifModal{{ $t->id }}">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                                @if ($t->is_verified == 0)
+                                    {{-- Verifikasi Pembayaran --}}
+                                    <button type="button" title="Verifikasi pembayaran" class="btn btn-primary"
+                                        data-coreui-toggle="modal" data-coreui-target="#verifModal{{ $t->id }}">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                @endif
                             </section>
 
                             <!-- Modal Lihat bukti pembayaran -->
-                            <x-base.modal modal-id="buktiModal{{ $t->id }}" title="Bukti pembayaran dari {{ $t->user->name }}">
+                            <x-base.modal modal-id="buktiModal{{ $t->id }}"
+                                title="Bukti pembayaran dari {{ $t->user->name }}">
                                 <div class="col-12 mb-4">
                                     <div class="mb-2">
                                         <img src="{{ $t->hasMedia('image')? @$t->getMedia('image')->last()->getUrl(): 'https://t3.ftcdn.net/jpg/04/87/13/44/360_F_487134492_svhGzEgDXKyQuuPXQrs7prKoBYWCEJdw.jpg' }}"
@@ -67,19 +70,20 @@
                                     </div>
                                 </div>
                             </x-base.modal>
-
-                            <!-- Modal Verifikasi Pembayaran -->
-                            <x-base.modal-confirm modal-id="verifModal{{ $t->id }}" title="Konfirmasi"
-                                sub-title="Apakah anda yakin ingin memverivikasi pembelian tiket dari {{ $t->user->name }}">
-                                <form action="{{ route('admin.transactions.update', $t->id) }}" method="post">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="quantity" value="{{ $t->quantity }}">
-                                    <input type="hidden" name="period_id" value="{{ $t->period->id }}">
-                                    <input type="hidden" name="chance_id" value="{{ $t->user->chances[0]->id }}">
-                                    <button type="submit" class="btn btn-primary">Verifikasi</button>
-                                </form>
-                            </x-base.modal-confirm>
+                            @if ($t->is_verified == 0)
+                                <!-- Modal Verifikasi Pembayaran -->
+                                <x-base.modal-confirm modal-id="verifModal{{ $t->id }}" title="Konfirmasi"
+                                    sub-title="Apakah anda yakin ingin memverivikasi pembelian tiket dari {{ $t->user->name }}">
+                                    <form action="{{ route('admin.transactions.update', $t->id) }}" method="post">
+                                        @csrf
+                                        @method('PUT')
+                                        <input type="hidden" name="quantity" value="{{ $t->quantity }}">
+                                        <input type="hidden" name="period_id" value="{{ $t->period->id }}">
+                                        <input type="hidden" name="chance_id" value="{{ $t->user->chances[0]->id }}">
+                                        <button type="submit" class="btn btn-primary">Verifikasi</button>
+                                    </form>
+                                </x-base.modal-confirm>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

@@ -37,7 +37,7 @@ Route::get('/', function () {
         'phases' => $phases,
         'categories' => $categories,
     ];
-    if (auth()->user() != null){
+    if (auth()->user() != null) {
         if (auth()->user()->hasRole('admin')) {
             return redirect()->route('admin.dashboard');
         }
@@ -92,6 +92,7 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
 
     // Transaction
     Route::get('transactions/all', [TransactionController::class, 'indexAll'])->name('transactions.indexAll');
+    Route::get('transactions/verified', [TransactionController::class, 'indexVerified'])->name('transactions.indexVerified');
     Route::resource('transactions', TransactionController::class);
 
     // Ticket
