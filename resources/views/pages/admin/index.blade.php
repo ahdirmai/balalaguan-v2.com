@@ -17,11 +17,18 @@
                 {{-- Amount of Successful Transaction --}}
                 <x-dashboard.card-widget card-title="{{ $tickets_sold_today }}" card-subtitle="Tiket terjual hari ini"
                 card-colour="bg-info" useDropdown="false" />
-                <h3>Tiket Festival terjual : {{ $tickets_sold_festival }}</h3>
-                <h3>Tiket VIP terjual : {{ $tickets_sold_vip }}</h3>
 
-                <h3>Stok Tiket Festival : {{ $stock_ticket_festival }}</h3>
-                <h3>Stok Tiket VIP : {{ $stock_ticket_vip }}</h3>
+                <x-dashboard.card-widget card-title="{{ $tickets_sold_festival }}" card-subtitle="Tiket Festival terjual"
+                card-colour="bg-info" useDropdown="false" />
+
+                <x-dashboard.card-widget card-title="{{ $tickets_sold_vip }}" card-subtitle="Tiket VIP terjual"
+                card-colour="bg-info" useDropdown="false" />
+
+                <x-dashboard.card-widget card-title="{{ $stock_ticket_festival }}" card-subtitle="Stok Tiket Festival"
+                card-colour="bg-info" useDropdown="false" />
+
+                <x-dashboard.card-widget card-title="{{ $stock_ticket_vip }}" card-subtitle="Stok Tiket VIP"
+                card-colour="bg-info" useDropdown="false" />
         </section>
         {{-- All availabel Package --}}
         <section class="row">
