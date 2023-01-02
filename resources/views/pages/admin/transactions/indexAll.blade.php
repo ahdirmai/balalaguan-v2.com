@@ -7,9 +7,6 @@
 
 @section('content')
     <div class="container">
-        <section class="col mb-3">
-            <butto class="btn btn-danger">Hapus semua</butto>
-        </section>
         <table id="table" class="table table-striped display nowrap" style="width:100%">
             <thead>
                 <tr>
