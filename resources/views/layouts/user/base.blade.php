@@ -24,5 +24,9 @@
 
     @livewireScripts
     @stack('script')
+    {{-- save user id into localStorage --}}
+    <script>
+        localStorage.setItem('balalaguan:userId', {{ auth()->check() ? auth()->user()->id : 'null' }})
+    </script>
 </body>
 </html>
