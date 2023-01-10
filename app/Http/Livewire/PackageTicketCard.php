@@ -65,10 +65,13 @@ class PackageTicketCard extends Component
             ->where('phase_id', $this->phaseid)->first();
 
 
+        // dd($this->periods->where('phase_id', $this->phaseid));
         $getPeriod = [
             $getFestivalStatus = $this->periods
                 ->where('phase_id', $this->phaseid)->first(),
             $getVIPStatus = $this->periods
+                ->where('phase_id', $this->phaseid)->skip(1)->first(),
+            $getTribunStatus = $this->periods
                 ->where('phase_id', $this->phaseid)->last(),
         ];
         // dd($getPeriod);
