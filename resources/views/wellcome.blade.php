@@ -25,7 +25,7 @@
 @section('content')
     {{-- Overlapping Section --}}
     <section class="container-lg overlapping bg-white p-2 rounded-3 mx-auto shadow d-flex flex-column-reverse flex-md-row justify-content-between">
-        <a href="https://www.google.co.id/maps/place/Universitas+Muhammadiyah+Banjarmasin/@-3.2483506,114.6277786,17z/data=!3m1!4b1!4m5!3m4!1s0x2de43b503e9158d1:0xe23c2c14475ebb27!8m2!3d-3.248356!4d114.6299673" target="_blank" class="btn bg-brand-red d-flex justify-content-center align-items-center text-light px-3 py-3 py-lg-0 rounded-3">Kunjungi</a>
+        <a href="https://www.google.com/maps/place/Gedung+Sultan+Suriansyah/@-3.2989256,114.588273,17z/data=!3m1!4b1!4m5!3m4!1s0x2de423a3fb5f2659:0x75f1cc80aad78356!8m2!3d-3.2989256!4d114.5904617" target="_blank" class="btn bg-brand-red d-flex justify-content-center align-items-center text-light px-3 py-3 py-lg-0 rounded-3">Kunjungi</a>
         {{-- Lokasi acara --}}
         <section class="d-flex align-items-center gap-4 p-3">
             <span class="border p-3 rounded-circle d-flex justify-content-center align-items-center"
