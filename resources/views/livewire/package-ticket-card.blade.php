@@ -26,7 +26,7 @@
                 <span>
                     <small class="text-muted">Harga</small>
                     <p>
-                            @if ($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)
+                            @if ($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0 && $getPeriod[2]->is_active == 0)
                                 IDR ******
                             @else
                                 {{-- {{ $this->category_id }} --}}
@@ -36,7 +36,7 @@
                 </span>
                 <span>
                     <button wire:click="expanded({{ $phaseid }})" @disabled(!auth()->check())
-                        @disabled($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0)@disabled($getPeriod[0]->stock <= 0 && $getPeriod[1]->stock <= 0) @disabled($chance<=0) class="btn bg-brand-red px-4 text-light"
+                        @disabled($getPeriod[0]->is_active == 0 && $getPeriod[1]->is_active == 0 && $getPeriod[2]->is_active == 0)@disabled($getPeriod[0]->stock <= 0 && $getPeriod[1]->stock <= 0 && $getPeriod[2]->stock <= 0) @disabled($chance<=0) class="btn bg-brand-red px-4 text-light"
                         type="button">Pilih</button>
                 </span>
             </section>
