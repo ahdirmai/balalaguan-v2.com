@@ -34,7 +34,7 @@
             </span>
             <section>
                 <strong>Lokasi Acara</strong>
-                <p class="mb-0">Universitas Muhammadiyah Banjarmasin</p>
+                <p class="mb-0">Gedung Sultan Suriansyah</p>
             </section>
         </section>
         {{-- Durasi acara --}}
@@ -72,7 +72,7 @@
                         <section class="mapouter col">
                             <div class="gmap_canvas">
                                 <iframe style="width: 100%" height="500" id="gmap_canvas"
-                                    src="https://maps.google.com/maps?q=QJ2H+MX4,%20Jl.%20Gubernur%20Syarkawi,%20Semangat%20Dalam,%20Kec.%20Alalak,%20Kabupaten%20Barito%20Kuala,%20Kalimantan%20Selatan%2070581&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    src="https://maps.google.com/maps?q=PH2R+C5G,%20Jalan%20Brigjen%20Haji%20Hasan%20Basri,%20Sungai%20Miai,%20Kec.%20Banjarmasin%20Utara,%20Kota%20Banjarmasin,%20Kalimantan%20Selatan%2070123&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </div>
                         </section>
