@@ -29,7 +29,7 @@
                     <p>Sedang diproses</p>
                 </section>
                 {{-- form --}}
-                <form class="d-none" action="@role('admin') {{ route('admin.ticket.check-in') }} @role('coadmin'){{ route('coadmin.ticket.check-in') }} @endrole" id="form" method="POST">
+                <form class="d-none" action="@role('admin') {{ route('admin.ticket.check-in') }} @else {{ route('coadmin.ticket.check-in') }} @endrole" id="form" method="POST">
                     @csrf
                     <input type="text" name="decoded" id="decoded">
                 </form>
