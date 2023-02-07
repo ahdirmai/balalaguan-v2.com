@@ -1,4 +1,4 @@
-@extends('layouts.coadmin.base')
+@extends('layouts.admin.base')
 
 @push('style')
     <style>
