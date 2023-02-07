@@ -34,6 +34,27 @@
                 Status Tamu
             </a>
         </li>
+        {{-- Coadmin routes --}}
+        <li class="nav-title">Co Admin</li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.coadmin.index') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bank') }}"></use>
+                </svg> 
+                Semua Co-Admin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.coadmin.create') }}">
+                <svg class="nav-icon">
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user-x') }}"></use>
+                </svg> 
+                Tambah Co-Admin
+                {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
+            </a>
+        </li>
+        {{-- End of Coadmin routes --}}
+        
         {{-- Transaction routes --}}
         <li class="nav-title">Transaksi</li>
         <li class="nav-item">

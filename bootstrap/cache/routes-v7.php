@@ -123,7 +123,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::gREezLmhSDkHq7Rl',
+            '_route' => 'generated::8NTGT51YNom6x5kz',
           ),
           1 => NULL,
           2 => 
@@ -143,7 +143,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ZHbdxoZ92oh8mbD4',
+            '_route' => 'generated::Ibfun2P6ct7Q4HLd',
           ),
           1 => NULL,
           2 => 
@@ -221,7 +221,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ofqIWXRZa3zwlJPN',
+            '_route' => 'generated::yvUL59S6FJ3MQJWY',
           ),
           1 => NULL,
           2 => 
@@ -278,7 +278,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::OV3B9jWEJEPOLnwB',
+            '_route' => 'generated::eZBvYjptCGRvpfLu',
           ),
           1 => NULL,
           2 => 
@@ -333,7 +333,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::iqajq9xxbes8jpz9',
+            '_route' => 'generated::WZiJXERU5zGB8ntd',
           ),
           1 => NULL,
           2 => 
@@ -424,7 +424,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::6RarfmaZqFZ1OTMN',
+            '_route' => 'generated::5WrPvSAoet74amak',
           ),
           1 => NULL,
           2 => 
@@ -987,10 +987,198 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/admin/coadmin' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.coadmin.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.coadmin.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/coadmin/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.coadmin.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/coadmin/dashboard' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/coadmin/dashboard/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/coadmin/scanner' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.scanner',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/coadmin/ticket' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/coadmin/ticket/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/livewire/(?|message/([^/]++)(*:110)|preview\\-file/([^/]++)(*:140))|/password/reset/([^/]++)(*:173)|/user/(?|profile/([^/]++)(?|(*:209)|/edit(*:222)|(*:230))|transaction/(?|detail/([^/]++)(*:269)|([^/]++)/([^/]++)(*:294)|payment/([^/]++)(*:318)))|/admin/(?|categories/([^/]++)(?|(*:360)|/edit(*:373)|(*:381))|p(?|hases/([^/]++)(?|(*:411)|/edit(*:424)|(*:432))|eriods/([^/]++)(?|(*:459)|/edit(*:472)|(*:480)))|t(?|ransactions/(?|reject/([^/]++)(*:524)|([^/]++)(?|(*:543)|/edit(*:556)|(*:564)))|icket/([^/]++)(?|(*:591)|/edit(*:604)|(*:612)))))/?$}sDu',
+      0 => '{^(?|/_debugbar/c(?|lockwork/([^/]++)(*:39)|ache/([^/]++)(?:/([^/]++))?(*:73))|/livewire/(?|message/([^/]++)(*:110)|preview\\-file/([^/]++)(*:140))|/password/reset/([^/]++)(*:173)|/user/(?|profile/([^/]++)(?|(*:209)|/edit(*:222)|(*:230))|transaction/(?|detail/([^/]++)(*:269)|([^/]++)/([^/]++)(*:294)|payment/([^/]++)(*:318)))|/admin/(?|c(?|ategories/([^/]++)(?|(*:363)|/edit(*:376)|(*:384))|oadmin/([^/]++)(?|(*:411)|/edit(*:424)|(*:432)))|p(?|hases/([^/]++)(?|(*:463)|/edit(*:476)|(*:484))|eriods/([^/]++)(?|(*:511)|/edit(*:524)|(*:532)))|t(?|ransactions/(?|reject/([^/]++)(*:576)|([^/]++)(?|(*:595)|/edit(*:608)|(*:616)))|icket/([^/]++)(?|(*:643)|/edit(*:656)|(*:664))))|/coadmin/(?|dashboard/([^/]++)(?|(*:708)|/edit(*:721)|(*:729))|ticket/([^/]++)(?|(*:756)|/edit(*:769)|(*:777))))/?$}sDu',
     ),
     3 => 
     array (
@@ -1266,7 +1454,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      360 => 
+      363 => 
       array (
         0 => 
         array (
@@ -1289,7 +1477,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      373 => 
+      376 => 
       array (
         0 => 
         array (
@@ -1312,7 +1500,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      381 => 
+      384 => 
       array (
         0 => 
         array (
@@ -1360,6 +1548,94 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+            '_route' => 'admin.coadmin.show',
+          ),
+          1 => 
+          array (
+            0 => 'coadmin',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      424 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.coadmin.edit',
+          ),
+          1 => 
+          array (
+            0 => 'coadmin',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      432 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.coadmin.update',
+          ),
+          1 => 
+          array (
+            0 => 'coadmin',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.coadmin.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'coadmin',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      463 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
             '_route' => 'admin.phases.show',
           ),
           1 => 
@@ -1377,7 +1653,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      424 => 
+      476 => 
       array (
         0 => 
         array (
@@ -1400,7 +1676,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      432 => 
+      484 => 
       array (
         0 => 
         array (
@@ -1442,7 +1718,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      459 => 
+      511 => 
       array (
         0 => 
         array (
@@ -1465,7 +1741,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      472 => 
+      524 => 
       array (
         0 => 
         array (
@@ -1488,7 +1764,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      480 => 
+      532 => 
       array (
         0 => 
         array (
@@ -1530,7 +1806,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      524 => 
+      576 => 
       array (
         0 => 
         array (
@@ -1552,7 +1828,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      543 => 
+      595 => 
       array (
         0 => 
         array (
@@ -1575,7 +1851,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      556 => 
+      608 => 
       array (
         0 => 
         array (
@@ -1598,7 +1874,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      564 => 
+      616 => 
       array (
         0 => 
         array (
@@ -1640,7 +1916,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      591 => 
+      643 => 
       array (
         0 => 
         array (
@@ -1663,7 +1939,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      604 => 
+      656 => 
       array (
         0 => 
         array (
@@ -1686,7 +1962,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      612 => 
+      664 => 
       array (
         0 => 
         array (
@@ -1713,6 +1989,182 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'admin.ticket.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'ticket',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      708 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.show',
+          ),
+          1 => 
+          array (
+            0 => 'dashboard',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      721 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.edit',
+          ),
+          1 => 
+          array (
+            0 => 'dashboard',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      729 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.update',
+          ),
+          1 => 
+          array (
+            0 => 'dashboard',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.dashboard.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'dashboard',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      756 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.show',
+          ),
+          1 => 
+          array (
+            0 => 'ticket',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      769 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.edit',
+          ),
+          1 => 
+          array (
+            0 => 'ticket',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      777 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.update',
+          ),
+          1 => 
+          array (
+            0 => 'ticket',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.destroy',
           ),
           1 => 
           array (
@@ -2063,7 +2515,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::gREezLmhSDkHq7Rl' => 
+    'generated::8NTGT51YNom6x5kz' => 
     array (
       'methods' => 
       array (
@@ -2075,7 +2527,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::gREezLmhSDkHq7Rl',
+        'as' => 'generated::8NTGT51YNom6x5kz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2091,7 +2543,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZHbdxoZ92oh8mbD4' => 
+    'generated::Ibfun2P6ct7Q4HLd' => 
     array (
       'methods' => 
       array (
@@ -2103,7 +2555,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::ZHbdxoZ92oh8mbD4',
+        'as' => 'generated::Ibfun2P6ct7Q4HLd',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2228,7 +2680,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ofqIWXRZa3zwlJPN' => 
+    'generated::yvUL59S6FJ3MQJWY' => 
     array (
       'methods' => 
       array (
@@ -2243,15 +2695,15 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:sanctum',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072d0000000000000000";}";s:4:"hash";s:44:"K+XyJN46ur5F8JS1zHJIqfxmVTDv2hpp29ZLpDoia1g=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072d0000000000000000";}";s:4:"hash";s:44:"ffirEucwgKCt2gVjLiSPu69/J63muJcTQGY6T4XItvk=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::ofqIWXRZa3zwlJPN',
+        'as' => 'generated::yvUL59S6FJ3MQJWY',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2281,7 +2733,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:758:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:539:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:864:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:645:"function () {
     $periods = \\App\\Models\\Period::with(\'category\', \'phase\')->get();
     $phases = \\App\\Models\\Phase::all();
     $categories = \\App\\Models\\Category::all();
@@ -2293,11 +2745,12 @@ app('router')->setCompiledRoutes(
     if (\\auth()->user() != null) {
         if (\\auth()->user()->hasRole(\'admin\')) {
             return \\redirect()->route(\'admin.dashboard\');
-        }
+        } elseif (\\auth()->user()->hasRole(\'coadmin\'))
+            return \\redirect()->route(\'coadmin.dashboard\');
     }
     // return response()->json($data);
     return \\view(\'wellcome\', $data);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072f0000000000000000";}";s:4:"hash";s:44:"mkYMQdWvTvDrdPVkucAI/nbZlRnYUj4X/D8e1IWBqzE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072f0000000000000000";}";s:4:"hash";s:44:"jd5Ffp+mPYpJMpvqan77bDjc17x6EIbCovwop0Ij7g0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -2356,7 +2809,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::OV3B9jWEJEPOLnwB' => 
+    'generated::eZBvYjptCGRvpfLu' => 
     array (
       'methods' => 
       array (
@@ -2376,7 +2829,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::OV3B9jWEJEPOLnwB',
+        'as' => 'generated::eZBvYjptCGRvpfLu',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2465,7 +2918,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::iqajq9xxbes8jpz9' => 
+    'generated::WZiJXERU5zGB8ntd' => 
     array (
       'methods' => 
       array (
@@ -2485,7 +2938,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::iqajq9xxbes8jpz9',
+        'as' => 'generated::WZiJXERU5zGB8ntd',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2684,7 +3137,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::6RarfmaZqFZ1OTMN' => 
+    'generated::5WrPvSAoet74amak' => 
     array (
       'methods' => 
       array (
@@ -2704,7 +3157,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::6RarfmaZqFZ1OTMN',
+        'as' => 'generated::5WrPvSAoet74amak',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4850,6 +5303,836 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\TicketController@destroy',
         'namespace' => NULL,
         'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/coadmin',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.index',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@index',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@index',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/coadmin/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.create',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@create',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@create',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/coadmin',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.store',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@store',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@store',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/coadmin/{coadmin}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.show',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@show',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@show',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/coadmin/{coadmin}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.edit',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@edit',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@edit',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'admin/coadmin/{coadmin}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.update',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@update',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@update',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.coadmin.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'admin/coadmin/{coadmin}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'as' => 'admin.coadmin.destroy',
+        'uses' => 'App\\Http\\Controllers\\CoadminController@destroy',
+        'controller' => 'App\\Http\\Controllers\\CoadminController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/dashboard',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.index',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@index',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@index',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/dashboard/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.create',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@create',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@create',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'coadmin/dashboard',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.store',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@store',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@store',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/dashboard/{dashboard}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.show',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@show',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@show',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/dashboard/{dashboard}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.edit',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@edit',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@edit',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'coadmin/dashboard/{dashboard}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.update',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@update',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@update',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.dashboard.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'coadmin/dashboard/{dashboard}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.dashboard.destroy',
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@destroy',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\CoadminDashboardController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.scanner' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/scanner',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Coadmin\\ScannerController@scanner',
+        'controller' => 'App\\Http\\Controllers\\Coadmin\\ScannerController@scanner',
+        'as' => 'coadmin.scanner',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/ticket',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.index',
+        'uses' => 'App\\Http\\Controllers\\TicketController@index',
+        'controller' => 'App\\Http\\Controllers\\TicketController@index',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/ticket/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.create',
+        'uses' => 'App\\Http\\Controllers\\TicketController@create',
+        'controller' => 'App\\Http\\Controllers\\TicketController@create',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'coadmin/ticket',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.store',
+        'uses' => 'App\\Http\\Controllers\\TicketController@store',
+        'controller' => 'App\\Http\\Controllers\\TicketController@store',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/ticket/{ticket}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.show',
+        'uses' => 'App\\Http\\Controllers\\TicketController@show',
+        'controller' => 'App\\Http\\Controllers\\TicketController@show',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'coadmin/ticket/{ticket}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.edit',
+        'uses' => 'App\\Http\\Controllers\\TicketController@edit',
+        'controller' => 'App\\Http\\Controllers\\TicketController@edit',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'coadmin/ticket/{ticket}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.update',
+        'uses' => 'App\\Http\\Controllers\\TicketController@update',
+        'controller' => 'App\\Http\\Controllers\\TicketController@update',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'coadmin/ticket/{ticket}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'as' => 'coadmin.ticket.destroy',
+        'uses' => 'App\\Http\\Controllers\\TicketController@destroy',
+        'controller' => 'App\\Http\\Controllers\\TicketController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
         'where' => 
         array (
         ),

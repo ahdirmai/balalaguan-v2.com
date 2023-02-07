@@ -51,6 +51,8 @@ class LoginController extends Controller
             return redirect()->route('admin.dashboard');
         } elseif ($user->hasRole('user')) {
             return  redirect()->intended(route('landing-page').'/#ticket');
+        } elseif ($user->hasRole('coadmin')){
+            return redirect()->route('coadmin.dashboard.index');
         }
     }
 }

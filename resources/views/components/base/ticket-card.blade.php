@@ -1,7 +1,7 @@
 <section class="col-half bg-light p-4 rounded-3 border mb-3">
     <section class="d-flex justify-content-between align-items-center mb-3">
         <span class="bg-brand-red text-light px-4 py-2 rounded-3">{{ $category }}</span>
-        <span class="{{ $isCheckIn ? 'text-success' : 'text-gray' }}">Check in</span>
+        <span class="{{ $isCheckIn ? 'badge bg-success' : 'text-gray' }}">{{ $isCheckIn ? 'Sudah Check in' : 'Belum Check in' }}</span>
     </section>
     <section class="row justify-content-between pb-3" style="border-bottom: 1px dashed #302b2b">
         <div class="col-5">

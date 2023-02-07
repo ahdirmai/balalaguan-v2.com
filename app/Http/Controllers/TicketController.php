@@ -20,7 +20,12 @@ class TicketController extends Controller
             'tickets' => $tickets,
         ];
         // return response()->json($data);
-        return view('pages.admin.ticket.index', $data);
+        if (auth()->user() != null) {
+            if (auth()->user()->hasRole('admin')) {
+                return view('pages.admin.ticket.index', $data);
+            } elseif (auth()->user()->hasRole('coadmin'))
+                return view('pages.coadmin.ticket.index', $data);
+        }
     }
 
     /**
@@ -127,9 +132,14 @@ class TicketController extends Controller
                 "status" => $status,
                 "username" => $username,
                 "userId" => $userId,
-                "message" => $message, 
+                "message" => $message,
             ]))
         );
-        return redirect()->route('admin.scanner');
+        if (auth()->user() != null) {
+            if (auth()->user()->hasRole('admin')) {
+                return redirect()->route('admin.scanner');
+            } elseif (auth()->user()->hasRole('coadmin'))
+                return redirect()->route('coadmin.scanner');
+        }
     }
 }
