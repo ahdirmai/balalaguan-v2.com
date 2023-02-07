@@ -114,6 +114,9 @@ Route::middleware('role:coadmin')->prefix('coadmin')->name('coadmin.')->group(fu
     // Barcode scanner
     Route::get('scanner', [ScannerController::class, 'scanner'])->name('scanner');
 
+    // Check in
+    Route::post('ticket/check-in', [TicketController::class, 'checkIn'])->name('ticket.check-in');
+
     // Ticket
     Route::resource('ticket', TicketController::class);
 });
