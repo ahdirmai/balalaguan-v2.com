@@ -9,17 +9,11 @@
     </div>
     <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('coadmin.dashboard.index') }}">
-                <svg class="nav-icon">
-                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-speedometer') }}"></use>
-                </svg> 
-                Beranda
-            </a>
             <a class="nav-link" href="{{ route('coadmin.scanner') }}">
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-qr-code') }}"></use>
                 </svg> 
-                Scann Barcode
+                Scan Barcode
             </a>
             <a class="nav-link" href="{{ route('coadmin.ticket.index') }}">
                 <svg class="nav-icon">

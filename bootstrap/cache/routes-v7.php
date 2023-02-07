@@ -123,7 +123,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8NTGT51YNom6x5kz',
+            '_route' => 'generated::avwWyMaicJiC8CD2',
           ),
           1 => NULL,
           2 => 
@@ -143,7 +143,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Ibfun2P6ct7Q4HLd',
+            '_route' => 'generated::pwfvOGFfM8kXAQTY',
           ),
           1 => NULL,
           2 => 
@@ -221,7 +221,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::yvUL59S6FJ3MQJWY',
+            '_route' => 'generated::Ag1HXs8cnYkTA4Qj',
           ),
           1 => NULL,
           2 => 
@@ -278,7 +278,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::eZBvYjptCGRvpfLu',
+            '_route' => 'generated::LlPBnoq9WsF0b7oG',
           ),
           1 => NULL,
           2 => 
@@ -333,7 +333,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::WZiJXERU5zGB8ntd',
+            '_route' => 'generated::NzifONXXVogIFx2b',
           ),
           1 => NULL,
           2 => 
@@ -424,7 +424,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::5WrPvSAoet74amak',
+            '_route' => 'generated::zlHmI2Kfu3A6XSPp',
           ),
           1 => NULL,
           2 => 
@@ -1112,6 +1112,25 @@ app('router')->setCompiledRoutes(
           array (
             'GET' => 0,
             'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/coadmin/ticket/check-in' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'coadmin.ticket.check-in',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
           ),
           3 => NULL,
           4 => false,
@@ -2515,7 +2534,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8NTGT51YNom6x5kz' => 
+    'generated::avwWyMaicJiC8CD2' => 
     array (
       'methods' => 
       array (
@@ -2527,7 +2546,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::8NTGT51YNom6x5kz',
+        'as' => 'generated::avwWyMaicJiC8CD2',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2543,7 +2562,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Ibfun2P6ct7Q4HLd' => 
+    'generated::pwfvOGFfM8kXAQTY' => 
     array (
       'methods' => 
       array (
@@ -2555,7 +2574,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::Ibfun2P6ct7Q4HLd',
+        'as' => 'generated::pwfvOGFfM8kXAQTY',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2680,7 +2699,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::yvUL59S6FJ3MQJWY' => 
+    'generated::Ag1HXs8cnYkTA4Qj' => 
     array (
       'methods' => 
       array (
@@ -2695,15 +2714,15 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:sanctum',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072d0000000000000000";}";s:4:"hash";s:44:"ffirEucwgKCt2gVjLiSPu69/J63muJcTQGY6T4XItvk=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072d0000000000000000";}";s:4:"hash";s:44:"K+XyJN46ur5F8JS1zHJIqfxmVTDv2hpp29ZLpDoia1g=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::yvUL59S6FJ3MQJWY',
+        'as' => 'generated::Ag1HXs8cnYkTA4Qj',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2733,7 +2752,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:864:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:645:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:870:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:651:"function () {
     $periods = \\App\\Models\\Period::with(\'category\', \'phase\')->get();
     $phases = \\App\\Models\\Phase::all();
     $categories = \\App\\Models\\Category::all();
@@ -2746,11 +2765,11 @@ app('router')->setCompiledRoutes(
         if (\\auth()->user()->hasRole(\'admin\')) {
             return \\redirect()->route(\'admin.dashboard\');
         } elseif (\\auth()->user()->hasRole(\'coadmin\'))
-            return \\redirect()->route(\'coadmin.dashboard\');
+            return \\redirect()->route(\'coadmin.dashboard.index\');
     }
     // return response()->json($data);
     return \\view(\'wellcome\', $data);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072f0000000000000000";}";s:4:"hash";s:44:"jd5Ffp+mPYpJMpvqan77bDjc17x6EIbCovwop0Ij7g0=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000072f0000000000000000";}";s:4:"hash";s:44:"8AMVnoidDXSYGGpURmBtGaK8ow+jKkfn7ADaVGFSX24=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -2809,7 +2828,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::eZBvYjptCGRvpfLu' => 
+    'generated::LlPBnoq9WsF0b7oG' => 
     array (
       'methods' => 
       array (
@@ -2829,7 +2848,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::eZBvYjptCGRvpfLu',
+        'as' => 'generated::LlPBnoq9WsF0b7oG',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2918,7 +2937,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::WZiJXERU5zGB8ntd' => 
+    'generated::NzifONXXVogIFx2b' => 
     array (
       'methods' => 
       array (
@@ -2938,7 +2957,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::WZiJXERU5zGB8ntd',
+        'as' => 'generated::NzifONXXVogIFx2b',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3137,7 +3156,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::5WrPvSAoet74amak' => 
+    'generated::zlHmI2Kfu3A6XSPp' => 
     array (
       'methods' => 
       array (
@@ -3157,7 +3176,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::5WrPvSAoet74amak',
+        'as' => 'generated::zlHmI2Kfu3A6XSPp',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5867,6 +5886,43 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\Coadmin\\ScannerController@scanner',
         'controller' => 'App\\Http\\Controllers\\Coadmin\\ScannerController@scanner',
         'as' => 'coadmin.scanner',
+        'namespace' => NULL,
+        'prefix' => '/coadmin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'coadmin.ticket.check-in' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'coadmin/ticket/check-in',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:coadmin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\TicketController@checkIn',
+        'controller' => 'App\\Http\\Controllers\\TicketController@checkIn',
+        'as' => 'coadmin.ticket.check-in',
         'namespace' => NULL,
         'prefix' => '/coadmin',
         'where' => 

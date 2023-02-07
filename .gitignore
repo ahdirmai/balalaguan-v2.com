@@ -19,4 +19,4 @@ yarn-error.log
 package-lock.json
 bootstrap/cache
 bootstrap/cache/routes-v7.php
-bootstrap/cache/config.php
+bootstrap/cache/config.php  

@@ -12,8 +12,6 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>NIK</th>
-                    <th>Telepon</th>
                     <th>Email</th>
                     <th>Aksi</th>
                 </tr>
@@ -23,11 +21,16 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $co->name }}</td>
-                        <td>{{ $co->nik }}</td>
-                        <td>{{ $co->phone }}</td>
                         <td>{{ $co->email }}</td>
                         <td>
-
+                            <section class="d-flex gap-2 align-items-center">
+                                {{-- delete --}}
+                                <form action="{{ route('admin.coadmin.destroy', $co->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-icon btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </form>
+                            </section>
                         </td>
                     </tr>
                 @endforeach

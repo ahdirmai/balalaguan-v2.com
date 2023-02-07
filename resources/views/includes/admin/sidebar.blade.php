@@ -19,7 +19,7 @@
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-qr-code') }}"></use>
                 </svg> 
-                Scann Barcode
+                Scan Barcode
             </a>
             <a class="nav-link" href="{{ route('admin.event.index') }}">
                 <svg class="nav-icon">
@@ -35,13 +35,13 @@
             </a>
         </li>
         {{-- Coadmin routes --}}
-        <li class="nav-title">Co Admin</li>
+        <li class="nav-title">Wakil Admin</li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.coadmin.index') }}">
                 <svg class="nav-icon">
-                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-bank') }}"></use>
+                    <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user') }}"></use>
                 </svg> 
-                Semua Co-Admin
+                Semua Wakil Admin
             </a>
         </li>
         <li class="nav-item">
@@ -49,7 +49,7 @@
                 <svg class="nav-icon">
                     <use xlink:href="{{ asset('/core-ui/svg/free.svg#cil-user-x') }}"></use>
                 </svg> 
-                Tambah Co-Admin
+                Tambah Wakil Admin
                 {{-- <span class="badge badge-sm bg-info ms-auto">23+</span> --}}
             </a>
         </li>

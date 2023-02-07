@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Faker\Factory as Faker;
+use Illuminate\Database\QueryException;
 
 class CoadminController extends Controller
 {
@@ -28,23 +30,22 @@ class CoadminController extends Controller
         // dd($request);
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'nik' => ['required', 'min:16', 'max:16', 'unique:users'],
-            'phone' => ['required', 'string', 'max:255'],
-            'address' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         ], [
-            'nik.unique' => 'NIK yang digunakan telah terdaftar',
             'email.unique' => 'Email yang digunakan telah terdaftar',
         ]);
 
+        // Init faker
+        $faker = Faker::create();
+
         $user = User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'nik' => $data['nik'],
-            'phone' => $data['phone'],
-            'address' => $data['address'],
+            'email' => $data['email'],
+            'nik' => $faker->unique()->numberBetween(1000000000000000, 9999999999999999),
+            'phone' => $faker->phoneNumber(),
+            'address' => $faker->address(),
         ]);
 
         // give user role 'coadmin'
@@ -61,5 +62,16 @@ class CoadminController extends Controller
     public function update(Request $request)
     {
         dd($request);
+    }
+
+    public function destroy($id) {
+        try {
+            $user = User::findOrFail($id);
+            $user->delete();
+            flash()->addSuccess('Sukses menghapus akun co admin');
+        } catch(QueryException $err) {
+            flash()->addError($err->getMessage());
+        }
+        return redirect()->route('admin.coadmin.index');
     }
 }
