@@ -45,7 +45,7 @@ Route::get('/', function () {
         if (auth()->user()->hasRole('admin')) {
             return redirect()->route('admin.dashboard');
         } elseif (auth()->user()->hasRole('coadmin'))
-            return redirect()->route('coadmin.dashboard');
+            return redirect()->route('coadmin.dashboard.index');
     }
     // return response()->json($data);
     return view('wellcome', $data);
