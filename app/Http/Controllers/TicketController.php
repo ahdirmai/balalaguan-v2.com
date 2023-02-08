@@ -20,7 +20,12 @@ class TicketController extends Controller
             'tickets' => $tickets,
         ];
         // return response()->json($data);
-        return view('pages.admin.ticket.index', $data);
+        if (auth()->user() != null) {
+            if (auth()->user()->hasRole('admin')) {
+                return view('pages.admin.ticket.index', $data);
+            } elseif (auth()->user()->hasRole('coadmin'))
+                return view('pages.coadmin.ticket.index', $data);
+        }
     }
 
     /**
@@ -93,7 +98,8 @@ class TicketController extends Controller
     {
         // dd($request);
         $token = base64_decode($request->decoded);
-        $ticket = Ticket::where('token', $token)->with('transaction.user')->first();
+        $ticket = Ticket::where('token', $token)->with('transaction.user', 'transaction.period.category')->first();
+        $ticket_category = $ticket->transaction->period->category->name;
         $username = $ticket->transaction->user->name;
         $userId = $ticket->transaction->user->id;
         $status = false;
@@ -104,7 +110,7 @@ class TicketController extends Controller
             if ($ticket->is_checked_in == 0) {
                 if ($ticket->update(['is_checked_in' => 1])) {
                     $status = true;
-                    $message = "Scan berhasil, silakan masuk ${username}!";
+                    $message = "Scan berhasil, silakan masuk ${username} di kategori ${ticket_category}!";
                     flash()->addSuccess($message);
                 } else {
                     $status = false;
@@ -127,9 +133,14 @@ class TicketController extends Controller
                 "status" => $status,
                 "username" => $username,
                 "userId" => $userId,
-                "message" => $message, 
+                "message" => $message,
             ]))
         );
-        return redirect()->route('admin.scanner');
+        if (auth()->user() != null) {
+            if (auth()->user()->hasRole('admin')) {
+                return redirect()->route('admin.scanner');
+            } elseif (auth()->user()->hasRole('coadmin'))
+                return redirect()->route('coadmin.scanner');
+        }
     }
 }

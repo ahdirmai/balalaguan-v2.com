@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Coadmin\CoadminDashboardController;
+use App\Http\Controllers\Coadmin\ScannerController;
+use App\Http\Controllers\Coadmin\TicketController as CoadminTicketController;
+use App\Http\Controllers\CoadminController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\PhaseController;
@@ -40,7 +44,8 @@ Route::get('/', function () {
     if (auth()->user() != null) {
         if (auth()->user()->hasRole('admin')) {
             return redirect()->route('admin.dashboard');
-        }
+        } elseif (auth()->user()->hasRole('coadmin'))
+            return redirect()->route('coadmin.dashboard.index');
     }
     // return response()->json($data);
     return view('wellcome', $data);
@@ -98,8 +103,20 @@ Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function
 
     // Ticket
     Route::resource('ticket', TicketController::class);
+
+    // Coadmin
+    Route::resource('coadmin', CoadminController::class);
 });
 
-Route::middleware('role:user')->group(function () {
-    // After login redirect to here
+Route::middleware('role:coadmin')->prefix('coadmin')->name('coadmin.')->group(function () {
+    Route::resource('dashboard', CoadminDashboardController::class);
+
+    // Barcode scanner
+    Route::get('scanner', [ScannerController::class, 'scanner'])->name('scanner');
+
+    // Check in
+    Route::post('ticket/check-in', [TicketController::class, 'checkIn'])->name('ticket.check-in');
+
+    // Ticket
+    Route::resource('ticket', TicketController::class);
 });
