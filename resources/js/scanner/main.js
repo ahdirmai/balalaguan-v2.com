@@ -1,31 +1,41 @@
 'use strict'
 
 import { Html5QrcodeScanner } from 'html5-qrcode'
+import axios from 'axios'
+import Swal from 'sweetalert2'
 
-const form = document.querySelector('#form')
-const decodedField = document.querySelector('[name=decoded]')
-const loading = document.querySelector('#loading')
+import 'sweetalert2/src/sweetalert2.scss'
 
-const onScanSuccess = (decodedText, decodedResult) => {
-    // handle the scanned code as you like, for example:
-    console.log(`Code matched = ${decodedText}`, decodedResult)
+const role = document.querySelector('#role').value || 'admin'
 
-    // stopping scanning
-    html5QrcodeScanner.clear()
-
-    // Show loading
-    loading.classList.remove('d-none')
-
-    // submit form
-    decodedField.setAttribute('value', decodedText)
-    form.submit()
+const showAlert = (text, icon) => {
+    Swal.fire({
+        title: 'Hasil Scan QR', text, icon,
+    })
+    .then(res => {
+        if (res.value) scanning()
+    })
 }
 
-const onScanFailure = error => {
-    // handle scan failure, usually better to ignore and keep scanning.
-    // for example:
-    // console.warn(`Code scan error = ${error}`)
+const onScanSuccess = async (decodedText, decodedResult) => {
+    // Pause
+    html5QrcodeScanner.pause()
+
+    // Fetching data
+    try {
+        const res = await axios.post(`/${ role }/ticket/check-in`, { decoded: decodedText }, {
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+
+        if ( res.data?.status ) showAlert(res.data?.message, 'success') 
+        else showAlert(res.data?.message, 'error')
+    scanning()
+    } catch(err) { showAlert(err, 'error') }
 }
+
+const onScanFailure = error => console.log(error)
 
 let html5QrcodeScanner = new Html5QrcodeScanner("reader",
     { 
@@ -36,4 +46,6 @@ let html5QrcodeScanner = new Html5QrcodeScanner("reader",
         }
     }, false)
 
-html5QrcodeScanner.render(onScanSuccess, onScanFailure)
+const scanning = () => html5QrcodeScanner.render(onScanSuccess, onScanFailure)
+
+scanning()

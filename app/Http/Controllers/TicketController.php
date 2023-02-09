@@ -97,35 +97,40 @@ class TicketController extends Controller
     public function checkIn(Request $request)
     {
         // dd($request);
+        // return response()->json($request);
         $token = base64_decode($request->decoded);
         $ticket = Ticket::where('token', $token)->with('transaction.user', 'transaction.period.category')->first();
-        $ticket_category = $ticket->transaction->period->category->name;
-        $username = $ticket->transaction->user->name;
-        $userId = $ticket->transaction->user->id;
-        $status = false;
-        $message = '';
-
+        
         // return response()->json($ticket);
         if ($ticket != null) {
+
+            $ticket_category = $ticket->transaction->period->category->name;
+            $username = $ticket->transaction->user->name;
+            $userId = $ticket->transaction->user->id;
+            $status = false;
+            $message = '';
+            
             if ($ticket->is_checked_in == 0) {
                 if ($ticket->update(['is_checked_in' => 1])) {
                     $status = true;
                     $message = "Scan berhasil, silakan masuk ${username} di kategori ${ticket_category}!";
-                    flash()->addSuccess($message);
+                    
+                    // 
+                    return response()->json([ "status" => $status, "message" => $message ]);
                 } else {
                     $status = false;
                     $message = 'Terjadi kesalahan, silakan coba lagi!';
-                    flash()->addError($message);
+                    return response()->json([ "status" => $status, "message" => $message ]);
                 }
             } else {
                 $status = false;
                 $message = "${username} sudah melakukan check-in!";
-                flash()->addWarning($message);
+                return response()->json([ "status" => $status, "message" => $message ]);
             }
         } else {
             $status = false;
             $message = 'Tiket tidak sesuai, silakan coba lagi!';
-            flash()->addError($message);
+            return response()->json([ "status" => $status, "message" => $message ]);
         }
         // Trigger event
         event(
@@ -136,11 +141,12 @@ class TicketController extends Controller
                 "message" => $message,
             ]))
         );
-        if (auth()->user() != null) {
-            if (auth()->user()->hasRole('admin')) {
-                return redirect()->route('admin.scanner');
-            } elseif (auth()->user()->hasRole('coadmin'))
-                return redirect()->route('coadmin.scanner');
-        }
+        
+        // if (auth()->user() != null) {
+        //     if (auth()->user()->hasRole('admin')) {
+        //         return redirect()->route('admin.scanner');
+        //     } elseif (auth()->user()->hasRole('coadmin'))
+        //         return redirect()->route('coadmin.scanner');
+        // }
     }
 }

@@ -29,11 +29,7 @@
                     <i class="fa-solid fa-spinner fs-1 animated--spinner"></i>
                     <p>Sedang diproses</p>
                 </section>
-                {{-- form --}}
-                <form class="d-none" action="{{ route('coadmin.ticket.check-in') }}" id="form" method="POST">
-                    @csrf
-                    <input type="text" name="decoded" id="decoded">
-                </form>
+                <input type="hidden" id="role" value="{{ Auth::user()->roles->first()->name }}">
             </section>
         </section>
     </section>
